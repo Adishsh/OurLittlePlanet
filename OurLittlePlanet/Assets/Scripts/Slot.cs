@@ -6,9 +6,15 @@ public class Slot : MonoBehaviour
 {
     [SerializeField] public Card card;
 
-public void CallCard()
+public void SelectSlot()
 {
-    card.MoveCardToNewSlot(gameObject);
+    Card newCard = GameManager.Instance.selectedCard;
+    if(newCard != null && card == null)
+    {
+        card = newCard;
+        card.MoveCardToNewSlot(this);
+        GameManager.Instance.selectedCard = null;
+    }
 }
 
 

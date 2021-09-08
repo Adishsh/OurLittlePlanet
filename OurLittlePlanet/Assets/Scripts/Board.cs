@@ -8,7 +8,7 @@ public class Board : MonoBehaviour
    CardsCollection Deck;
    CardsCollection Hand;
    CardsCollection Discard;
-   CardsCollection BuyOptions;
+   CardsCollection Market;
 
    int PolutionRate;
    int Money;
