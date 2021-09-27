@@ -5,8 +5,8 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
    CardsCollection EventDeck;
-   CardsCollection Deck;
-   CardsCollection Hand;
+   Deck Deck;
+   Hand Hand;
    CardsCollection Discard;
    CardsCollection Market;
 
@@ -14,15 +14,30 @@ public class Board : MonoBehaviour
    int Money;
    int Enenrgy;
 
-    public void DrawCardToHand()
+    public Board(CardsCollection eventDeck,Deck deck,Hand hand, CardsCollection discard, CardsCollection market)
     {
-        Card cardToHand = Deck.DrawCard(0);
-        Hand.AddCard(cardToHand);
+        EventDeck = eventDeck;
+        Deck =deck;
+Hand= hand;
+Discard = discard;
+Market = market;
+    }
+    public void DrawCardToHand(int cardsToDraw = 1)
+    {
+        for(int i =0; i< cardsToDraw; i++)
+        {
+            Card cardToHand = Deck.DrawCard();
+            Hand.AddCard(cardToHand);
+        }
     }
 
-    public void UseCard(int index)
+    public void BuildCard(Card card, int mapIndex = 0)
     {
-        Card cardToDiscard = Hand.DrawCard(index);
-        Discard.AddCard(cardToDiscard);
+        if(card != null)
+        {
+            Hand.DrawCard(card);
+            //build
+            Discard.AddCard(card);
+        }
     }
 }

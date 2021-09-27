@@ -45,8 +45,8 @@ public class Card : MonoBehaviour
         m_isFrontUp = frontUp;
     }
 
-    public void SetUpCard()
+    public void SetUpCard(CardData cardData)
     {
-
+        m_CardData = cardData;
     }
 }

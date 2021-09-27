@@ -6,37 +6,46 @@ public class CardsCollection : MonoBehaviour
 {
     [SerializeField] private bool m_isPile;
     [SerializeField] private bool m_isFrontUp;
-    [SerializeField] public int m_maxCardAmount {get; private set;}
+    [SerializeField] protected int m_maxCardAmount;
 
     public bool m_isSelectable;
     public int CardsAmount => m_Cards.Count;
-    private List<Card> m_Cards;
+    [SerializeField] private List<Card> m_Cards;
 
     public void Shuffle()
     {
 
     }
 
-    public void AddCard(Card card, int index = 0)
+    public virtual void AddCard(Card card)
     {
-        
+        m_Cards.Add(card);
     }
 
-    public void AddCards(List<Card> cards, int index = 0)
+    public void AddCards(List<Card> cards)
     {
-        
+        m_Cards.AddRange(cards);
     }
 
     public void RemoveCards(int index = 0)
     {
-        
+        m_Cards.RemoveAt(index);
     }
 
-    public Card DrawCard(int index = 0)
+    public int GetCardIndex(Card card)
     {
-       Card givenCard = m_Cards[index];
-       m_Cards.RemoveAt(0);
-       return givenCard;
+        return m_Cards.IndexOf(card);
+    }
+
+    protected virtual Card DrawCard(int index = 0)
+    {
+        if(m_Cards.Count <= index)
+        {
+            return null;
+        }
+        Card givenCard = m_Cards[index];
+        RemoveCards(0);
+        return givenCard;
     }
  
     public void Clear()
