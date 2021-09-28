@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
    [SerializeField] Hand Hand;
    [SerializeField] Discard Discard;
    [SerializeField] CardsCollection Market;
+   [SerializeField] WorldMap Map;
 
     enum GameState
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake() 
     {
-        Board = new Board(EventDeck, Deck, Hand, Discard, Market);
+        Board = new Board(EventDeck, Deck, Hand, Discard, Market, Map);
         Instance = this;
         gameState = GameState.Drawing;
     }
@@ -59,11 +60,13 @@ public class GameManager : MonoBehaviour
         selectedCard = card;
     }
 
-    public void BuildCard()
+    public void BuildCard(int selectedBuildingSlot)
     {
+        Debug.Log($" bc1: {selectedCard} +{selectedBuildingSlot}");
+
         if(selectedCard != null)
         {
-            Board.BuildCard(selectedCard);
+            Board.BuildCard(selectedCard, selectedBuildingSlot);
         }
     }
 
@@ -74,6 +77,17 @@ public class GameManager : MonoBehaviour
             Board.DrawCardToHand(5);
         }
         gameState = GameState.PlayingCards;
+    }
+
+    public void EndTurn()
+    {
+        if(gameState == GameState.PlayingCards)
+        {
+            Debug.Log("end turn pressed");
+            Board.DiscardHand();
+            gameState = GameState.Drawing;
+        }
+        
     }
 
 

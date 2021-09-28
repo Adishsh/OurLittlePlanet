@@ -10,7 +10,7 @@ public class CardsCollection : MonoBehaviour
 
     public bool m_isSelectable;
     public int CardsAmount => m_Cards.Count;
-    [SerializeField] private List<Card> m_Cards;
+    [SerializeField] protected List<Card> m_Cards;
 
     public void Shuffle()
     {
@@ -39,18 +39,14 @@ public class CardsCollection : MonoBehaviour
 
     protected virtual Card DrawCard(int index = 0)
     {
-        if(m_Cards.Count <= index)
-        {
-            return null;
-        }
         Card givenCard = m_Cards[index];
-        RemoveCards(0);
+        RemoveCards(index);
         return givenCard;
     }
  
     public void Clear()
     {
-        
+        m_Cards = new List<Card>();
     }
 
 }

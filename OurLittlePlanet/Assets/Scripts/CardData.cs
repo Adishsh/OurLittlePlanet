@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CardData : MonoBehaviour
 {
+    [SerializeField] public Color color;
     [SerializeField] public int m_Pollution;
     [SerializeField] public int m_Resources;
     [SerializeField] public int m_Cost;

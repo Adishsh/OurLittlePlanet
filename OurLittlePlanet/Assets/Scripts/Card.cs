@@ -16,6 +16,8 @@ public class Card : MonoBehaviour
         gameObject.GetComponent<Image>().sprite = m_CardData.m_Sprite;
         var parent =  gameObject.transform.parent;
         slot = parent.GetComponent<Slot>();
+        //if( m_CardData.color != null)
+       // gameObject.GetComponent<Image>().material.color = m_CardData.color;
     }
 
     public void MoveCardToNewSlot(Slot newParent)
@@ -27,6 +29,7 @@ public class Card : MonoBehaviour
         gameObject.transform.SetParent(newParent.transform);
         transform.localPosition = Vector3.zero;
         slot = newParent;
+        newParent.card = this;
     }
 
     public void SelectCard()

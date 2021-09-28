@@ -13,4 +13,11 @@ public class Deck : CardsCollection
         return card;
     }
 
+    public override void AddCard(Card card)
+    {
+        Debug.Log($"add {card} to deck");
+        card.MoveCardToNewSlot(slot);
+        base.AddCard(card);
+    }
+
 }

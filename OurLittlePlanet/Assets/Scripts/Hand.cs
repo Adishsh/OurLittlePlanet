@@ -19,6 +19,10 @@ public class Hand : CardsCollection
         if(slots.Count <= m_maxCardAmount)
         {
             Slot freeSlot = slots.Find( slot => !slot.gameObject.activeSelf);
+            if(freeSlot == null) 
+            {
+             freeSlot = slots.Find( slot => !slot.card);                
+            }
             freeSlot.gameObject.SetActive(true);
             return freeSlot;
         }
@@ -33,5 +37,12 @@ public class Hand : CardsCollection
         }
         card.MoveCardToNewSlot(CreateNewSlot());
         base.AddCard(card);
+    }
+
+    public List<Card> RemoveAllCards()
+    {
+        var cards = m_Cards;
+        base.Clear();
+        return cards;
     }
 }
