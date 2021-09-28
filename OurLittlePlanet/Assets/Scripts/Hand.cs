@@ -21,7 +21,7 @@ public class Hand : CardsCollection
             Slot freeSlot = slots.Find( slot => !slot.gameObject.activeSelf);
             if(freeSlot == null) 
             {
-             freeSlot = slots.Find( slot => !slot.card);                
+             freeSlot = slots.Find( slot => slot.card == null);                
             }
             freeSlot.gameObject.SetActive(true);
             return freeSlot;

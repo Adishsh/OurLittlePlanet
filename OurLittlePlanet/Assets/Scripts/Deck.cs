@@ -9,7 +9,7 @@ public class Deck : CardsCollection
 
     public Card DrawCard()
     {
-        Card card = base.DrawCard(0);
+        Card card = base.DrawCard(CardsAmount -1);
         return card;
     }
 

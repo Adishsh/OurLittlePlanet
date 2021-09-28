@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameState == GameState.Drawing)
         {
-            Board.DrawCardToHand(5);
+            Board.DrawCardToHand(3);
         }
         gameState = GameState.PlayingCards;
     }
