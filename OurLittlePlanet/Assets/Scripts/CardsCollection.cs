@@ -14,7 +14,13 @@ public class CardsCollection : MonoBehaviour
 
     public void Shuffle()
     {
-
+        for (int i = 0; i < m_Cards.Count; i++) 
+        {
+            Card temp = m_Cards[i];
+            int randomIndex = Random.Range(i, m_Cards.Count);
+            m_Cards[i] = m_Cards[randomIndex];
+            m_Cards[randomIndex] = temp;
+        }
     }
 
     public virtual void AddCard(Card card)

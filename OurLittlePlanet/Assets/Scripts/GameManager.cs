@@ -41,9 +41,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void BuyCard()
+    public void BuyCard(Card card)
     {
-        
+        Board.BuyCard(card);
     }
 
     public void SelectCard(Card card)

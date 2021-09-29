@@ -69,6 +69,13 @@ Map = map;
             Deck.AddCard(card);
         }
         Debug.Log($"RefilDeck to {Deck.CardsAmount}");
-
     }
+
+    public void BuyCard(Card card)
+    {
+        Discard.AddCard(card);
+        Debug.Log($"Discard {card}");
+    }
+
+    
 }

@@ -34,7 +34,6 @@ public class Card : MonoBehaviour
 
     public void SelectCard()
     {
-        GameManager.Instance.SelectCard(this);
         m_isSelected = true;
     }
 
