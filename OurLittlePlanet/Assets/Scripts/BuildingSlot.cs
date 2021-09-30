@@ -25,6 +25,6 @@ public class BuildingSlot : MonoBehaviour
 
     private void OnMouseUp()
     {
-        GameManager.Instance.BuildCard(index);
+        EventManager.instance.BuildCard.Invoke(index);
     }
 }

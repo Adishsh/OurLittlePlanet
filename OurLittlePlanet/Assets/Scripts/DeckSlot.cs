@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DeckSlot : Slot
 {
-   protected override void SelectSlotCard()
-{
-    GameManager.Instance.DrawCardsToHand();
-}
+    protected override void SelectSlotCard()
+    {
+        EventManager.instance.DrawCards.Invoke();
+    }
 }

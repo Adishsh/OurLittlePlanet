@@ -6,6 +6,6 @@ public class MarketSlot : Slot
 {
     protected override void SelectSlotCard()
     {
-        GameManager.Instance.BuyCard(card);
+        EventManager.instance.BuyCard.Invoke(card);
     }
 }

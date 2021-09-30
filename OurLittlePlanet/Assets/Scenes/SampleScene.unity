@@ -3816,6 +3816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1361728085}
   - component: {fileID: 1361728084}
+  - component: {fileID: 1361728086}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3835,7 +3836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48af86ec12043334fa78c0477d89317d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedCard: {fileID: 0}
   EventDeck: {fileID: 0}
   Deck: {fileID: 537651732}
   Hand: {fileID: 176859777}
@@ -3860,6 +3860,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361728086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361728083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e78116d5e4388194cbaf0560819e4219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawCards:
+    m_PersistentCalls:
+      m_Calls: []
+  EndTurn:
+    m_PersistentCalls:
+      m_Calls: []
+  BuyCard:
+    m_PersistentCalls:
+      m_Calls: []
+  SelectCard:
+    m_PersistentCalls:
+      m_Calls: []
+  BuildCard:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1386412301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4777,9 +4804,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1361728084}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: EndTurn
+      - m_Target: {fileID: 1361728086}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: EndTurnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

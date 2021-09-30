@@ -9,7 +9,8 @@ public class HandSlot : Slot
     if(card != null)
     {
         card.SelectCard();
-        GameManager.Instance.selectedCard = card;
+        EventManager.instance.SelectCard.Invoke(card);
+
     }
 }
 }
