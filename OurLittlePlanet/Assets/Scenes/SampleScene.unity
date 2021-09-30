@@ -455,8 +455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 140480964}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &140480964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +598,6 @@ MonoBehaviour:
   m_isFrontUp: 0
   m_maxCardAmount: 5
   m_Cards: []
-  m_isSelectable: 0
   slots:
   - {fileID: 580056741}
   - {fileID: 102306970}
@@ -1210,8 +1207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 364184775}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &364184775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1288,8 +1283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 454890316}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!1001 &467020916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1445,8 +1438,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 483895121}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &483895121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,8 +1604,7 @@ MonoBehaviour:
   - {fileID: 454890317}
   - {fileID: 2080924469}
   - {fileID: 720939167}
-  m_isSelectable: 0
-  slot: {fileID: 618233722}
+  m_TopSlot: {fileID: 618233722}
 --- !u!1 &542482237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,8 +2413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 720939166}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!1 &747819484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 783cf6e5c38d5c543841c0bce0025508,
@@ -2444,8 +2432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 747819488}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &747819488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2585,7 +2571,7 @@ MonoBehaviour:
   m_Deck: {fileID: 537651732}
   m_Hand: {fileID: 176859777}
   m_Discard: {fileID: 1711319975}
-  m_Market: {fileID: 0}
+  m_Market: {fileID: 1200450544}
   m_Map: {fileID: 1676516740}
 --- !u!1 &801578839 stripped
 GameObject:
@@ -3583,6 +3569,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isPile: 0
+  m_isFrontUp: 0
+  m_maxCardAmount: 0
+  m_Cards: []
   slots:
   - {fileID: 421736543}
   - {fileID: 1262653654}
@@ -3651,8 +3641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 1263052929}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!1 &1284461808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 783cf6e5c38d5c543841c0bce0025508,
@@ -3672,8 +3660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 1284461812}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &1284461812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4380,8 +4366,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 1477673104}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &1477673104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5393,8 +5377,7 @@ MonoBehaviour:
   m_isFrontUp: 0
   m_maxCardAmount: 0
   m_Cards: []
-  m_isSelectable: 0
-  slot: {fileID: 2034968012}
+  m_TopSlot: {fileID: 2034968012}
 --- !u!1 &1712895738
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,8 +6458,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 1989653068}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &1989653068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6690,8 +6671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 2080924468}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!1 &2090363462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 783cf6e5c38d5c543841c0bce0025508,
@@ -6711,8 +6690,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CardData: {fileID: 2090363465}
-  m_isSelectable: 0
-  m_isSelected: 0
 --- !u!114 &2090363465
 MonoBehaviour:
   m_ObjectHideFlags: 0

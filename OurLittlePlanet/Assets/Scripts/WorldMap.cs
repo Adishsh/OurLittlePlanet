@@ -14,6 +14,10 @@ public class WorldMap : MonoBehaviour
         BuildingSlots[buildingSlotIndex].Build(card);
     }
 
+    public void SetSelectable(bool isSelectable)
+    {
+
+    }
     
     public int GetEndTurnPolution()
     {

@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private Card selectedCard;
+    private Slot selectedSlot;
     private GameState gameState;
 
    [SerializeField] int Money = 1000;
@@ -30,13 +30,20 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     {
         SetListeners();
-        gameState = GameState.Drawing;
+        SetGameState(GameState.Drawing);
         SetUpGame();
+    }
+
+    private void SetGameState(GameState newState)
+    {
+        Board.SetDrwaingSelectable(newState == GameState.Drawing);
+        Board.SetPlayingSelectable(newState == GameState.PlayingCards);
+        gameState = newState;
     }
 
     private void SetListeners()
     {
-        SelectCardListener = new UnityAction<Slot> (SelectCard);
+        SelectCardListener = new UnityAction<Slot> (SelectHandSlot);
         BuyCardListener = new UnityAction<Slot>(BuyCard);
         DrawCardsListener = new UnityAction(DrawCardsToHand);
         EndTurnListener = new UnityAction(EndTurn);
@@ -52,74 +59,86 @@ public class GameManager : MonoBehaviour
 
     private void BuyCard(Slot slot)
     {
-        if(!slot.card)
+        Card card = slot.card;
+        if(!card)
         {
-            Debug.LogError($"error select card {slot.card}");
+            Debug.LogError($"error buy card {card}");
             return;
         }
-        Money = Money - slot.card.m_CardData.m_Cost;
-        display.SetMoney(Money);
-        Board.BuyCard(slot.card);
+        int cost = card.m_CardData.m_Cost;
+        if (Money > cost)
+        {
+            Money = Money - cost;
+            display.SetMoney(Money);
+            Board.BuyCard(slot);
+        }
     }
 
-    private void SelectCard(Slot slot)
+    private void SelectHandSlot(Slot slot)
     {
-        if(!slot.card)
+        Card card =slot.card;
+        if(!card)
         {
-            Debug.LogError($"error select card {slot.card}");
+            Debug.LogError($"error select card {card}");
             return;
         }
         if(gameState != GameState.PlayingCards)
         {
+            Debug.LogError($"hand is selectable not in playing mode");
             return;
         }
         
-        if(selectedCard != null)
+        if(selectedSlot != null)
         {
-            selectedCard.UnselectCard();
+            selectedSlot.SelectSlot(false);
         }
-        selectedCard = slot.card;
-        selectedCard?.SelectCard();
+        selectedSlot = slot;
+        selectedSlot.SelectSlot(true);
+        Board.SetBuildSelectable(true);
     }
 
-    private void UnSelectCard()
+    private void UnSelectSlot()
     {
-        if(selectedCard)
+        if(selectedSlot)
         {
-            selectedCard.UnselectCard();
-            selectedCard = null;
+            selectedSlot.SelectSlot(false);
+            Board.SetBuildSelectable(false);
+            selectedSlot = null;
         }
     }
 
     private void BuildCard(int selectedBuildingSlot)
     {
-        if(selectedCard != null)
+        if(selectedSlot != null)
         {
-            Board.BuildCard(selectedCard, selectedBuildingSlot);
-            UnSelectCard();
+            Board.BuildCard(selectedSlot, selectedBuildingSlot);
+            UnSelectSlot();
         }
     }
 
     private void DrawCardsToHand()
     {
-        if(gameState == GameState.Drawing)
+        if(gameState != GameState.Drawing)
         {
-            Board.DrawCardToHand(3);
+            Debug.LogError("not in drawing mode");
+            return;
         }
-        gameState = GameState.PlayingCards;
+        SetGameState(GameState.PlayingCards);
+        Board.DrawCardToHand(3);
     }
 
     private void EndTurn()
     {
-        if(gameState == GameState.PlayingCards)
+        if(gameState != GameState.PlayingCards)
         {
-            Debug.Log("end turn pressed");
-            Board.DiscardHand();
-            EndTurnCalculation();
-            UnSelectCard();
-            ActivateEvents();
-            gameState = GameState.Drawing;
+            Debug.LogError("not in playing mode");
+            return;
         }
+        Board.DiscardHand();
+        EndTurnCalculation();
+        UnSelectSlot();
+        ActivateEvents();
+        SetGameState(GameState.Drawing);
     }
 
     private void EndTurnCalculation()

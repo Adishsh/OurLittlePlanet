@@ -9,9 +9,13 @@ public class CardsCollection : MonoBehaviour
     [SerializeField] protected int m_maxCardAmount;
     [SerializeField] protected List<Card> m_Cards;
 
-    public bool m_isSelectable;
+    protected bool m_isSelectable;
     public int CardsAmount => m_Cards.Count;
 
+    public void SetSelectable(bool isSelectable)
+    {
+        m_isSelectable = isSelectable;
+    }
     public void Shuffle()
     {
         for (int i = 0; i < m_Cards.Count; i++) 
@@ -48,6 +52,11 @@ public class CardsCollection : MonoBehaviour
         Card givenCard = m_Cards[index];
         RemoveCards(index);
         return givenCard;
+    }
+
+    protected virtual Card GetTopCard()
+    {
+        return CardsAmount>0 ? m_Cards[CardsAmount -1]: null;
     }
  
     public void Clear()

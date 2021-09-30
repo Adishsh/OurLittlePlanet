@@ -15,10 +15,13 @@ public class Hand : CardsCollection
         }
     }
 
-    public Card DrawCard(Card card)
+    public Card DrawCard(Slot slot)
     {
-            base.DrawCard(GetCardIndex(card));
-            return card;
+        Card card = slot.card;
+        slot.SetCard(null, false);
+        slot.gameObject.SetActive(false);
+        base.DrawCard(GetCardIndex(card));
+        return card;
     }
 
     private Slot CreateNewSlot()
@@ -43,20 +46,26 @@ public class Hand : CardsCollection
         {
             return;
         }
-        card.MoveCardToNewSlot(CreateNewSlot());
+        Slot slot = CreateNewSlot();
+        slot.SetCard(card);
         base.AddCard(card);
     }
 
     public List<Card> RemoveAllCards()
     {
         var cards = m_Cards;
+        foreach(Slot slot in slots)
+        {         
+            slot.SetCard(null, false);
+            slot.gameObject.SetActive(false);
+        }
         base.Clear();
         return cards;
     }
 
     private void SelectHandSlot(Slot slot)
     {
-        if(slot.card != null)
+        if(slot.card != null && m_isSelectable)
         {
             EventManager.instance.SelectCard.Invoke(slot);
         }

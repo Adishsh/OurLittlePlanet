@@ -9,9 +9,25 @@ public class Board : MonoBehaviour
    [SerializeField] Deck m_Deck;
    [SerializeField] Hand m_Hand;
    [SerializeField] Discard m_Discard;
-   [SerializeField] CardsCollection m_Market;
+   [SerializeField] Market m_Market;
    [SerializeField] WorldMap m_Map;
 
+    public void SetDrwaingSelectable(bool isSelectable)
+    {
+        m_Deck.SetSelectable(isSelectable);
+    }
+
+    public void SetPlayingSelectable(bool isSelectable)
+    {
+        m_Hand.SetSelectable(isSelectable);
+        m_Market.SetSelectable(isSelectable);
+        m_Hand.SetSelectable(isSelectable);
+    }
+
+    public void SetBuildSelectable(bool isSelectable)
+    {
+        m_Map.SetSelectable(isSelectable);
+    }
 
     public void DrawCardToHand(int cardsToDraw = 1)
     {
@@ -26,11 +42,11 @@ public class Board : MonoBehaviour
         }
     }
 
-    public void BuildCard(Card card, int mapIndex = 0)
+    public void BuildCard(Slot slot, int mapIndex = 0)
     {
+        Card card = m_Hand.DrawCard(slot);
         if(card != null)
         {
-            m_Hand.DrawCard(card);
             m_Map.BuildCard(mapIndex, card);
             m_Discard.AddCard(card);
         }
@@ -59,8 +75,10 @@ public class Board : MonoBehaviour
         Debug.Log($"RefilDeck to {m_Deck.CardsAmount}");
     }
 
-    public void BuyCard(Card card)
+    public void BuyCard(Slot slot)
     {
+        Card card= slot.card;
+        m_Market.DrawCard(slot);
         m_Discard.AddCard(card);
         Debug.Log($"Discard {card}");
     }

@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class Discard : CardsCollection
 {
-    [SerializeField] Slot slot;
+    [SerializeField] Slot m_TopSlot;
 
     public override void AddCard(Card card)
     {
-        card.MoveCardToNewSlot(slot);
+        m_TopSlot.SetCard(card);
         base.AddCard(card);
     }
 
     public List<Card> ShuffleAndGetCards()
     {
-        Debug.Log($"shuffle {m_Cards[0]}");
-
         base.Shuffle();
-        Debug.Log($"shuffle {m_Cards[0]}");
-
         var cards = m_Cards;
         m_Cards = new List<Card>();
+        m_TopSlot.SetCard(null, false);
         return cards;
     }
 }
