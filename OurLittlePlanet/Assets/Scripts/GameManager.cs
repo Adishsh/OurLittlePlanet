@@ -5,20 +5,15 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    private Board Board;
     private Card selectedCard;
     private GameState gameState;
 
-   [SerializeField] CardsCollection EventDeck;
-   [SerializeField] Deck Deck;
-   [SerializeField] Hand Hand;
-   [SerializeField] Discard Discard;
-   [SerializeField] CardsCollection Market;
-   [SerializeField] WorldMap Map;
    [SerializeField] int Money = 1000;
    [SerializeField] int Population = 1000;   
    [SerializeField] int Polution = 0;
    [SerializeField] StatsDisplay display;
+   [SerializeField] private Board Board;
+
     enum GameState
     {
         Drawing,
@@ -26,15 +21,14 @@ public class GameManager : MonoBehaviour
         PlayingCards,
         EndOfTurn,
     }
-    private UnityAction<Card> SelectCardListener;
-    private UnityAction<Card> BuyCardListener;
+    private UnityAction<Slot> SelectCardListener;
+    private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
     private UnityAction EndTurnListener;
     private UnityAction<int> BuildListener;
 
     private void Awake() 
     {
-        Board = new Board(EventDeck, Deck, Hand, Discard, Market, Map);
         SetListeners();
         gameState = GameState.Drawing;
         SetUpGame();
@@ -42,8 +36,8 @@ public class GameManager : MonoBehaviour
 
     private void SetListeners()
     {
-        SelectCardListener = new UnityAction<Card> (SelectCard);
-        BuyCardListener = new UnityAction<Card>(BuyCard);
+        SelectCardListener = new UnityAction<Slot> (SelectCard);
+        BuyCardListener = new UnityAction<Slot>(BuyCard);
         DrawCardsListener = new UnityAction(DrawCardsToHand);
         EndTurnListener = new UnityAction(EndTurn);
         BuildListener = new UnityAction<int>(BuildCard);
@@ -56,15 +50,25 @@ public class GameManager : MonoBehaviour
     
     }
 
-    private void BuyCard(Card card)
+    private void BuyCard(Slot slot)
     {
-        Money = Money - card.m_CardData.m_Cost;
+        if(!slot.card)
+        {
+            Debug.LogError($"error select card {slot.card}");
+            return;
+        }
+        Money = Money - slot.card.m_CardData.m_Cost;
         display.SetMoney(Money);
-        Board.BuyCard(card);
+        Board.BuyCard(slot.card);
     }
 
-    private void SelectCard(Card card)
+    private void SelectCard(Slot slot)
     {
+        if(!slot.card)
+        {
+            Debug.LogError($"error select card {slot.card}");
+            return;
+        }
         if(gameState != GameState.PlayingCards)
         {
             return;
@@ -74,17 +78,25 @@ public class GameManager : MonoBehaviour
         {
             selectedCard.UnselectCard();
         }
-        selectedCard = card;
+        selectedCard = slot.card;
+        selectedCard?.SelectCard();
+    }
+
+    private void UnSelectCard()
+    {
+        if(selectedCard)
+        {
+            selectedCard.UnselectCard();
+            selectedCard = null;
+        }
     }
 
     private void BuildCard(int selectedBuildingSlot)
     {
-        Debug.Log($" bc1: {selectedCard} +{selectedBuildingSlot}");
-
         if(selectedCard != null)
         {
             Board.BuildCard(selectedCard, selectedBuildingSlot);
-            SelectCard(null);
+            UnSelectCard();
         }
     }
 
@@ -104,8 +116,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("end turn pressed");
             Board.DiscardHand();
             EndTurnCalculation();
-            SelectCard(null);
-            ActivateEvent();
+            UnSelectCard();
+            ActivateEvents();
             gameState = GameState.Drawing;
         }
     }
@@ -116,15 +128,13 @@ public class GameManager : MonoBehaviour
         display.SetPolution(Polution);
     }
     
-        
     private void SetUpGame()
     {
-
         display.SetMoney(Money);
         display.SetPolution(Polution);
     }
     
-    private void ActivateEvent()
+    private void ActivateEvents()
     {
 
     }

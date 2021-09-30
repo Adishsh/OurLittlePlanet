@@ -404,7 +404,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 33820485}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &87187457
+--- !u!114 &87187454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 87187453}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad4758eaf78a9643888341ecbb3634e, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -423,7 +423,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 19969699}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &102306973
+--- !u!114 &102306970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 102306969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad4758eaf78a9643888341ecbb3634e, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
+  m_Color: {r: 0.83921576, g: 0.43137258, b: 0.7294118, a: 0}
   m_Pollution: 10
   m_Resources: 0
   m_Cost: 10
@@ -599,12 +599,12 @@ MonoBehaviour:
   m_isPile: 0
   m_isFrontUp: 0
   m_maxCardAmount: 5
-  m_isSelectable: 0
   m_Cards: []
+  m_isSelectable: 0
   slots:
-  - {fileID: 580056744}
-  - {fileID: 102306973}
-  - {fileID: 87187457}
+  - {fileID: 580056741}
+  - {fileID: 102306970}
+  - {fileID: 87187454}
 --- !u!1 &190908602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.5137255, g: 0.85098046, b: 1, a: 0}
+  m_Color: {r: 0.5137255, g: 0.85098046, b: 1, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 421736542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1477673103}
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.41509432, g: 0.11121393, b: 0.11121393, a: 1}
+  m_Color: {r: 0.4156863, g: 0.10980393, b: 0.10980393, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.18039216, g: 0.18039216, b: 0.18039216, a: 0}
+  m_Color: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -1604,7 +1604,6 @@ MonoBehaviour:
   m_isPile: 1
   m_isFrontUp: 0
   m_maxCardAmount: 5
-  m_isSelectable: 0
   m_Cards:
   - {fileID: 1263052930}
   - {fileID: 483895120}
@@ -1614,6 +1613,7 @@ MonoBehaviour:
   - {fileID: 454890317}
   - {fileID: 2080924469}
   - {fileID: 720939167}
+  m_isSelectable: 0
   slot: {fileID: 618233722}
 --- !u!1 &542482237
 GameObject:
@@ -1811,7 +1811,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2018363583}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &580056744
+--- !u!114 &580056741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 580056740}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad4758eaf78a9643888341ecbb3634e, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -2053,7 +2053,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1677964531}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &617334258
+--- !u!114 &617334255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2062,7 +2062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 617334254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad4758eaf78a9643888341ecbb3634e, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 618233721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e0ac4f14ff692a4db05787ac11e91f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -2229,8 +2229,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 542482237}
   index: 3
-  AdjasentSlots: []
-  cardData: {fileID: 0}
 --- !u!64 &670128709
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2405,7 +2403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.028947307, g: 0.01960784, b: 0.3882353, a: 1}
+  m_Color: {r: 0.027450982, g: 0.019607844, b: 0.38823533, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -2460,7 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.5372549, g: 0.95294124, b: 0, a: 0}
+  m_Color: {r: 0.5372549, g: 0.95294124, b: 0, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -2479,6 +2477,7 @@ GameObject:
   - component: {fileID: 766950375}
   - component: {fileID: 766950374}
   - component: {fileID: 766950373}
+  - component: {fileID: 766950377}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2570,6 +2569,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &766950377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766950372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9f7a6928a524a47bc585d0da3ff246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventDeck: {fileID: 0}
+  m_Deck: {fileID: 537651732}
+  m_Hand: {fileID: 176859777}
+  m_Discard: {fileID: 1711319975}
+  m_Market: {fileID: 0}
+  m_Map: {fileID: 1676516740}
 --- !u!1 &801578839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 3574f1d8be69d1943ac3370637e01405,
@@ -2591,7 +2608,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 801578839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 1989653067}
@@ -2771,8 +2788,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 1712895738}
   index: 1
-  AdjasentSlots: []
-  cardData: {fileID: 0}
 --- !u!4 &856363905
 Transform:
   m_ObjectHideFlags: 0
@@ -2872,7 +2887,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 879178960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 2090363464}
@@ -3008,8 +3023,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 646098286}
   index: 2
-  AdjasentSlots: []
-  cardData: {fileID: 0}
 --- !u!64 &1045522185
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3463,6 +3476,7 @@ GameObject:
   - component: {fileID: 1200450543}
   - component: {fileID: 1200450542}
   - component: {fileID: 1200450541}
+  - component: {fileID: 1200450544}
   m_Layer: 5
   m_Name: MarketSlots
   m_TagString: Untagged
@@ -3557,6 +3571,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200450539}
   m_CullTransparentMesh: 1
+--- !u!114 &1200450544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200450539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 421736543}
+  - {fileID: 1262653654}
+  - {fileID: 879178962}
+  - {fileID: 801578841}
 --- !u!1 &1262653652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 3574f1d8be69d1943ac3370637e01405,
@@ -3578,7 +3609,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1262653652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b671cb524f297c4b858aea3cdc9c570, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 140480963}
@@ -3600,7 +3631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
+  m_Color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -3655,7 +3686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.6784314, g: 0.5137255, b: 1, a: 0}
+  m_Color: {r: 0.6784314, g: 0.5137255, b: 1, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -3836,16 +3867,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48af86ec12043334fa78c0477d89317d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventDeck: {fileID: 0}
-  Deck: {fileID: 537651732}
-  Hand: {fileID: 176859777}
-  Discard: {fileID: 1711319975}
-  Market: {fileID: 0}
-  Map: {fileID: 1676516740}
   Money: 1000
   Population: 1000
   Polution: 0
   display: {fileID: 1758655551}
+  Board: {fileID: 766950377}
 --- !u!4 &1361728085
 Transform:
   m_ObjectHideFlags: 0
@@ -4368,7 +4394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
+  m_Color: {r: 0.83921576, g: 0.43137258, b: 0.7294118, a: 0}
   m_Pollution: 10
   m_Resources: 0
   m_Cost: 10
@@ -4860,7 +4886,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 203837522}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1599657686
+--- !u!114 &1599657683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4869,7 +4895,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1599657682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dad4758eaf78a9643888341ecbb3634e, type: 3}
+  m_Script: {fileID: 11500000, guid: 83f7fd94a5e98d94b884a380938cb6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
@@ -5366,8 +5392,8 @@ MonoBehaviour:
   m_isPile: 1
   m_isFrontUp: 0
   m_maxCardAmount: 0
-  m_isSelectable: 0
   m_Cards: []
+  m_isSelectable: 0
   slot: {fileID: 2034968012}
 --- !u!1 &1712895738
 GameObject:
@@ -6137,8 +6163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 1455346634}
   index: 0
-  AdjasentSlots: []
-  cardData: {fileID: 0}
 --- !u!1001 &1863327164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6465,7 +6489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
+  m_Color: {r: 0.83921576, g: 0.43137258, b: 0.7294118, a: 0}
   m_Pollution: 10
   m_Resources: 0
   m_Cost: 10
@@ -6646,7 +6670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.37297463, g: 0.06276252, b: 0.4056604, a: 1}
+  m_Color: {r: 0.37254903, g: 0.0627451, b: 0.4039216, a: 0}
   m_Pollution: 0
   m_Resources: 0
   m_Cost: 0
@@ -6701,7 +6725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf28f33df0c5643935fa078594347c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.5137255, b: 0.8705883, a: 0}
+  m_Color: {r: 0.83921576, g: 0.43137258, b: 0.7294118, a: 0}
   m_Pollution: 10
   m_Resources: 0
   m_Cost: 10

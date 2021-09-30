@@ -7,13 +7,13 @@ public class EventManager : MonoBehaviour {
 
     public UnityEvent DrawCards; 
     public UnityEvent EndTurn; 
-    public UnityEvent<Card> BuyCard;
-    public UnityEvent<Card> SelectCard;
+    public UnityEvent<Slot> BuyCard;
+    public UnityEvent<Slot> SelectCard;
     public UnityEvent<int> BuildCard;
 
 
-    private UnityAction<Card> SelectCardListener;
-    private UnityAction<Card> BuyCardListener;
+    private UnityAction<Slot> SelectCardListener;
+    private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
     private UnityAction EndTurnListener;
     private UnityAction<int> BuildListener;
@@ -46,8 +46,8 @@ public class EventManager : MonoBehaviour {
     {
         DrawCards = new UnityEvent();
         EndTurn = new UnityEvent(); 
-        BuyCard = new UnityEvent<Card>();
-        SelectCard = new UnityEvent<Card>();
+        BuyCard = new UnityEvent<Slot>();
+        SelectCard = new UnityEvent<Slot>();
         BuildCard = new UnityEvent<int>();
     }
 

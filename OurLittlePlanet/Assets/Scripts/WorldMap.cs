@@ -21,9 +21,9 @@ public class WorldMap : MonoBehaviour
         foreach(var slot in BuildingSlots)
         {
             Debug.Log("GetEndTurnPolution");
-            if(slot.cardData)
+            if(slot.m_CardData)
             {
-                sum +=  slot.cardData.m_Pollution;
+                sum +=  slot.m_CardData.m_Pollution;
             Debug.Log(sum);
 
             }

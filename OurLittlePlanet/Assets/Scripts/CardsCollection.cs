@@ -7,10 +7,10 @@ public class CardsCollection : MonoBehaviour
     [SerializeField] private bool m_isPile;
     [SerializeField] private bool m_isFrontUp;
     [SerializeField] protected int m_maxCardAmount;
+    [SerializeField] protected List<Card> m_Cards;
 
     public bool m_isSelectable;
     public int CardsAmount => m_Cards.Count;
-    [SerializeField] protected List<Card> m_Cards;
 
     public void Shuffle()
     {

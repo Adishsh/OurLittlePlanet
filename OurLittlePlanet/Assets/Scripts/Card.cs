@@ -14,10 +14,14 @@ public class Card : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponent<Image>().sprite = m_CardData.m_Sprite;
+        //gameObject.GetComponent<Image>().color = m_CardData.m_Color;
+
         var parent =  gameObject.transform.parent;
         slot = parent.GetComponent<Slot>();
-        //if( m_CardData.color != null)
-       // gameObject.GetComponent<Image>().material.color = m_CardData.color;
+        if (!slot)
+        {
+            Debug.LogError("Card parent should be Slot");
+        }
     }
 
     public void MoveCardToNewSlot(Slot newParent)

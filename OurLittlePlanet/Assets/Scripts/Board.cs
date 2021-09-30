@@ -4,37 +4,25 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-   CardsCollection EventDeck;
-   Deck Deck;
-   Hand Hand;
-   Discard Discard;
-   CardsCollection Market;
-   WorldMap Map;
 
-   int PolutionRate;
-   int Money;
-   int Enenrgy;
+   [SerializeField] CardsCollection m_EventDeck;
+   [SerializeField] Deck m_Deck;
+   [SerializeField] Hand m_Hand;
+   [SerializeField] Discard m_Discard;
+   [SerializeField] CardsCollection m_Market;
+   [SerializeField] WorldMap m_Map;
 
-    public Board(CardsCollection eventDeck,Deck deck,Hand hand, Discard discard, CardsCollection market, WorldMap map)
-    {
-        EventDeck = eventDeck;
-        Deck =deck;
-Hand= hand;
-Discard = discard;
-Market = market;
-Map = map;
-    }
+
     public void DrawCardToHand(int cardsToDraw = 1)
     {
         for(int i =0; i< cardsToDraw; i++)
         {
-            if(Deck.CardsAmount <= 0)
+            if(m_Deck.CardsAmount <= 0)
             {
                 RefilDeck();
             }
-
-            Card cardToHand = Deck.DrawCard();
-            Hand.AddCard(cardToHand);
+            Card cardToHand = m_Deck.DrawCard();
+            m_Hand.AddCard(cardToHand);
         }
     }
 
@@ -42,9 +30,9 @@ Map = map;
     {
         if(card != null)
         {
-            Hand.DrawCard(card);
-            Map.BuildCard(mapIndex, card);
-            Discard.AddCard(card);
+            m_Hand.DrawCard(card);
+            m_Map.BuildCard(mapIndex, card);
+            m_Discard.AddCard(card);
         }
     }
 
@@ -52,34 +40,34 @@ Map = map;
     public void DiscardHand()
     {
         Debug.Log("DiscardHand");
-        var cards = Hand.RemoveAllCards();
+        var cards = m_Hand.RemoveAllCards();
 
         foreach (Card card in cards)
         {
-            Discard.AddCard(card);
+            m_Discard.AddCard(card);
         }
     }
 
     public void RefilDeck()
     {
-        var cards = Discard.ShuffleAndGetCards();
+        var cards = m_Discard.ShuffleAndGetCards();
     
         foreach(Card  card in cards)
         {
-            Deck.AddCard(card);
+            m_Deck.AddCard(card);
         }
-        Debug.Log($"RefilDeck to {Deck.CardsAmount}");
+        Debug.Log($"RefilDeck to {m_Deck.CardsAmount}");
     }
 
     public void BuyCard(Card card)
     {
-        Discard.AddCard(card);
+        m_Discard.AddCard(card);
         Debug.Log($"Discard {card}");
     }
 
     public int GetEndTurnPolution()
     {
-        return Map.GetEndTurnPolution();
+        return m_Map.GetEndTurnPolution();
      // see every card
      // return polution sum   
     }

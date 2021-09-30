@@ -7,6 +7,14 @@ public class Hand : CardsCollection
     Card topCard;
     [SerializeField] List<Slot> slots;
 
+    private void Awake() 
+    {
+        foreach(Slot slot in slots)
+        {
+            slot.OnSelectSlotCard = () => SelectHandSlot(slot);
+        }
+    }
+
     public Card DrawCard(Card card)
     {
             base.DrawCard(GetCardIndex(card));
@@ -44,5 +52,13 @@ public class Hand : CardsCollection
         var cards = m_Cards;
         base.Clear();
         return cards;
+    }
+
+    private void SelectHandSlot(Slot slot)
+    {
+        if(slot.card != null)
+        {
+            EventManager.instance.SelectCard.Invoke(slot);
+        }
     }
 }
