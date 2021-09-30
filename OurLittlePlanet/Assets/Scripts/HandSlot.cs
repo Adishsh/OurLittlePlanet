@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandSlot : Slot
 {
-   public override void SelectSlotCard()
+   protected override void SelectSlotCard()
 {
     if(card != null)
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MarketSlot : Slot
 {
-    public override void SelectSlotCard()
+    protected override void SelectSlotCard()
     {
         GameManager.Instance.BuyCard(card);
     }

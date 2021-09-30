@@ -77,5 +77,10 @@ Map = map;
         Debug.Log($"Discard {card}");
     }
 
-    
+    public int GetEndTurnPolution()
+    {
+        return Map.GetEndTurnPolution();
+     // see every card
+     // return polution sum   
+    }
 }

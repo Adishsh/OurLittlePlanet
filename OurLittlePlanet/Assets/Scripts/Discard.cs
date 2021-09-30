@@ -8,14 +8,17 @@ public class Discard : CardsCollection
 
     public override void AddCard(Card card)
     {
-        Debug.Log($"add {card} to discard {slot}");
         card.MoveCardToNewSlot(slot);
         base.AddCard(card);
     }
 
     public List<Card> ShuffleAndGetCards()
     {
+        Debug.Log($"shuffle {m_Cards[0]}");
+
         base.Shuffle();
+        Debug.Log($"shuffle {m_Cards[0]}");
+
         var cards = m_Cards;
         m_Cards = new List<Card>();
         return cards;
