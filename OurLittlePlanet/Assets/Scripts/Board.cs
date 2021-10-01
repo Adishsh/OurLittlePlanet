@@ -12,6 +12,11 @@ public class Board : MonoBehaviour
    [SerializeField] Market m_Market;
    [SerializeField] WorldMap m_Map;
 
+    public void InitBoard()
+    {
+
+    }
+
     public void SetDrwaingSelectable(bool isSelectable)
     {
         m_Deck.SetSelectable(isSelectable);
@@ -33,12 +38,12 @@ public class Board : MonoBehaviour
     {
         for(int i =0; i< cardsToDraw; i++)
         {
-            if(m_Deck.CardsAmount <= 0)
+            Card cardToHand = m_Deck.DrawCard();
+            m_Hand.AddCard(cardToHand);
+            if(m_Deck.CardsAmount == 0)
             {
                 RefilDeck();
             }
-            Card cardToHand = m_Deck.DrawCard();
-            m_Hand.AddCard(cardToHand);
         }
     }
 

@@ -5,9 +5,11 @@ using UnityEngine;
 public class Market : CardsCollection
 {
     [SerializeField] private List<Slot> slots;
+    [SerializeField] List<CardData> m_CardsData;
     
-    private void Awake() 
+    private void Start() 
     {
+        base.InitCardsDisplayed(m_CardsData, slots);
         foreach(var slot in slots)
         {
             slot.OnSelectSlotCard = () => SelectMarketCard(slot);

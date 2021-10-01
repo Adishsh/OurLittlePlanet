@@ -5,12 +5,15 @@ using UnityEngine;
 public class Deck : CardsCollection
 {
     [SerializeField] Slot m_TopSlot;
-
-    private void Awake() 
+    [SerializeField] List<CardData> m_CardsData;
+    
+    private void Start() 
     {
+        base.InitCardsPiled(m_CardsData, m_TopSlot);
         m_TopSlot.SetCard(base.GetTopCard(), false);
         m_TopSlot.OnSelectSlotCard = SelectDeckSlot;
     }
+
     public Card DrawCard()
     {
         Card card = base.DrawCard(CardsAmount -1);

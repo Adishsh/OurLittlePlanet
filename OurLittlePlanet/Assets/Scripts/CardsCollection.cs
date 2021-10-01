@@ -8,9 +8,37 @@ public class CardsCollection : MonoBehaviour
     [SerializeField] private bool m_isFrontUp;
     [SerializeField] protected int m_maxCardAmount;
     [SerializeField] protected List<Card> m_Cards;
+    [SerializeField] private Card cardPrefab;
 
     protected bool m_isSelectable;
     public int CardsAmount => m_Cards.Count;
+
+    protected void InitCardsPiled(List<CardData> cardsdata, Slot slot)
+    {
+        foreach(CardData data in cardsdata)
+        {
+            InitCard(data, slot);
+        }
+    }
+
+    protected void InitCardsDisplayed(List<CardData> cardsdata, List<Slot> slots)
+    {
+        for( int i=0; i< cardsdata.Count; i++)
+        {
+            InitCard(cardsdata[i], slots[i]);
+        }
+    }
+
+    private void InitCard(CardData cardData, Slot slot)
+    {
+        Transform ParentTransform = slot.gameObject.transform;
+
+        Debug.Log($"init card{cardData.m_CardName} in {ParentTransform}");
+        Card card = Instantiate(cardPrefab, ParentTransform.position, ParentTransform.rotation, ParentTransform);
+        card.SetUpCard(cardData);
+        slot.SetCard(card, false);
+        m_Cards.Add(card);
+    }
 
     public void SetSelectable(bool isSelectable)
     {

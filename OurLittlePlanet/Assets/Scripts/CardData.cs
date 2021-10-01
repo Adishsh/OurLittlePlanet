@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "CardData", menuName = "ScriptableObjects/CardData", order = 1)]
+
 [System.Serializable]
-public class CardData : MonoBehaviour
+public class CardData : ScriptableObject
 {
-    [SerializeField] public Color m_Color;
+    public Color m_Color;
+    [SerializeField] public string m_Description;
+    [SerializeField] public string m_CardName;
+    [SerializeField] public Sprite m_Sprite;
+    [SerializeField] public Building m_Building;
     [SerializeField] public int m_Pollution;
     [SerializeField] public int m_Resources;
     [SerializeField] public int m_Cost;
-    [SerializeField] public Sprite m_Sprite;
-    [SerializeField] public string m_Description;
-    //[SerializeField] public string m_Name;
-    [SerializeField] public GameObject m_Building;
 }
