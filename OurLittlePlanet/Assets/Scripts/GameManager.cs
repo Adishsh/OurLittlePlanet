@@ -143,8 +143,11 @@ public class GameManager : MonoBehaviour
 
     private void EndTurnCalculation()
     {
-        Polution = Board.GetEndTurnPolution();
+        CardImpact impact= Board.GetEndTurnImpact();
+        Polution = impact.polution;
+        Population = impact.population;
         display.SetPolution(Polution);
+        display.SetPopulation(Population);
     }
     
     private void SetUpGame()

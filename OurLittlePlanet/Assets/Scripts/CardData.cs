@@ -13,4 +13,6 @@ public class CardData : ScriptableObject
     [SerializeField] public int m_Pollution;
     [SerializeField] public int m_Resources;
     [SerializeField] public int m_Cost;
+    [SerializeField] public SimpleCardAction m_Action;
+
 }

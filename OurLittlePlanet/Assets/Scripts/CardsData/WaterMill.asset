@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
-  m_Name: CardDataPink
+  m_Name: WaterMill
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.83921576, g: 0.43137258, b: 0.7294118, a: 1}
-  m_Description: pink
-  m_CardName: pink
+  m_Color: {r: 1, g: 0.47411847, b: 0, a: 1}
+  m_Description: Watermill
+  m_CardName: Watermill
   m_Sprite: {fileID: 21300000, guid: 89fd3282f0f1b394a96b18dd9bd26ce3, type: 3}
   m_Building: {fileID: -5533609999644646071, guid: 1a4f53a197b7db942905213d6a930cdd,
     type: 3}
   m_Pollution: 0
-  m_Resources: 0
-  m_Cost: 0
+  m_Resources: 2
+  m_Cost: 10

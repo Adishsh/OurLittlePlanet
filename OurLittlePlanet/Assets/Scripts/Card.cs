@@ -17,8 +17,6 @@ public class Card : MonoBehaviour
 
     private void Start()
     {
-        //gameObject.GetComponent<Image>().sprite = m_CardData.m_Sprite;
-        //gameObject.GetComponent<Image>().color = m_CardData.m_Color;
         var parent =  gameObject.transform.parent;
     }
 
@@ -48,5 +46,7 @@ public class Card : MonoBehaviour
         }
         Image image = gameObject.GetComponent<Image>();
         image.color = m_CardData.m_Color;
+        cardData.m_Action = new SimpleCardAction();
     }
+
 }

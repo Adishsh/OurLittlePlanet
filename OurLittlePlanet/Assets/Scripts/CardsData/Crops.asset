@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
-  m_Name: CardDataBlack
+  m_Name: Crops
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.3773585, g: 0.33962265, b: 0.33962265, a: 1}
-  m_Description: black
-  m_CardName: black
-  m_Sprite: {fileID: 21300000, guid: 89fd3282f0f1b394a96b18dd9bd26ce3, type: 3}
-  m_Building: {fileID: -5533609999644646071, guid: 1a4f53a197b7db942905213d6a930cdd,
+  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Description: Crops
+  m_CardName: Crops
+  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Building: {fileID: 4245059071356226690, guid: 6bb835dc512d12b4185065f60a616199,
     type: 3}
   m_Pollution: 0
-  m_Resources: 0
+  m_Resources: 1
   m_Cost: 0

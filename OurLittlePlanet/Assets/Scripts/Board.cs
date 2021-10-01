@@ -88,9 +88,9 @@ public class Board : MonoBehaviour
         Debug.Log($"Discard {card}");
     }
 
-    public int GetEndTurnPolution()
+    public CardImpact GetEndTurnImpact()
     {
-        return m_Map.GetEndTurnPolution();
+        return m_Map.GetEndTurnImpact();
      // see every card
      // return polution sum   
     }

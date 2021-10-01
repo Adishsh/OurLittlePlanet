@@ -19,20 +19,22 @@ public class WorldMap : MonoBehaviour
 
     }
     
-    public int GetEndTurnPolution()
+    public CardImpact GetEndTurnImpact()
     {
-        int sum = 0;
+        CardImpact totalImpact = new CardImpact();
         foreach(var slot in BuildingSlots)
         {
             Debug.Log("GetEndTurnPolution");
             if(slot.m_CardData)
             {
-                sum +=  slot.m_CardData.m_Pollution;
-            Debug.Log(sum);
-
+                CardImpact cardImpact = slot.GetCardCalaulation(this);
+                totalImpact.polution += cardImpact.polution;
+                totalImpact.population += cardImpact.population;
+                totalImpact.extraCardsToDraw += cardImpact.extraCardsToDraw;
+                totalImpact.eventCardsToAdd += cardImpact.eventCardsToAdd;
             }
         }
-        return sum;
+        return totalImpact;
      // see every card
      // return polution sum   
     }
