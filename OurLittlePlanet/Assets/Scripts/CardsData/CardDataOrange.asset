@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.47411847, b: 0, a: 1}
   m_Description: orange
   m_CardName: orange
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 89fd3282f0f1b394a96b18dd9bd26ce3, type: 3}
   m_Building: {fileID: -5533609999644646071, guid: 1a4f53a197b7db942905213d6a930cdd,
     type: 3}
   m_Pollution: 0

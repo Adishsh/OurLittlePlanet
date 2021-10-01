@@ -10,6 +10,7 @@ public class Card : MonoBehaviour
     [SerializeField] Text m_Cost;
     [SerializeField] Text m_Polution;
     [SerializeField] Text m_Population;
+    [SerializeField] Image m_CardImage;
 
     public CardData m_CardData{ get; private set; }
     public bool m_isFrontUp { get; private set; }
@@ -41,11 +42,11 @@ public class Card : MonoBehaviour
         m_Polution.text = cardData.m_Pollution.ToString();
         m_Population.text = cardData.m_Resources.ToString();
 
-        Image image = gameObject.GetComponent<Image>();
         if( m_CardData.m_Sprite)
         {
-            image.sprite = m_CardData.m_Sprite;
+            m_CardImage.sprite = m_CardData.m_Sprite;
         }
+        Image image = gameObject.GetComponent<Image>();
         image.color = m_CardData.m_Color;
     }
 }
