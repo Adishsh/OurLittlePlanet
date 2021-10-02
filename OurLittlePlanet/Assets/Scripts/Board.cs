@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
 
-   [SerializeField] CardsCollection m_EventDeck;
+   [SerializeField] EventDeck m_EventDeck;
    [SerializeField] Deck m_Deck;
    [SerializeField] Hand m_Hand;
    [SerializeField] Discard m_Discard;
    [SerializeField] Market m_Market;
    [SerializeField] WorldMap m_Map;
+   [SerializeField] Text m_EventText;
 
+    private EventCard m_EventCard;
+   
     public void InitBoard()
     {
-
     }
 
     public void SetDrwaingSelectable(bool isSelectable)
@@ -93,5 +96,12 @@ public class Board : MonoBehaviour
         return m_Map.GetEndTurnImpact();
      // see every card
      // return polution sum   
+    }
+
+    public void GetEvent()
+    {
+        m_EventCard = m_EventDeck.GetEventCard();
+        m_EventText.text = m_EventCard.m_EventName;
+        m_EventCard.EventAction(m_Map);
     }
 }

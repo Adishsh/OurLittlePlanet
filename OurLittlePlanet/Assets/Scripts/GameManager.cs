@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
 
     enum GameState
     {
+        StartTurn,
         Drawing,
-        Events,
         PlayingCards,
         EndOfTurn,
     }
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     {
         SetListeners();
-        SetGameState(GameState.Drawing);
+        SetGameState(GameState.StartTurn);
         SetUpGame();
     }
 
@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
         Board.SetDrwaingSelectable(newState == GameState.Drawing);
         Board.SetPlayingSelectable(newState == GameState.PlayingCards);
         gameState = newState;
+
+        if(newState == GameState.StartTurn)
+        {
+            StartTurn();
+        }
     }
 
     private void SetListeners()
@@ -56,7 +61,12 @@ public class GameManager : MonoBehaviour
         EventManager.instance.BuildCard.AddListener(BuildListener);
     
     }
-
+    private void StartTurn()
+    {
+        ActivateEvents();
+        SetGameState(GameState.Drawing);
+    }
+ 
     private void BuyCard(Slot slot)
     {
         Card card = slot.card;
@@ -137,8 +147,7 @@ public class GameManager : MonoBehaviour
         Board.DiscardHand();
         EndTurnCalculation();
         UnSelectSlot();
-        ActivateEvents();
-        SetGameState(GameState.Drawing);
+        SetGameState(GameState.StartTurn);
     }
 
     private void EndTurnCalculation()
@@ -158,7 +167,8 @@ public class GameManager : MonoBehaviour
     
     private void ActivateEvents()
     {
-
+        Board.GetEvent();
+        SetGameState(GameState.Drawing);
     }
 
     private void OnDestroy() {
