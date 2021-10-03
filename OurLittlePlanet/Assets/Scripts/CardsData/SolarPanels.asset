@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: SolarPanels
   m_EditorClassIdentifier: 
-  m_Color: {r: 1, g: 0.47411847, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.57981944, b: 0.44716978, a: 1}
   m_Description: SolarPanels
   m_CardName: SolarPanels
   m_Sprite: {fileID: 21300000, guid: 89fd3282f0f1b394a96b18dd9bd26ce3, type: 3}
