@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventCard : Card
+public class EventCard: MonoBehaviour
 {
     public string m_EventName;
-    public virtual void EventAction(WorldMap map)
+    public virtual void ActivateEvent(WorldMap map, StatsManager statsManager)
     {
+        statsManager.SetCurrentEvent(this);
         Debug.Log("did event!!");
     }
 }

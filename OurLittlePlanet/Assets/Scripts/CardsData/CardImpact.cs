@@ -6,7 +6,7 @@ using System;
 public class CardImpact
 {
     public int polution;
-    public int population;
+    public int resources;
     public int extraCardsToDraw;
     public int eventCardsToAdd;      
 }

@@ -14,7 +14,7 @@ public class StatsDisplay : MonoBehaviour
         Money.text = amount.ToString();
     }
   
-    public void SetPopulation(int amount)
+    public void SetResources(int amount)
     {
         Population.text = amount.ToString();
     }

@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 31459837}
   - component: {fileID: 31459836}
   m_Layer: 5
-  m_Name: CurrentEvent
+  m_Name: EventDeck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,12 +312,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60eef83ba2b2f18428a37ce440a2a6e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCards:
-  - {fileID: 1316589832}
-  - {fileID: 1316589832}
+  m_ActiveEventCards:
   - {fileID: 1316589832}
   - {fileID: 1890969744}
+  m_AllEventCards:
+  - {fileID: 1316589832}
   - {fileID: 1890969744}
+  m_EventText: {fileID: 72216219}
 --- !u!222 &31459837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2118,7 +2119,6 @@ MonoBehaviour:
   m_Discard: {fileID: 1711319975}
   m_Market: {fileID: 1200450544}
   m_Map: {fileID: 1676516740}
-  m_EventText: {fileID: 72216219}
 --- !u!1001 &816127534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2955,12 +2955,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf027af44344ab4aa13a86fa6fdc0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CardName: {fileID: 0}
-  m_Description: {fileID: 0}
-  m_Cost: {fileID: 0}
-  m_Polution: {fileID: 0}
-  m_Population: {fileID: 0}
-  m_CardImage: {fileID: 0}
   m_EventName: Sunny Day
 --- !u!1 &1361728083
 GameObject:
@@ -2973,6 +2967,7 @@ GameObject:
   - component: {fileID: 1361728085}
   - component: {fileID: 1361728084}
   - component: {fileID: 1361728086}
+  - component: {fileID: 1361728087}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2992,11 +2987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48af86ec12043334fa78c0477d89317d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 1000
-  Population: 1000
-  Polution: 0
-  display: {fileID: 1758655551}
-  Board: {fileID: 766950377}
+  m_StatsManager: {fileID: 1361728087}
+  m_Board: {fileID: 766950377}
 --- !u!4 &1361728085
 Transform:
   m_ObjectHideFlags: 0
@@ -3038,6 +3030,22 @@ MonoBehaviour:
   BuildCard:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1361728087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361728083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20194716da8cc9a428f788cc000edac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Display: {fileID: 1758655551}
+  m_InitMoney: 900
+  m_InitResources: 1000
+  m_InitPolution: 0
 --- !u!1 &1410957991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,12 +4578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df4742fb9077d47a52b31606313131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CardName: {fileID: 0}
-  m_Description: {fileID: 0}
-  m_Cost: {fileID: 0}
-  m_Polution: {fileID: 0}
-  m_Population: {fileID: 0}
-  m_CardImage: {fileID: 0}
   m_EventName: Rainy Day
 --- !u!1001 &2018363583
 PrefabInstance:

@@ -46,7 +46,6 @@ public class Card : MonoBehaviour
         }
         Image image = gameObject.GetComponent<Image>();
         image.color = m_CardData.m_Color;
-        cardData.m_Action = new SimpleCardAction();
     }
 
 }

@@ -7,12 +7,9 @@ public class GameManager : MonoBehaviour
 {
     private Slot selectedSlot;
     private GameState gameState;
-
-   [SerializeField] int Money = 1000;
-   [SerializeField] int Population = 1000;   
-   [SerializeField] int Polution = 0;
-   [SerializeField] StatsDisplay display;
-   [SerializeField] private Board Board;
+    
+   [SerializeField] StatsManager m_StatsManager;
+   [SerializeField] private Board m_Board;
 
     enum GameState
     {
@@ -31,13 +28,12 @@ public class GameManager : MonoBehaviour
     {
         SetListeners();
         SetGameState(GameState.StartTurn);
-        SetUpGame();
     }
 
     private void SetGameState(GameState newState)
     {
-        Board.SetDrwaingSelectable(newState == GameState.Drawing);
-        Board.SetPlayingSelectable(newState == GameState.PlayingCards);
+        m_Board.SetDrwaingSelectable(newState == GameState.Drawing);
+        m_Board.SetPlayingSelectable(newState == GameState.PlayingCards);
         gameState = newState;
 
         if(newState == GameState.StartTurn)
@@ -76,11 +72,10 @@ public class GameManager : MonoBehaviour
             return;
         }
         int cost = card.m_CardData.m_Cost;
-        if (Money > cost)
+        if (m_StatsManager.m_Money > cost)
         {
-            Money = Money - cost;
-            display.SetMoney(Money);
-            Board.BuyCard(slot);
+            m_StatsManager.AddMoney(-cost);
+            m_Board.BuyCard(slot);
         }
     }
 
@@ -104,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
         selectedSlot = slot;
         selectedSlot.SelectSlot(true);
-        Board.SetBuildSelectable(true);
+        m_Board.SetBuildSelectable(true);
     }
 
     private void UnSelectSlot()
@@ -112,7 +107,7 @@ public class GameManager : MonoBehaviour
         if(selectedSlot)
         {
             selectedSlot.SelectSlot(false);
-            Board.SetBuildSelectable(false);
+            m_Board.SetBuildSelectable(false);
             selectedSlot = null;
         }
     }
@@ -121,7 +116,7 @@ public class GameManager : MonoBehaviour
     {
         if(selectedSlot != null)
         {
-            Board.BuildCard(selectedSlot, selectedBuildingSlot);
+            m_Board.BuildCard(selectedSlot, selectedBuildingSlot);
             UnSelectSlot();
         }
     }
@@ -134,7 +129,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         SetGameState(GameState.PlayingCards);
-        Board.DrawCardToHand(3);
+        m_Board.DrawCardToHand(3);
     }
 
     private void EndTurn()
@@ -144,7 +139,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("not in playing mode");
             return;
         }
-        Board.DiscardHand();
+        m_Board.DiscardHand();
         EndTurnCalculation();
         UnSelectSlot();
         SetGameState(GameState.StartTurn);
@@ -152,22 +147,15 @@ public class GameManager : MonoBehaviour
 
     private void EndTurnCalculation()
     {
-        CardImpact impact= Board.GetEndTurnImpact();
-        Polution = impact.polution;
-        Population = impact.population;
-        display.SetPolution(Polution);
-        display.SetPopulation(Population);
+        CardImpact impact= m_Board.GetEndTurnImpact();
+        m_StatsManager.SetPolution(impact.polution);
+        m_StatsManager.SetResources(impact.resources);
     }
-    
-    private void SetUpGame()
-    {
-        display.SetMoney(Money);
-        display.SetPolution(Polution);
-    }
-    
+
     private void ActivateEvents()
     {
-        Board.GetEvent();
+        m_Board.SetNextEvent(m_StatsManager);
+        
         SetGameState(GameState.Drawing);
     }
 

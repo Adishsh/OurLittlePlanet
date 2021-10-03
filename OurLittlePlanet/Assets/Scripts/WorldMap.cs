@@ -25,11 +25,11 @@ public class WorldMap : MonoBehaviour
         foreach(var slot in BuildingSlots)
         {
             Debug.Log("GetEndTurnPolution");
-            if(slot.m_CardData)
+            if(slot.HasCardData())
             {
                 CardImpact cardImpact = slot.GetCardCalaulation(this);
                 totalImpact.polution += cardImpact.polution;
-                totalImpact.population += cardImpact.population;
+                totalImpact.resources += cardImpact.resources;
                 totalImpact.extraCardsToDraw += cardImpact.extraCardsToDraw;
                 totalImpact.eventCardsToAdd += cardImpact.eventCardsToAdd;
             }

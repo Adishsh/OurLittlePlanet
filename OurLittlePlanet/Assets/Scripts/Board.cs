@@ -12,10 +12,7 @@ public class Board : MonoBehaviour
    [SerializeField] Discard m_Discard;
    [SerializeField] Market m_Market;
    [SerializeField] WorldMap m_Map;
-   [SerializeField] Text m_EventText;
-
-    private EventCard m_EventCard;
-   
+  
     public void InitBoard()
     {
     }
@@ -98,10 +95,14 @@ public class Board : MonoBehaviour
      // return polution sum   
     }
 
-    public void GetEvent()
+    public void AddEventCardToEventDeck()
     {
-        m_EventCard = m_EventDeck.GetEventCard();
-        m_EventText.text = m_EventCard.m_EventName;
-        m_EventCard.EventAction(m_Map);
+        m_EventDeck.AddEventCardToEventDeck();
+    }
+
+    public void SetNextEvent(StatsManager statsManager)
+    {
+        EventCard newEvent = m_EventDeck.SelectEventCard();
+        newEvent.ActivateEvent(m_Map, statsManager);
     }
 }

@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class BuildingSlot : MonoBehaviour
 {
-
     [SerializeField] int index;
     public List<BuildingSlot> m_AdjasentSlots {get; private set;} 
-    public CardData m_CardData {get; private set;}
     private Building building;
 
     public BuildingSlot(List<BuildingSlot> adjasentSlots)
@@ -18,13 +16,14 @@ public class BuildingSlot : MonoBehaviour
     {
         DestroyBuilding();
         Debug.Log($"cardP ={card.m_CardData.m_Pollution}");
-        m_CardData = card.m_CardData;
-        building = m_CardData.m_Building;
+        var cardData = card.m_CardData;
+        building = cardData.m_Building;
         if(building)
         {
             Vector3 newPosition = transform.position + building.transform.position;
             building = Instantiate(building, newPosition, transform.rotation, transform);
             building.GetComponent<Renderer>().material.color = card.m_CardData.m_Color;
+            building.m_CardData = cardData;
         }
     }
     
@@ -32,10 +31,15 @@ public class BuildingSlot : MonoBehaviour
     {
         if(building != null)
         {
-            m_CardData = null;
+            building.m_CardData = null;
             Destroy(building.gameObject);
             building = null;
         }
+    }
+
+    public bool HasCardData()
+    {
+        return building?.m_CardData != null;
     }
 
     private void OnMouseUp()
@@ -45,6 +49,6 @@ public class BuildingSlot : MonoBehaviour
     
     public CardImpact GetCardCalaulation(WorldMap map)
     {
-        return m_CardData.m_Action.GetCardCalaulation(m_CardData, map);
+        return building?.GetCardCalaulation(map);
     }
 }
