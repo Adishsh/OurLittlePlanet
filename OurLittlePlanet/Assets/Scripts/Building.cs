@@ -5,7 +5,7 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     public CardData m_CardData {get; set;}
-     public virtual CardImpact GetCardCalaulation(WorldMap map)
+     public virtual CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
         Debug.Log("GetCardCalaulation");
         return new CardImpact()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Board : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Board : MonoBehaviour
    [SerializeField] Market m_Market;
    [SerializeField] WorldMap m_Map;
   
+    public Action<StatsManager> EndTurnImpactCalculations => m_Map.CalcEndTurnImpact;
+    public Action<StatsManager> SetNextEvent => SetAndActivateNextEvent;
     public void InitBoard()
     {
     }
@@ -88,19 +91,12 @@ public class Board : MonoBehaviour
         Debug.Log($"Discard {card}");
     }
 
-    public CardImpact GetEndTurnImpact()
-    {
-        return m_Map.GetEndTurnImpact();
-     // see every card
-     // return polution sum   
-    }
-
     public void AddEventCardToEventDeck()
     {
         m_EventDeck.AddEventCardToEventDeck();
     }
 
-    public void SetNextEvent(StatsManager statsManager)
+    private void SetAndActivateNextEvent(StatsManager statsManager)
     {
         EventCard newEvent = m_EventDeck.SelectEventCard();
         newEvent.ActivateEvent(m_Map, statsManager);

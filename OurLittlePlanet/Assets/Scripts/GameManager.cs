@@ -147,15 +147,12 @@ public class GameManager : MonoBehaviour
 
     private void EndTurnCalculation()
     {
-        CardImpact impact= m_Board.GetEndTurnImpact();
-        m_StatsManager.SetPolution(impact.polution);
-        m_StatsManager.SetResources(impact.resources);
+        m_Board.EndTurnImpactCalculations.Invoke(m_StatsManager);
     }
 
     private void ActivateEvents()
     {
-        m_Board.SetNextEvent(m_StatsManager);
-        
+        m_Board.SetNextEvent.Invoke(m_StatsManager);
         SetGameState(GameState.Drawing);
     }
 

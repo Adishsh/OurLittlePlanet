@@ -43,9 +43,9 @@ public class StatsManager: MonoBehaviour
         m_Display.SetPolution(polution);
     }
     
-    public void AddCardsToDraw(int extraCardsAmount)
+    public void SetCardsToDraw(int extraCardsAmount)
     {
-        m_CardsToDraw += extraCardsAmount;
+        m_CardsToDraw = extraCardsAmount + 1;
     }
 
     public void SetCurrentEvent(EventCard currentEvent)

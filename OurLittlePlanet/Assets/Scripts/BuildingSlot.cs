@@ -47,8 +47,8 @@ public class BuildingSlot : MonoBehaviour
         EventManager.instance.BuildCard.Invoke(index);
     }
     
-    public CardImpact GetCardCalaulation(WorldMap map)
+    public CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
-        return building?.GetCardCalaulation(map);
+        return building?.GetCardCalaulation(statsManager, map);
     }
 }
