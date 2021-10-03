@@ -7,12 +7,11 @@ public class SolarPowerBuilding : Building
     public override CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
         bool isRainyDay = statsManager.m_CurrentEvent.GetType() == typeof(RainyDay);
-        Debug.Log($"SolarPowerBuilding - GetCardCalaulation isRainyDay: {isRainyDay}");
 
-        return new CardImpact()
-        {
-            polution = m_CardData.m_Pollution,
-            resources = isRainyDay ? 0 : m_CardData.m_Resources,
-        };
+        Debug.Log($"SolarPowerBuilding - GetCardCalaulation isRainyDay: {isRainyDay}");
+        
+        CardImpact impact = base.GetCardCalaulation(statsManager, map);
+        impact.resources = isRainyDay ? 0 : m_CardData.m_Resources;
+        return impact;
     }
 }
