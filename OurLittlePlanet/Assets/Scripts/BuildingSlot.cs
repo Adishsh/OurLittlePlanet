@@ -21,7 +21,8 @@ public class BuildingSlot : MonoBehaviour
         if(building)
         {
             Vector3 newPosition = transform.position + building.transform.position;
-            building = Instantiate(building, newPosition, transform.rotation, transform);
+            var newRotation= building.transform.rotation * transform.rotation;
+            building = Instantiate(building, newPosition, newRotation, transform);
             building.GetComponent<Renderer>().material.color = card.m_CardData.m_Color;
             building.m_CardData = cardData;
         }
