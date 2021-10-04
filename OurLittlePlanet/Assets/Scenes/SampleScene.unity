@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3246,7 +3246,7 @@ MonoBehaviour:
   m_CardsData:
   - {fileID: 11400000, guid: 93221190eabc69a4faf4c7ee3110d0b7, type: 2}
   - {fileID: 11400000, guid: 55fc300257969214d8875d1d7b526920, type: 2}
-  - {fileID: 11400000, guid: 776c5fa4b0ab6504a98eae24b29abc90, type: 2}
+  - {fileID: 0}
 --- !u!1 &1262653652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4081725042649462136, guid: 3574f1d8be69d1943ac3370637e01405,

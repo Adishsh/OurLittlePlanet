@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Description: Mine
   m_CardName: Mine
-  m_Sprite: {fileID: 21300000, guid: 09cfac898fce42847a66274e4c7d91cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc4d902689510ce4e9dbe13767398703, type: 3}
   m_Building: {fileID: 330142146359680913, guid: 16d9d61c6e386cf498ca856c0a48f1df,
     type: 3}
   m_Pollution: 1
