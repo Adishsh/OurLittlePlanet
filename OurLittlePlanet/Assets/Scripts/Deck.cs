@@ -23,6 +23,7 @@ public class Deck : CardsCollection
 
     public override void AddCard(Card card)
     {
+        Debug.Log("AddCard to deck");
         m_TopSlot.SetCard(card);
         base.AddCard(card);
     }

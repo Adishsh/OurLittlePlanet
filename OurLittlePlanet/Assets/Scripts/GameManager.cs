@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     
    [SerializeField] StatsManager m_StatsManager;
    [SerializeField] private Board m_Board;
+   [SerializeField] List<int> m_ResourcesList;
+   private int day;
+   private int resourceIndex;
+
 
     enum GameState
     {
@@ -17,7 +21,9 @@ public class GameManager : MonoBehaviour
         Drawing,
         PlayingCards,
         EndOfTurn,
+        LoseGame,
     }
+
     private UnityAction<Slot> SelectCardListener;
     private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
@@ -40,6 +46,11 @@ public class GameManager : MonoBehaviour
         {
             StartTurn();
         }
+
+        if(newState == GameState.LoseGame)
+        {
+            LoseGame();
+        }
     }
 
     private void SetListeners()
@@ -59,8 +70,15 @@ public class GameManager : MonoBehaviour
     }
     private void StartTurn()
     {
+        day++;
+        SetRecourcesGoal();
         ActivateEvents();
         SetGameState(GameState.Drawing);
+    }
+
+    private void SetRecourcesGoal()
+    {
+        m_StatsManager.SetResourcesGoal(m_ResourcesList[resourceIndex]);
     }
  
     private void BuyCard(Slot slot)
@@ -128,8 +146,11 @@ public class GameManager : MonoBehaviour
             Debug.LogError("not in drawing mode");
             return;
         }
+        Debug.Log($"m_StatsManager.m_CardsToDraw:{m_StatsManager.m_CardsToDraw}");
+        m_Board.DrawCardToHand(m_StatsManager.m_CardsToDraw);
+
         SetGameState(GameState.PlayingCards);
-        m_Board.DrawCardToHand(3);
+
     }
 
     private void EndTurn()
@@ -142,12 +163,30 @@ public class GameManager : MonoBehaviour
         m_Board.DiscardHand();
         EndTurnCalculation();
         UnSelectSlot();
+        if (m_StatsManager.DidStrikeOut())
+        {
+            Debug.LogError("LoseGame");
+            SetGameState(GameState.LoseGame);
+        }
         SetGameState(GameState.StartTurn);
+    }
+
+    private void LoseGame()
+    {
+        Debug.Log("you lose");
     }
 
     private void EndTurnCalculation()
     {
         m_Board.EndTurnImpactCalculations.Invoke(m_StatsManager);
+        if(m_StatsManager.m_Resources > m_ResourcesList[resourceIndex])
+        {
+            resourceIndex++;
+        } 
+        else
+        {
+            m_StatsManager.AddStrikes();
+        }
     }
 
     private void ActivateEvents()

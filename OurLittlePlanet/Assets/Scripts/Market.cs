@@ -29,9 +29,8 @@ public class Market : CardsCollection
         }
     }
     
-    public void DrawCard(Slot slot)
+    public Card DrawCard(Slot slot)
     {
-        Card card = slot.card;
-        base.DrawCard(GetCardIndex(slot.card));
+        return base.DuplicateCard(slot);
     }
 }

@@ -15,7 +15,6 @@ public class BuildingSlot : MonoBehaviour
     public void Build(Card card)
     {
         DestroyBuilding();
-        Debug.Log($"cardP ={card.m_CardData.m_Pollution}");
         var cardData = card.m_CardData;
         building = cardData.m_Building;
         if(building)

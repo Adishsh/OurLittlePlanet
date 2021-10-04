@@ -7,13 +7,13 @@ using System;
 public class Board : MonoBehaviour
 {
 
-   [SerializeField] EventDeck m_EventDeck;
-   [SerializeField] Deck m_Deck;
-   [SerializeField] Hand m_Hand;
-   [SerializeField] Discard m_Discard;
-   [SerializeField] Market m_Market;
-   [SerializeField] WorldMap m_Map;
-  
+    [SerializeField] EventDeck m_EventDeck;
+    [SerializeField] Deck m_Deck;
+    [SerializeField] Hand m_Hand;
+    [SerializeField] Discard m_Discard;
+    [SerializeField] Market m_Market;
+    [SerializeField] WorldMap m_Map;
+
     public Action<StatsManager> EndTurnImpactCalculations => m_Map.CalcEndTurnImpact;
     public Action<StatsManager> SetNextEvent => SetAndActivateNextEvent;
     public void InitBoard()
@@ -37,30 +37,30 @@ public class Board : MonoBehaviour
         m_Map.SetSelectable(isSelectable);
     }
 
-    public void DrawCardToHand(int cardsToDraw = 1)
+    public void DrawCardToHand(int cardsToDraw)
     {
-        for(int i =0; i< cardsToDraw; i++)
+        RefilDeckIfNeeded();
+
+        for (int i = 0; i < cardsToDraw; i++)
         {
             Card cardToHand = m_Deck.DrawCard();
             m_Hand.AddCard(cardToHand);
-            if(m_Deck.CardsAmount == 0)
-            {
-                RefilDeck();
-            }
+
+            RefilDeckIfNeeded();
         }
     }
 
     public void BuildCard(Slot slot, int mapIndex = 0)
     {
         Card card = m_Hand.DrawCard(slot);
-        if(card != null)
+        if (card != null)
         {
             m_Map.BuildCard(mapIndex, card);
             m_Discard.AddCard(card);
         }
     }
 
-    
+
     public void DiscardHand()
     {
         Debug.Log("DiscardHand");
@@ -72,21 +72,25 @@ public class Board : MonoBehaviour
         }
     }
 
-    public void RefilDeck()
+    public void RefilDeckIfNeeded()
     {
+        if (m_Deck.CardsAmount > 0)
+        {
+            return;
+        }
+        Debug.Log($"ShuffleAndGetCards m_Discard: {m_Discard.CardsAmount}");
         var cards = m_Discard.ShuffleAndGetCards();
-    
-        foreach(Card  card in cards)
+
+        foreach (Card card in cards)
         {
             m_Deck.AddCard(card);
         }
-        Debug.Log($"RefilDeck to {m_Deck.CardsAmount}");
+        Debug.Log($"RefilDeck to m_Deck {m_Deck.CardsAmount}");
     }
 
     public void BuyCard(Slot slot)
     {
-        Card card= slot.card;
-        m_Market.DrawCard(slot);
+        Card card = m_Market.DrawCard(slot);
         m_Discard.AddCard(card);
         Debug.Log($"Discard {card}");
     }

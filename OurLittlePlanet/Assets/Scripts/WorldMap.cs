@@ -37,7 +37,7 @@ public class WorldMap : MonoBehaviour
             }
             statsManager.SetPolution(totalImpact.polution);
             statsManager.SetResources(totalImpact.resources);
-            statsManager.SetCardsToDraw(totalImpact.extraCardsToDraw);
+            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
             for( int i = 0; i< totalImpact.eventCardsToAdd; i++)
             {
                 statsManager.m_AddEventCardToEventDeck.Invoke();

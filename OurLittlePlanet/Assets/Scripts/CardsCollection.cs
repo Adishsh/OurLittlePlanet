@@ -75,9 +75,19 @@ public class CardsCollection : MonoBehaviour
         return m_Cards.IndexOf(card);
     }
 
-    protected virtual Card DrawCard(int index = 0)
+    public Card DuplicateCard(Slot slot)
+    {
+        Card card = slot.card;
+        Card newCard = Instantiate(card, card.transform.position, card.transform.rotation, slot.transform);
+        newCard.SetUpCard(card.m_CardData);
+        return newCard;
+
+    }
+
+    protected virtual Card DrawCard(int index = 0, bool shouldRemoveCard = true)
     {
         Card givenCard = m_Cards[index];
+        if(shouldRemoveCard)
         RemoveCards(index);
         return givenCard;
     }
