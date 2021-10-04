@@ -95,9 +95,9 @@ public class Board : MonoBehaviour
         Debug.Log($"Discard {card}");
     }
 
-    public void AddEventCardToEventDeck()
+    public void AddEventCardToEventDeck(int eventsToAdd)
     {
-        m_EventDeck.AddEventCardToEventDeck();
+        m_EventDeck.AddEventCardToEventDeck(eventsToAdd);
     }
 
     private void SetAndActivateNextEvent(StatsManager statsManager)

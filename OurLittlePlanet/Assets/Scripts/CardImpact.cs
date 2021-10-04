@@ -8,5 +8,5 @@ public class CardImpact
     public int polution;
     public int resources;
     public int extraCardsToDraw;
-    public int eventCardsToAdd;      
+    public int extraEventCardsToAdd;      
 }

@@ -5,21 +5,32 @@ using System;
 
 public class StatsManager: MonoBehaviour
 {
+    public static StatsManager Instance;
    [SerializeField] private StatsDisplay m_Display;
    [SerializeField] int m_InitMoney = 1000;
    [SerializeField] int m_InitResources = 1000;   
    [SerializeField] int m_InitPolution = 0;
    [SerializeField] int m_StrikesAllowed = 3;
    [SerializeField] int m_InitCardsToDraw = 5;
+   [SerializeField] float m_MoneyGivenPerRecource = 10f;
+   [SerializeField] int m_PolutionAmountToAddBadEvent = 10;
 
-   private int strikes = 0;
-   public int m_Money { get; private set; }
-   public int m_Resources { get; private set; }
-   public int m_Polution { get; private set; }
-   public int m_CardsToDraw { get; private set; }
-   public EventCard m_CurrentEvent { get; private set; }
-   public Action m_AddEventCardToEventDeck { get; private set; }
-   public int m_ExtraNeededResources{ get; private set; }
+
+    private int strikes = 0;
+    public int m_Money { get; private set; }
+    public int m_Resources { get; private set; }
+    public int m_Polution { get; private set; }
+    public int m_CardsToDraw { get; private set; }
+    public EventCard m_CurrentEvent { get; private set; }
+    public int m_ExtraNeededResources{ get; private set; }
+    public int m_GoalResources{ get; private set; }
+    public int m_ExtraEventCardsToAdd{ get; private set; }
+    private int nextPolutionToAddEvent;
+
+    private void Awake() 
+    {
+        Instance = this;
+    }
 
     private void Start() 
     {
@@ -28,6 +39,12 @@ public class StatsManager: MonoBehaviour
         SetPolution(m_InitPolution);
         AddStrikes(strikes);
         AddCardsToDraw(m_InitCardsToDraw);
+        SetNextPolutionToAddEvent();
+    }
+
+    public void SetNextPolutionToAddEvent()
+    {
+        nextPolutionToAddEvent += m_PolutionAmountToAddBadEvent;
     }
 
     public void AddMoney(int addedMoney)
@@ -42,15 +59,22 @@ public class StatsManager: MonoBehaviour
         m_Display.SetResources(resources);
     }
 
+    public void GainMoneyForRecources()
+    {
+        AddMoney(Mathf.RoundToInt(m_MoneyGivenPerRecource * m_Resources));
+    }
+
     public void SetExtraResources(int resources)
     {
        m_ExtraNeededResources = resources;
-        m_Display.SetResources(resources);
+        m_Display.SetExtraResourcesNeeded(resources);
     }
 
     public void SetResourcesGoal(int resources)
     {
-       m_ExtraNeededResources = resources;
+        Debug.Log($"SetResourcesGoal:{resources}");
+
+       m_GoalResources = resources;
         m_Display.SetResourcesNeeded(resources);
     }
 
@@ -58,6 +82,21 @@ public class StatsManager: MonoBehaviour
     {
         m_Polution = polution;     
         m_Display.SetPolution(polution);
+    }
+
+    private int GetNewEventCardsFromPolution()
+    {
+        if(m_Polution > nextPolutionToAddEvent)
+        {
+            int extraPolution = m_Polution - nextPolutionToAddEvent;
+            int badEventToAdd = (int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent);
+            nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
+            Debug.Log($"extraPolution: {extraPolution} nextPolutionToAddEvent: {nextPolutionToAddEvent}");
+
+            Debug.Log($"GetNewEventCardsFromPolution: {badEventToAdd}");
+            return badEventToAdd;
+        }
+        return 0;
     }
     
     public void AddCardsToDraw(int extraCardsAmount)
@@ -80,5 +119,15 @@ public class StatsManager: MonoBehaviour
     public bool DidStrikeOut()
     {
         return strikes >= m_StrikesAllowed;
+    }
+
+    public void SetNewEventCards(int extraEventsToAdd= 0)
+    {
+        m_ExtraEventCardsToAdd = extraEventsToAdd;
+    }
+
+    public int GetEventCardsAmountToDraw()
+    {
+        return GetNewEventCardsFromPolution() + m_ExtraEventCardsToAdd;
     }
 }

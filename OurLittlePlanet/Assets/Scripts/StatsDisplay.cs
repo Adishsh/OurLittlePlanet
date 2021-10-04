@@ -30,7 +30,7 @@ public class StatsDisplay : MonoBehaviour
 
     public void SetResourcesNeeded(int amount)
     {
-        ResourcesGoal.text = $"+{amount}";
+        ResourcesGoal.text = $"{amount}";
         ResourcesGoal.gameObject.SetActive(amount > 0);
     }
 

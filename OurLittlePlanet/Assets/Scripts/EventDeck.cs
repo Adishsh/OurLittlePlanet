@@ -18,11 +18,15 @@ public class EventDeck : MonoBehaviour
         return nextEventCard;
     }
 
-    public void AddEventCardToEventDeck()
+    public void AddEventCardToEventDeck(int eventsToAdd)
     {
-        int randomIndex = Random.Range(0, m_AllEventCards.Count);
-        EventCard newEvent = m_AllEventCards[randomIndex];
-        m_ActiveEventCards.Add(newEvent);
+        Debug.Log("bad event added");
+        for( int i=0; i < eventsToAdd; i++)
+        {
+            int randomIndex = Random.Range(0, m_AllEventCards.Count);
+            EventCard newEvent = m_AllEventCards[randomIndex];
+            m_ActiveEventCards.Add(newEvent);
+        }
     }
 
 }

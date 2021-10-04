@@ -7,11 +7,11 @@ public class BuildingSlot : MonoBehaviour
     [SerializeField] int index;
     public List<BuildingSlot> m_AdjasentSlots {get; private set;} 
     private Building building;
-
     public BuildingSlot(List<BuildingSlot> adjasentSlots)
     {
         m_AdjasentSlots = adjasentSlots;
     }
+
     public void Build(Card card)
     {
         DestroyBuilding();
@@ -31,6 +31,7 @@ public class BuildingSlot : MonoBehaviour
     {
         if(building != null)
         {
+            building.DestroyBuilding.Invoke();
             building.m_CardData = null;
             Destroy(building.gameObject);
             building = null;

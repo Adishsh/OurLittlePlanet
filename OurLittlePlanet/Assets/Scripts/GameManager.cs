@@ -162,6 +162,7 @@ public class GameManager : MonoBehaviour
         }
         m_Board.DiscardHand();
         EndTurnCalculation();
+        AddEventCardToEventDeck();
         UnSelectSlot();
         if (m_StatsManager.DidStrikeOut())
         {
@@ -169,6 +170,15 @@ public class GameManager : MonoBehaviour
             SetGameState(GameState.LoseGame);
         }
         SetGameState(GameState.StartTurn);
+    }
+    
+    private void AddEventCardToEventDeck()
+    {
+       int newEventsAmount = m_StatsManager.GetEventCardsAmountToDraw();
+        Debug.Log("AddEventCardToEventDeck: "+newEventsAmount);
+
+       m_Board.AddEventCardToEventDeck(newEventsAmount);
+
     }
 
     private void LoseGame()
@@ -195,7 +205,8 @@ public class GameManager : MonoBehaviour
         SetGameState(GameState.Drawing);
     }
 
-    private void OnDestroy() {
+    private void OnDestroy() 
+    {
         EventManager.instance.SelectCard.RemoveAllListeners();
         EventManager.instance.BuyCard.RemoveAllListeners();
         EventManager.instance.DrawCards.RemoveAllListeners();

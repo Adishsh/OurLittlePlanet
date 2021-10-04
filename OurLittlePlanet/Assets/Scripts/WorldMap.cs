@@ -9,11 +9,11 @@ public class WorldMap : MonoBehaviour
     [SerializeField] int width;
     [SerializeField] int height;
 
-
     public void BuildCard(int buildingSlotIndex, Card card)
     {
         Debug.Log(" bc ");
         BuildingSlots[buildingSlotIndex].Build(card);
+
     }
 
     public void SetSelectable(bool isSelectable)
@@ -33,16 +33,14 @@ public class WorldMap : MonoBehaviour
                 totalImpact.polution += cardImpact.polution;
                 totalImpact.resources += cardImpact.resources;
                 totalImpact.extraCardsToDraw += cardImpact.extraCardsToDraw;
-                totalImpact.eventCardsToAdd += cardImpact.eventCardsToAdd;
-            }
-            statsManager.SetPolution(totalImpact.polution);
-            statsManager.SetResources(totalImpact.resources);
-            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
-            for( int i = 0; i< totalImpact.eventCardsToAdd; i++)
-            {
-                statsManager.m_AddEventCardToEventDeck.Invoke();
+                totalImpact.extraEventCardsToAdd += cardImpact.extraEventCardsToAdd;
             }
         }   
+            statsManager.SetPolution(totalImpact.polution);
+            statsManager.SetResources(totalImpact.resources);
+            statsManager.GainMoneyForRecources();
+            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
+            statsManager.SetNewEventCards(totalImpact.extraEventCardsToAdd);
     }
 
 }
