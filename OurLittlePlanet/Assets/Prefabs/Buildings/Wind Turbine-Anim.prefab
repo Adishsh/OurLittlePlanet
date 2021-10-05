@@ -506,8 +506,8 @@ GameObject:
   - component: {fileID: 3556509171411306598}
   - component: {fileID: 501194417398138819}
   - component: {fileID: 2382526124761297673}
-  - component: {fileID: 4860635020769618700}
   - component: {fileID: 5514384739396205418}
+  - component: {fileID: 8062220034797191325}
   m_Layer: 0
   m_Name: Wind Turbine-Anim
   m_TagString: Untagged
@@ -593,18 +593,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4860635020769618700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184005214167339740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &5514384739396205418
 Animator:
   serializedVersion: 3
@@ -624,6 +612,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8062220034797191325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184005214167339740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea5161f005843b46a1c84774a6582d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4222110081094474757
 GameObject:
   m_ObjectHideFlags: 0
