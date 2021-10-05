@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: "Activist\u2019s Tent"
   m_CardName: "Activist\u2019s Tent"
-  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 498bea05fd7f99c49bec891ea2be85d9, type: 3}
   m_Building: {fileID: 1390834114267013896, guid: 9e7865db190ba2342bae47e70a1b0c33,
     type: 3}
   m_Pollution: 0

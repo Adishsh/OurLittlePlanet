@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.47411847, b: 0, a: 1}
   m_Description: Watermill
   m_CardName: Watermill
-  m_Sprite: {fileID: 21300000, guid: 89fd3282f0f1b394a96b18dd9bd26ce3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 952a08a41b0e1d840ab15813125c602d, type: 3}
   m_Building: {fileID: 6889846767483607933, guid: 1bbbce77492461a4b9550b31a62360f5,
     type: 3}
   m_Pollution: 0

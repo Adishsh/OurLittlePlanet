@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: Stables
   m_CardName: Stables
-  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ed928e74e56c4c4089049db2f414a95, type: 3}
   m_Building: {fileID: 4054471597427183215, guid: 73307e783e471434a8d43563e6dcf4e7,
     type: 3}
   m_Pollution: 0

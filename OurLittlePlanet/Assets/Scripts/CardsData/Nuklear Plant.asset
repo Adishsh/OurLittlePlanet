@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: Nuclear Plant
   m_CardName: Nuclear Plant
-  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 355d48c4e1ffe1e4c9e6fa980e584a34, type: 3}
   m_Building: {fileID: 1791010881761377524, guid: becfcab1288eb8646bd9d5ca67f69b98,
     type: 3}
   m_Pollution: 0

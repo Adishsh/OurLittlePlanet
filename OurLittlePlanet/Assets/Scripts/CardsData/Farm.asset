@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: Farm
   m_CardName: Farm
-  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03868be8d36d699428c53f44b59f18e8, type: 3}
   m_Building: {fileID: 6630122502396197021, guid: 748e2a35814660e4ba53991bb0e0379d,
     type: 3}
   m_Pollution: 1

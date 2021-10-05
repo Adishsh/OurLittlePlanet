@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: Space Port
   m_CardName: Space Port
-  m_Sprite: {fileID: 21300000, guid: 0687d769bc1bd2e4cad69134fb50e6ba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 500514e4dce4285499dee44c65bf427b, type: 3}
   m_Building: {fileID: 8618005799965023721, guid: c9bfa75a0e11bb24fb23ca32775b9f51,
     type: 3}
   m_Pollution: 0
