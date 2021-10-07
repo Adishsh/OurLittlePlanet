@@ -24,5 +24,10 @@ public class Building : MonoBehaviour
         m_CardData = null;
     }
 
+    // for now for Oil Pump and Activist's Tent	
+    public virtual void OnTurnEnd()
+    {
+    }
+
 
 }

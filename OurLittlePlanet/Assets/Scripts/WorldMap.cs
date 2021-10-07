@@ -28,6 +28,7 @@ public class WorldMap : MonoBehaviour
         bool isInLastRow = index >= m_RowsCount * (m_RowsCount-1);
         bool isInFirstColumn = index % m_RowsCount == 0;
         bool isInLastColumn = index % m_RowsCount == m_RowsCount - 1;
+
         var slots = new List<BuildingSlot>();
         if (!isInLastRow)
         {
@@ -51,20 +52,28 @@ public class WorldMap : MonoBehaviour
         return slots;
     }
 
-    public List<BuildingSlot> GetAllSlotsWithBuildingsTypes<T>()
+    public List<BuildingSlot> GetAllSlotsWithBuildingsTypes<T>(bool shouldMarkActionDone =true)
     {
         return BuildingSlots.FindAll((slot) => 
         {
             Building building = slot?.building;
+            if(shouldMarkActionDone)
+            {
+                slot.WasActionDone = true;
+            }
             return building != null && building.GetType() == typeof(T);
         });
     }
 
-    public int GetIslandCount(List<BuildingSlot> slots)
+    public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =true)
     {
         List<BuildingSlot> adjecentSlots = new List<BuildingSlot>();
         foreach(BuildingSlot slot in slots)
         {
+            if(shouldMarkActionDone)
+            {
+                slot.WasActionDone = true;
+            }
             adjecentSlots.AddRange(GetAdjecentSlots(slot));
         }
 
@@ -81,8 +90,19 @@ public class WorldMap : MonoBehaviour
     public void BuildCard(int buildingSlotIndex, Card card)
     {
         Debug.Log(" bc ");
-        BuildingSlots[buildingSlotIndex].Build(card);
+        BuildingSlot slot = BuildingSlots[buildingSlotIndex];
+        if(slot != null)
+        {
+            slot.DestroyBuilding();
+        }
+        slot.Build(card);
+        StatsManager.Instance.SetTempCardImpact(GetCardsImpact());
+    }
 
+    public void DestroyBuilding(int buildingSlotIndex)
+    {
+        BuildingSlots[buildingSlotIndex].DestroyBuilding();
+        StatsManager.Instance.SetTempCardImpact(GetCardsImpact());
     }
 
     public void SetSelectable(bool isSelectable)
@@ -92,24 +112,39 @@ public class WorldMap : MonoBehaviour
     
     public void CalcEndTurnImpact(StatsManager statsManager)
     {
+        StatsManager.Instance.SetTempCardImpact(null);
+         foreach(var slot in BuildingSlots)
+        {
+            Debug.Log("GetEndTurnPolution");
+            if(slot.HasCardData())
+            {
+                slot.building.OnTurnEnd();
+            }
+        }
+        CardImpact totalImpact = GetCardsImpact();
+            statsManager.AddPolution(totalImpact.polution);
+            statsManager.SetResources(totalImpact.resources);
+            statsManager.GainMoneyForRecources();
+            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
+            statsManager.SetNewEventCards(totalImpact.extraEventCardsToAdd);
+    }
+
+    private CardImpact GetCardsImpact()
+    {
         CardImpact totalImpact = new CardImpact();
         foreach(var slot in BuildingSlots)
         {
             Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
-                CardImpact cardImpact = slot.GetCardCalaulation(statsManager, this);
+                CardImpact cardImpact = slot.GetCardCalaulation(StatsManager.Instance, this);
                 totalImpact.polution += cardImpact.polution;
                 totalImpact.resources += cardImpact.resources;
                 totalImpact.extraCardsToDraw += cardImpact.extraCardsToDraw;
                 totalImpact.extraEventCardsToAdd += cardImpact.extraEventCardsToAdd;
             }
-        }   
-            statsManager.AddPolution(totalImpact.polution);
-            statsManager.SetResources(totalImpact.resources);
-            statsManager.GainMoneyForRecources();
-            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
-            statsManager.SetNewEventCards(totalImpact.extraEventCardsToAdd);
+        }
+        return totalImpact;
     }
 
 }

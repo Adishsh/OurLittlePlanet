@@ -64,12 +64,6 @@ public class StatsManager: MonoBehaviour
         AddMoney(Mathf.RoundToInt(m_MoneyGivenPerRecource * m_Resources));
     }
 
-    public void SetExtraResources(int resources)
-    {
-       m_ExtraNeededResources = resources;
-        m_Display.SetExtraResourcesNeeded(resources);
-    }
-
     public void SetResourcesGoal(int resources)
     {
         Debug.Log($"SetResourcesGoal:{resources}");
@@ -129,5 +123,20 @@ public class StatsManager: MonoBehaviour
     public int GetEventCardsAmountToDraw()
     {
         return GetNewEventCardsFromPolution() + m_ExtraEventCardsToAdd;
+    }
+
+    
+    public void SetTempCardImpact(CardImpact impact)
+    {
+        if(impact == null) 
+        {
+            m_Display.HideTempPolution();
+        } 
+        else
+        {
+            m_Display.SetTempPolution(impact.polution);
+            m_Display.SetResources(impact.resources);
+            m_Display.SetLessResourcesNeeded(impact.lessResourcesNeeded);
+        }
     }
 }

@@ -10,6 +10,8 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] Text ResourcesGoal;
     [SerializeField] Text ExtraResourcesNeeded;
     [SerializeField] Text Polution;
+    [SerializeField] Text m_TempPolution;
+    [SerializeField] Text m_LessResourcesNeeded;
     [SerializeField] Text m_Strikes;
 
     public void SetMoney(int amount)
@@ -20,12 +22,6 @@ public class StatsDisplay : MonoBehaviour
     public void SetResources(int amount)
     {
         Resources.text = amount.ToString();
-    }
-
-    public void SetExtraResourcesNeeded(int amount)
-    {
-        ExtraResourcesNeeded.text = $"+{amount}";
-        ExtraResourcesNeeded.gameObject.SetActive(amount > 0);
     }
 
     public void SetResourcesNeeded(int amount)
@@ -42,5 +38,24 @@ public class StatsDisplay : MonoBehaviour
     public void SetStrikes(int strike)
     {
         m_Strikes.text = strike.ToString();
+    }
+
+    public void SetTempPolution(int polution)
+    {
+        m_TempPolution.gameObject.SetActive(true);
+        m_TempPolution.text = polution.ToString();
+    }
+
+    public void HideTempPolution()
+    {
+        m_TempPolution.gameObject.SetActive(false);
+        m_TempPolution.text = "";
+    }
+
+    public void SetLessResourcesNeeded(int amount)
+    {
+        ExtraResourcesNeeded.gameObject.SetActive(amount != 0);
+        string AdditiveSign = amount > 0 ? "+":"-";
+        m_LessResourcesNeeded.text = $"{AdditiveSign} {Mathf.Abs(amount)}";
     }
 }
