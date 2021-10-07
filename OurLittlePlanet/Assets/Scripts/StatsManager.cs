@@ -36,7 +36,7 @@ public class StatsManager: MonoBehaviour
     {
         AddMoney(m_InitMoney);
         SetResources(m_InitResources);
-        SetPolution(m_InitPolution);
+        AddPolution(m_InitPolution);
         AddStrikes(strikes);
         AddCardsToDraw(m_InitCardsToDraw);
         SetNextPolutionToAddEvent();
@@ -78,10 +78,10 @@ public class StatsManager: MonoBehaviour
         m_Display.SetResourcesNeeded(resources);
     }
 
-    public void SetPolution(int polution)
+    public void AddPolution(int polution)
     {
-        m_Polution = polution;     
-        m_Display.SetPolution(polution);
+        m_Polution += polution;     
+        m_Display.SetPolution(m_Polution);
     }
 
     private int GetNewEventCardsFromPolution()

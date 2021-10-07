@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BuildingSlot : MonoBehaviour
 {
-    [SerializeField] int index;
+    [SerializeField]public int index;
     public List<BuildingSlot> m_AdjasentSlots {get; private set;} 
-    private Building building;
+    public Building building{ get; private set;}
+    public bool WasActionDone;
+
+
     public BuildingSlot(List<BuildingSlot> adjasentSlots)
     {
         m_AdjasentSlots = adjasentSlots;
