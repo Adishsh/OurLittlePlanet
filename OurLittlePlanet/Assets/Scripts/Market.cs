@@ -5,13 +5,13 @@ using UnityEngine;
 public class Market : CardsCollection
 {
     [SerializeField] private List<Slot> slots;
-    [SerializeField] private List<CardData> m_CardsData;
     [SerializeField] private List<EraList> m_EraCards;
 
     
     private void Start() 
     {
         ChangeEra(0);
+        
         foreach(var slot in slots)
         {
             slot.OnSelectSlotCard = () => SelectMarketCard(slot);
@@ -39,7 +39,13 @@ public class Market : CardsCollection
     public void ChangeEra(int eraIndex)
     {
         if(m_EraCards.Count > eraIndex)
-        base.InitCardsDisplayed(m_EraCards[eraIndex].list, slots);
+        {
+            base.InitCardsDisplayed(m_EraCards[eraIndex].list, slots);
+        }
+        for (int i = 0; i < slots.Count; i++)
+        {
+            slots[i].gameObject.SetActive(i < m_EraCards[eraIndex].list.Count);
+        }
     }
      [System.Serializable]
     public class EraList
