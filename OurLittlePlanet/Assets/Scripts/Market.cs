@@ -38,7 +38,7 @@ public class Market : CardsCollection
 
     public void ChangeEra(int eraIndex)
     {
-        if(m_EraCards.Count < eraIndex)
+        if(m_EraCards.Count > eraIndex)
         base.InitCardsDisplayed(m_EraCards[eraIndex].list, slots);
     }
      [System.Serializable]
