@@ -5,11 +5,13 @@ using UnityEngine;
 public class Market : CardsCollection
 {
     [SerializeField] private List<Slot> slots;
-    [SerializeField] List<CardData> m_CardsData;
+    [SerializeField] private List<CardData> m_CardsData;
+    [SerializeField] private List<EraList> m_EraCards;
+
     
     private void Start() 
     {
-        base.InitCardsDisplayed(m_CardsData, slots);
+        ChangeEra(0);
         foreach(var slot in slots)
         {
             slot.OnSelectSlotCard = () => SelectMarketCard(slot);
@@ -32,5 +34,16 @@ public class Market : CardsCollection
     public Card DrawCard(Slot slot)
     {
         return base.DuplicateCard(slot);
+    }
+
+    public void ChangeEra(int eraIndex)
+    {
+        if(m_EraCards.Count < eraIndex)
+        base.InitCardsDisplayed(m_EraCards[eraIndex].list, slots);
+    }
+     [System.Serializable]
+    public class EraList
+    {
+        public List<CardData> list;
     }
 }

@@ -14,6 +14,7 @@ public class Board : MonoBehaviour
     [SerializeField] Market m_Market;
     [SerializeField] WorldMap m_Map;
 
+
     public Action<StatsManager> EndTurnImpactCalculations => m_Map.CalcEndTurnImpact;
     public Action<StatsManager> SetNextEvent => SetAndActivateNextEvent;
     public void InitBoard()
@@ -104,5 +105,10 @@ public class Board : MonoBehaviour
     {
         EventCard newEvent = m_EventDeck.SelectEventCard();
         newEvent.ActivateEvent(m_Map, statsManager);
+    }
+
+    public void ChangeEra(int eraIndex)
+    {
+        m_Market.ChangeEra(eraIndex);
     }
 }

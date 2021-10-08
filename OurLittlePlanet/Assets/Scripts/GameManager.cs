@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
    [SerializeField] StatsManager m_StatsManager;
    [SerializeField] private Board m_Board;
    [SerializeField] List<int> m_ResourcesList;
+   [SerializeField] int m_NumberOfDaysToChangeEra;
+
+
    private int day;
    private int resourceIndex;
-
+   private int currentEra;
 
     enum GameState
     {
@@ -71,6 +74,15 @@ public class GameManager : MonoBehaviour
     private void StartTurn()
     {
         day++;
+        m_StatsManager.SetDay(day);
+
+        int era =day / m_NumberOfDaysToChangeEra;
+        if(era > currentEra)
+        {
+            currentEra = era;
+            m_StatsManager.SetEra(era);
+            m_Board.ChangeEra(era);
+        }
         SetRecourcesGoal();
         ActivateEvents();
         SetGameState(GameState.Drawing);

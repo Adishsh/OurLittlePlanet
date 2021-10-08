@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class WorldMap : MonoBehaviour
 {
@@ -19,6 +18,32 @@ public class WorldMap : MonoBehaviour
         {
             BuildingSlots[i].index = i;
         }
+    }
+
+    public List<BuildingSlot> GetRow(int index)
+    {
+        return BuildingSlots.GetRange(index * m_RowsCount, m_RowsCount);
+    }
+
+    public List<BuildingSlot> GetColumn(int index)
+    {
+        var slots = new List<BuildingSlot>();
+        for(var i = 0; i < BuildingSlots.Count; i ++)
+        {
+            slots.Add(BuildingSlots[index + (i * m_RowsCount)]);
+        }
+        return slots;
+    }
+
+    public List<BuildingSlot> GetRandom3x3()
+    {
+        var startIndex = Random.Range(0, m_RowsCount - 3);
+        var slots = new List<BuildingSlot>();
+        for(var i = 0; i < BuildingSlots.Count; i ++)
+        {
+            slots.AddRange(BuildingSlots.GetRange(startIndex * i, 3));
+        }
+        return slots;
     }
 
     public List<BuildingSlot> GetAdjecentSlots(BuildingSlot slot)

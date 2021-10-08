@@ -139,4 +139,14 @@ public class StatsManager: MonoBehaviour
             m_Display.SetLessResourcesNeeded(impact.lessResourcesNeeded);
         }
     }
+
+    public void SetDay(int num)
+    {
+        m_Display.SetDay(num);
+    }
+
+    public void SetEra(int num)
+    {
+        m_Display.SetEra(num);
+    }
 }

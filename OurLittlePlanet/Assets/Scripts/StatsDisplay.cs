@@ -13,6 +13,9 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] Text m_TempPolution;
     [SerializeField] Text m_LessResourcesNeeded;
     [SerializeField] Text m_Strikes;
+    [SerializeField] Text m_Day;
+    [SerializeField] Text m_Era;
+
 
     public void SetMoney(int amount)
     {
@@ -57,5 +60,15 @@ public class StatsDisplay : MonoBehaviour
         ExtraResourcesNeeded.gameObject.SetActive(amount != 0);
         string AdditiveSign = amount > 0 ? "+":"-";
         m_LessResourcesNeeded.text = $"{AdditiveSign} {Mathf.Abs(amount)}";
+    }
+    
+    public void SetDay(int num)
+    {
+        m_Day.text = num.ToString();
+    }
+
+    public void SetEra(int num)
+    {
+        m_Era.text = num.ToString();
     }
 }
