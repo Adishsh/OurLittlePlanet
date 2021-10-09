@@ -26,17 +26,13 @@ public class Hand : CardsCollection
     private Slot CreateNewSlot()
     {
         //instanciateSlot
-        if(slots.Count <= m_maxCardAmount)
+        Slot freeSlot = slots.Find( slot => !slot.gameObject.activeSelf);
+        if(freeSlot == null) 
         {
-            Slot freeSlot = slots.Find( slot => !slot.gameObject.activeSelf);
-            if(freeSlot == null) 
-            {
-             freeSlot = slots.Find( slot => slot.card == null);                
-            }
-            freeSlot.gameObject.SetActive(true);
-            return freeSlot;
+            freeSlot = slots.Find( slot => slot.card == null);                
         }
-        return null;
+        freeSlot.gameObject.SetActive(true);
+        return freeSlot;
     }
 
     public override void AddCard(Card card)

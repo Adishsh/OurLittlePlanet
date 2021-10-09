@@ -47,6 +47,11 @@ public class Board : MonoBehaviour
 
         for (int i = 0; i < cardsToDraw; i++)
         {
+            if(m_Deck.CardsAmount == 0)
+            {
+                Debug.Log("Player has less cards in deck then 5");
+                return;
+            }
             Card cardToHand = m_Deck.DrawCard();
             m_Hand.AddCard(cardToHand);
 
