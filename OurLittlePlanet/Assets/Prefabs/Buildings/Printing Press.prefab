@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 6253415475244576354}
   - component: {fileID: 7018652947691938247}
   - component: {fileID: 5081103689758659853}
-  - component: {fileID: 7457899887669111366}
+  - component: {fileID: 1591390465799648687}
   m_Layer: 0
   m_Name: Printing Press
   m_TagString: Untagged
@@ -997,7 +997,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7457899887669111366
+--- !u!114 &1591390465799648687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1006,9 +1006,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6738309262471230680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: f8e29d36c153c1747a266af8e0fb3959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slot: {fileID: 0}
 --- !u!1 &6966166118254146516
 GameObject:
   m_ObjectHideFlags: 0

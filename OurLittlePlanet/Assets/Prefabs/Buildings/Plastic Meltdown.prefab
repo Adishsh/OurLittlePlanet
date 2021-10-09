@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 8189710160415697564}
   - component: {fileID: 5046400389104215353}
   - component: {fileID: 7056187491189248499}
-  - component: {fileID: 2733075507738305627}
+  - component: {fileID: -2220520927291570210}
   m_Layer: 0
   m_Name: Plastic Meltdown
   m_TagString: Untagged
@@ -1078,7 +1078,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2733075507738305627
+--- !u!114 &-2220520927291570210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1087,9 +1087,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8857561577957388326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a02cd4b8527d8249b25bd0f6623d5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slot: {fileID: 0}
 --- !u!1 &9069983747232334619
 GameObject:
   m_ObjectHideFlags: 0

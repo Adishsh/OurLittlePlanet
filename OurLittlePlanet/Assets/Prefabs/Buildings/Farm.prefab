@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 2834258134171305380}
   - component: {fileID: 1223454440804436481}
   - component: {fileID: 3971719798166208203}
-  - component: {fileID: 6630122502396197021}
+  - component: {fileID: -1103242367942465864}
   m_Layer: 0
   m_Name: Farm
   m_TagString: Untagged
@@ -508,7 +508,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6630122502396197021
+--- !u!114 &-1103242367942465864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3179152578826641182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: a64ac8f864c85f044b1e58ac6e50cd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3583179950703852903

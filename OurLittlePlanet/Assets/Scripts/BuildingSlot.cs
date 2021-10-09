@@ -27,6 +27,7 @@ public class BuildingSlot : MonoBehaviour
             building = Instantiate(building, newPosition, newRotation, transform);
             building.GetComponent<Renderer>().material.color = card.m_CardData.m_Color;
             building.m_CardData = cardData;
+            building.slot = this;
         }
     }
     

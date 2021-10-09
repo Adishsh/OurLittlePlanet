@@ -7,6 +7,8 @@ public class Building : MonoBehaviour
 {
     public Action DestroyBuilding;
     public CardData m_CardData {get; set;}
+
+    public BuildingSlot slot;
     
     public virtual CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
@@ -22,6 +24,7 @@ public class Building : MonoBehaviour
     protected virtual void OnBuildingDestroy(StatsManager statsManager)
     {
         m_CardData = null;
+        slot = null;
     }
 
     // for now for Oil Pump and Activist's Tent	

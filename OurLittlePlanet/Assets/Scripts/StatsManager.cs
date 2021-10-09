@@ -75,7 +75,14 @@ public class StatsManager: MonoBehaviour
 
     public void AddPolution(int polution)
     {
-        m_Polution += polution;     
+        if(polution + m_Polution < nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent)
+        {
+            m_Polution = nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent;
+        }
+        else
+        {
+            m_Polution += polution;
+        }    
         m_Display.SetPolution(m_Polution);
     }
 

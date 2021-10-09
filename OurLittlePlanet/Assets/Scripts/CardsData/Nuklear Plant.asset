@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Nuclear Plant
   m_CardName: Nuclear Plant
   m_Sprite: {fileID: 21300000, guid: 355d48c4e1ffe1e4c9e6fa980e584a34, type: 3}
-  m_Building: {fileID: 1791010881761377524, guid: becfcab1288eb8646bd9d5ca67f69b98,
+  m_Building: {fileID: -5950926615406912435, guid: becfcab1288eb8646bd9d5ca67f69b98,
     type: 3}
   m_Pollution: 0
   m_Resources: 5

@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Stables
   m_CardName: Stables
   m_Sprite: {fileID: 21300000, guid: 0ed928e74e56c4c4089049db2f414a95, type: 3}
-  m_Building: {fileID: 4054471597427183215, guid: 73307e783e471434a8d43563e6dcf4e7,
+  m_Building: {fileID: -3729077859012187268, guid: 73307e783e471434a8d43563e6dcf4e7,
     type: 3}
   m_Pollution: 0
   m_Resources: 0

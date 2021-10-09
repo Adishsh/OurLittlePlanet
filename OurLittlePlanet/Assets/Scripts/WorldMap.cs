@@ -89,6 +89,11 @@ public class WorldMap : MonoBehaviour
             return building != null && building.GetType() == typeof(T);
         });
     }
+    public List<BuildingSlot> GetAllSlots()
+    {
+        return BuildingSlots;
+        
+    }
 
     public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =true)
     {
