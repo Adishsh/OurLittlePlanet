@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hand : CardsCollection
+public class DiscardDisplay : CardsCollection
 {
     [SerializeField] List<Slot> slots;
 
     private void Awake() 
     {
+        Debug.Log("DiscardDisplay init ");
         foreach(Slot slot in slots)
         {
-            slot.OnSelectSlotCard = () => SelectHandSlot(slot);
+            slot.OnSelectSlotCard = () => SelectDiscardSlot(slot);
         }
+        Debug.Log("DiscardDisplay done");
+
     }
 
     public Card DrawCard(Slot slot)
@@ -25,9 +28,6 @@ public class Hand : CardsCollection
 
     private Slot CreateNewSlot()
     {
-        //instanciateSlot
-        if(slots.Count <= m_maxCardAmount)
-        {
             Slot freeSlot = slots.Find( slot => !slot.gameObject.activeSelf);
             if(freeSlot == null) 
             {
@@ -35,9 +35,7 @@ public class Hand : CardsCollection
             }
             freeSlot.gameObject.SetActive(true);
             return freeSlot;
-        }
-        return null;
-    }
+     }
 
     public override void AddCard(Card card)
     {
@@ -62,11 +60,12 @@ public class Hand : CardsCollection
         return cards;
     }
 
-    private void SelectHandSlot(Slot slot)
+    private void SelectDiscardSlot(Slot slot)
     {
-        if(slot.card != null && m_isSelectable)
+        if(slot.card != null)
         {
-            EventManager.instance.SelectCard.Invoke(slot);
+            Debug.Log("SelectDiscardSlot Dםמ ");
+            EventManager.instance.SelectDiscardCard.Invoke(slot);
         }
     }
 }

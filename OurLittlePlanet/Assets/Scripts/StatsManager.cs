@@ -25,6 +25,7 @@ public class StatsManager: MonoBehaviour
     public int m_ExtraNeededResources{ get; private set; }
     public int m_GoalResources{ get; private set; }
     public int m_ExtraEventCardsToAdd{ get; private set; }
+    public int freeDiscardCardCount;
     private int nextPolutionToAddEvent;
 
     private void Awake() 
@@ -148,5 +149,10 @@ public class StatsManager: MonoBehaviour
     public void SetEra(int num)
     {
         m_Display.SetEra(num);
+        if(strikes > 0)
+        {
+            strikes--;
+        }
+        freeDiscardCardCount =3;
     }
 }

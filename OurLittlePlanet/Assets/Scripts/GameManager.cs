@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
    private int resourceIndex;
    private int currentEra;
 
+
     enum GameState
     {
         StartTurn,
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
         EndOfTurn,
         LoseGame,
     }
-
+    private UnityAction<Slot> SelectDiscardCardListener;
     private UnityAction<Slot> SelectCardListener;
     private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
@@ -58,12 +59,14 @@ public class GameManager : MonoBehaviour
 
     private void SetListeners()
     {
+        SelectDiscardCardListener = new UnityAction<Slot> (SellCard);
         SelectCardListener = new UnityAction<Slot> (SelectHandSlot);
         BuyCardListener = new UnityAction<Slot>(BuyCard);
         DrawCardsListener = new UnityAction(DrawCardsToHand);
         EndTurnListener = new UnityAction(EndTurn);
         BuildListener = new UnityAction<int>(BuildCard);
 
+        EventManager.instance.SelectDiscardCard.AddListener(SelectDiscardCardListener);
         EventManager.instance.SelectCard.AddListener(SelectCardListener);
         EventManager.instance.BuyCard.AddListener(BuyCardListener);
         EventManager.instance.DrawCards.AddListener(DrawCardsListener);
@@ -107,6 +110,23 @@ public class GameManager : MonoBehaviour
             m_StatsManager.AddMoney(-cost);
             m_Board.BuyCard(slot);
         }
+    }
+
+    private void SellCard(Slot slot)
+    {
+        if(m_StatsManager.freeDiscardCardCount > 0)
+        {
+            m_StatsManager.freeDiscardCardCount--;
+        }
+        else
+        {
+            if (m_StatsManager.m_Money < 10)
+            {
+                return;
+            }
+            m_StatsManager.AddMoney(-10);
+        }
+        m_Board.SellCard(slot);
     }
 
     private void SelectHandSlot(Slot slot)
@@ -162,7 +182,6 @@ public class GameManager : MonoBehaviour
         m_Board.DrawCardToHand(m_StatsManager.m_CardsToDraw);
 
         SetGameState(GameState.PlayingCards);
-
     }
 
     private void EndTurn()

@@ -9,9 +9,11 @@ public class EventManager : MonoBehaviour {
     public UnityEvent EndTurn; 
     public UnityEvent<Slot> BuyCard;
     public UnityEvent<Slot> SelectCard;
+    public UnityEvent<Slot> SelectDiscardCard;
     public UnityEvent<int> BuildCard;
 
 
+    private UnityAction<Slot> SelectDiscardCardListener;
     private UnityAction<Slot> SelectCardListener;
     private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
@@ -49,6 +51,7 @@ public class EventManager : MonoBehaviour {
         BuyCard = new UnityEvent<Slot>();
         SelectCard = new UnityEvent<Slot>();
         BuildCard = new UnityEvent<int>();
+        SelectDiscardCard = new UnityEvent<Slot>();
     }
 
     public void EndTurnPressed()

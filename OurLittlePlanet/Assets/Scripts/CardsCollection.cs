@@ -70,6 +70,8 @@ public class CardsCollection : MonoBehaviour
         m_Cards.RemoveAt(index);
     }
 
+
+
     public int GetCardIndex(Card card)
     {
         return m_Cards.IndexOf(card);
