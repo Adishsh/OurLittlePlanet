@@ -8,14 +8,13 @@ public class FarmBuilding : Building
     {
         List<BuildingSlot> AdjacentBuildings = map.GetAdjecentSlots(slot);
 
-        List<BuildingSlot> AdjacentFarms = AdjacentBuildings.FindAll(building => building.building.GetType() == typeof(FarmBuilding));
+        List<BuildingSlot> AdjacentFarms = AdjacentBuildings.FindAll(buildingSlot => buildingSlot?.building != null && buildingSlot.building.GetType() == typeof(FarmBuilding));
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
         if (AdjacentFarms.Count >= 2)
         {
             impact.resources += 1;
-
         }
         Debug.Log("Farm" + AdjacentFarms.Count);
         return impact;
