@@ -7,7 +7,7 @@ public class BuildingSlot : MonoBehaviour
     [SerializeField]public int index;
     public List<BuildingSlot> m_AdjasentSlots {get; private set;} 
     public Building building{ get; private set;}
-    public bool WasActionDone;
+    public bool WasCalculated;
 
 
     public BuildingSlot(List<BuildingSlot> adjasentSlots)

@@ -77,14 +77,14 @@ public class WorldMap : MonoBehaviour
         return slots;
     }
 
-    public List<BuildingSlot> GetAllSlotsWithBuildingsTypes<T>(bool shouldMarkActionDone =true)
+    public List<BuildingSlot> GetAllSlotsWithBuildingsTypes<T>(bool shouldMarkActionDone =false)
     {
         return BuildingSlots.FindAll((slot) => 
         {
             Building building = slot?.building;
             if(shouldMarkActionDone)
             {
-                slot.WasActionDone = true;
+                slot.WasCalculated = true;
             }
             return building != null && building.GetType() == typeof(T);
         });
@@ -95,26 +95,30 @@ public class WorldMap : MonoBehaviour
         
     }
 
-    public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =true)
+    public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =false)
     {
-        List<BuildingSlot> adjecentSlots = new List<BuildingSlot>();
+        List<BuildingSlot> allAdjecentSlots = new List<BuildingSlot>();
+        slots = slots.FindAll(slot => !slot.WasCalculated);
         foreach(BuildingSlot slot in slots)
         {
             if(shouldMarkActionDone)
             {
-                slot.WasActionDone = true;
+                slot.WasCalculated = true;
             }
-            adjecentSlots.AddRange(GetAdjecentSlots(slot));
+            var adjecentSlots = GetAdjecentSlots(slot);
+            Debug.Log(" allAdjecentSlots part :"+adjecentSlots.Count);
+            allAdjecentSlots.AddRange(adjecentSlots);
         }
-
-        foreach(BuildingSlot adjecentSlot in adjecentSlots)
+        Debug.Log(" allAdjecentSlots all:"+allAdjecentSlots.Count);
+        foreach(BuildingSlot adjecentSlot in allAdjecentSlots)
         {
             if(slots.Contains(adjecentSlot))
             {
-                adjecentSlots.Remove(adjecentSlot);
+                allAdjecentSlots.Remove(adjecentSlot);
             }
         }
-        return adjecentSlots.Count;
+        Debug.Log(" GetIslandCount left:"+allAdjecentSlots.Count);
+        return allAdjecentSlots.Count;
     }
 
     public void BuildCard(int buildingSlotIndex, Card card)
@@ -164,9 +168,11 @@ public class WorldMap : MonoBehaviour
         CardImpact totalImpact = new CardImpact();
         foreach(var slot in BuildingSlots)
         {
+            slot.WasCalculated = false;
             Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
+                slot.WasCalculated = false;
                 CardImpact cardImpact = slot.GetCardCalaulation(StatsManager.Instance, this);
                 totalImpact.polution += cardImpact.polution;
                 totalImpact.resources += cardImpact.resources;

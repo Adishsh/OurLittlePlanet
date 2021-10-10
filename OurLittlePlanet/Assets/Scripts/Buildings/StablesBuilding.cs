@@ -9,6 +9,8 @@ public class StablesBuilding : Building
         List<BuildingSlot> AllStables = map.GetAllSlotsWithBuildingsTypes<StablesBuilding>();
         Debug.Log("StablesBuilding near slots:"+AllStables.Count);
         int numOfStables = map.GetIslandCount(AllStables, true);
+        Debug.Log("numOfStables :"+numOfStables);
+        
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
         if (numOfStables >= 3)
         {

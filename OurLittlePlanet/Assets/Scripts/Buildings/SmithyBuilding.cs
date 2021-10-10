@@ -8,7 +8,7 @@ public class SmithyBuilding : Building
     {
         List<BuildingSlot> AdjacentBuildings = map.GetAdjecentSlots(slot);
 
-        List<BuildingSlot> AdjacentMines = AdjacentBuildings.FindAll(building => building.building.GetType() == typeof(MineBuilding));
+        List<BuildingSlot> AdjacentMines = AdjacentBuildings.FindAll(buildingSlot => buildingSlot.building != null && buildingSlot.building.GetType() == typeof(MineBuilding));
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
