@@ -3209,6 +3209,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
+  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
+  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
 --- !u!1 &542482237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6972,7 +6974,7 @@ MonoBehaviour:
   m_StatsManager: {fileID: 1361728087}
   m_Board: {fileID: 766950377}
   m_ResourcesList: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
-  m_NumberOfDaysToChangeEra: 3
+  m_NumberOfDaysToChangeEra: 10
 --- !u!4 &1361728085
 Transform:
   m_ObjectHideFlags: 0
@@ -7030,7 +7032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Display: {fileID: 1758655551}
-  m_InitMoney: 100
+  m_InitMoney: 0
   m_InitResources: 0
   m_InitPolution: 0
   m_StrikesAllowed: 3
