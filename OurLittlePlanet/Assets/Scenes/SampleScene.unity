@@ -475,7 +475,6 @@ MonoBehaviour:
   - {fileID: 1316589832}
   - {fileID: 1890969744}
   m_AllEventCards:
-  - {fileID: 1316589832}
   - {fileID: 1890969744}
   m_EventText: {fileID: 72216219}
 --- !u!222 &31459837
