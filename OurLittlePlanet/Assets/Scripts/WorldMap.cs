@@ -97,8 +97,12 @@ public class WorldMap : MonoBehaviour
 
     public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =false)
     {
+            Debug.Log(" allAdjecentSlots slots :"+slots.Count);
+
         List<BuildingSlot> allAdjecentSlots = new List<BuildingSlot>();
         slots = slots.FindAll(slot => !slot.WasCalculated);
+            Debug.Log(" allAdjecentSlots slots NotCalculated:"+slots.Count);
+
         foreach(BuildingSlot slot in slots)
         {
             if(shouldMarkActionDone)
@@ -114,11 +118,11 @@ public class WorldMap : MonoBehaviour
         {
             if(slots.Contains(adjecentSlot))
             {
-                allAdjecentSlots.Remove(adjecentSlot);
+                slots.Remove(adjecentSlot);
             }
         }
         Debug.Log(" GetIslandCount left:"+allAdjecentSlots.Count);
-        return allAdjecentSlots.Count;
+        return slots.Count;
     }
 
     public void BuildCard(int buildingSlotIndex, Card card)
@@ -159,7 +163,7 @@ public class WorldMap : MonoBehaviour
             statsManager.AddPolution(totalImpact.polution);
             statsManager.SetResources(totalImpact.resources);
             statsManager.GainMoneyForRecources();
-            statsManager.AddCardsToDraw(totalImpact.extraCardsToDraw);
+            statsManager.SetExtraCardsToDraw(totalImpact.extraCardsToDraw);
             statsManager.SetNewEventCards(totalImpact.extraEventCardsToAdd);
     }
 
@@ -169,10 +173,13 @@ public class WorldMap : MonoBehaviour
         foreach(var slot in BuildingSlots)
         {
             slot.WasCalculated = false;
+            Debug.Log("WasCalculated = false");
+        }
+        foreach(var slot in BuildingSlots)
+        {
             Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
-                slot.WasCalculated = false;
                 CardImpact cardImpact = slot.GetCardCalaulation(StatsManager.Instance, this);
                 totalImpact.polution += cardImpact.polution;
                 totalImpact.resources += cardImpact.resources;

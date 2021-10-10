@@ -39,7 +39,7 @@ public class StatsManager: MonoBehaviour
         SetResources(m_InitResources);
         AddPolution(m_InitPolution);
         AddStrikes(strikes);
-        AddCardsToDraw(m_InitCardsToDraw);
+        SetExtraCardsToDraw(0);
         SetNextPolutionToAddEvent();
     }
 
@@ -101,10 +101,10 @@ public class StatsManager: MonoBehaviour
         return 0;
     }
     
-    public void AddCardsToDraw(int extraCardsAmount)
+    public void SetExtraCardsToDraw(int extraCardsAmount)
     {
         Debug.Log($"AddCardsToDraw:{extraCardsAmount}");
-        m_CardsToDraw += extraCardsAmount;
+        m_CardsToDraw = m_InitCardsToDraw + extraCardsAmount;
     }
 
     public void SetCurrentEvent(EventCard currentEvent)

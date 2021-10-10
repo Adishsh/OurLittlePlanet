@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1385325422859878599}
   - component: {fileID: 3809303561988305933}
   - component: {fileID: 2747319745790936132}
-  - component: {fileID: 8262239925374162246}
+  - component: {fileID: -877642987301229828}
   m_Layer: 0
   m_Name: Smithy-Anim
   m_TagString: Untagged
@@ -197,7 +197,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8262239925374162246
+--- !u!114 &-877642987301229828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,9 +206,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3449090014143501784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a2dd05e9b16eba408813e76cdb8d51e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slot: {fileID: 0}
 --- !u!1 &3895427808774716428
 GameObject:
   m_ObjectHideFlags: 0
