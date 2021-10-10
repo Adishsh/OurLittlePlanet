@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Smithy
   m_CardName: Smithy
   m_Sprite: {fileID: 21300000, guid: d867d352308b34f498af92a7ddd11af2, type: 3}
-  m_Building: {fileID: 8262239925374162246, guid: c5fdb6e1425ec2447bc2280282f0ad0d,
+  m_Building: {fileID: -877642987301229828, guid: c5fdb6e1425ec2447bc2280282f0ad0d,
     type: 3}
   m_Pollution: 1
   m_Resources: 2

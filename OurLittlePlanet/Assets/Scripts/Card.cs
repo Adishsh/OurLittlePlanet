@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField] Text m_CardName;
+    [SerializeField] TMP_Text m_CardName;
     [SerializeField] Text m_Description;
     [SerializeField] Text m_Cost;
     [SerializeField] Text m_Polution;
