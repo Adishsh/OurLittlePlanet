@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class SunnyDay : EventCard
 {
-    
+    public override void ActivateEvent(WorldMap map, StatsManager statsManager)
+    {
+    }
 }

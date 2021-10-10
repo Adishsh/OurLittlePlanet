@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class RainyDay : EventCard
 {
+    
+    public override void ActivateEvent(WorldMap map, StatsManager statsManager)
+    {
+    }
 }
