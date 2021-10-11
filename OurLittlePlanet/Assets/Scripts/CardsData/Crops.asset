@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Crops
   m_CardName: Crops
   m_Sprite: {fileID: 21300000, guid: 2f35fd0f85c9144409b65edc550bc9c6, type: 3}
-  m_Building: {fileID: 8345630748372054473, guid: d393eef238a8c8142b8a16d8c7c252b8,
+  m_Building: {fileID: 7274432640690059045, guid: 48b54002902939047ba5139956a28b20,
     type: 3}
   m_Pollution: 0
   m_Resources: 1
