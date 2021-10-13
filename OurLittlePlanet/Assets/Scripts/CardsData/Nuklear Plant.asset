@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Nuklear Plant
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 0.39607844, g: 0.6666667, b: 0.3137255, a: 1}
   m_Description: Nuclear Plant
   m_CardName: Nuclear Plant
   m_Sprite: {fileID: 21300000, guid: 355d48c4e1ffe1e4c9e6fa980e584a34, type: 3}

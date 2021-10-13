@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: PowerPlant
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.3773585, g: 0.33962265, b: 0.33962265, a: 1}
+  m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
   m_Description: Power Plant
   m_CardName: Power Plant
   m_Sprite: {fileID: 21300000, guid: 860119205eea8194bb920d02b40c832f, type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Smithy
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
   m_Description: Smithy
   m_CardName: Smithy
   m_Sprite: {fileID: 21300000, guid: d867d352308b34f498af92a7ddd11af2, type: 3}

@@ -6,7 +6,7 @@ public class WindBuilding : Building
 {
     public override CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
-        bool isRainyDay = statsManager.m_CurrentEvent.GetType() == typeof(RainyDay);
+        bool isRainyDay = statsManager.m_CurrentEvent.GetType() == typeof(RainyDay) || statsManager.m_CurrentEvent.GetType() == typeof(StormyDay);
 
         Debug.Log($"SolarPowerBuilding - GetCardCalaulation isRainyDay: {isRainyDay}");
 

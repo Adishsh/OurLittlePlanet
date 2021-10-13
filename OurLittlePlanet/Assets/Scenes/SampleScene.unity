@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -473,9 +473,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActiveEventCards:
   - {fileID: 1316589832}
+  - {fileID: 1316589832}
+  - {fileID: 1316589832}
   - {fileID: 1890969744}
+  - {fileID: 1890969744}
+  - {fileID: 1750767197}
   m_AllEventCards:
-  - {fileID: 1890969744}
+  - {fileID: 1750767197}
   m_EventText: {fileID: 72216219}
 --- !u!222 &31459837
 CanvasRenderer:
@@ -1685,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 280
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -2280,7 +2284,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 360
+      value: 440
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -3334,6 +3338,7 @@ RectTransform:
   m_Children:
   - {fileID: 1316589831}
   - {fileID: 1890969743}
+  - {fileID: 1750767196}
   m_Father: {fileID: 31459835}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4488,7 +4493,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -6770,7 +6775,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -6972,7 +6977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatsManager: {fileID: 1361728087}
   m_Board: {fileID: 766950377}
-  m_ResourcesList: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c000000
+  m_ResourcesList: 0200000005000000080000000b0000000e00000013000000180000001d0000002200000027000000
   m_NumberOfDaysToChangeEra: 10
 --- !u!4 &1361728085
 Transform:
@@ -8535,7 +8540,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 360
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -9484,7 +9489,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 360
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
@@ -9689,6 +9694,55 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 3574f1d8be69d1943ac3370637e01405, type: 3}
+--- !u!1 &1750767195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1750767196}
+  - component: {fileID: 1750767197}
+  m_Layer: 5
+  m_Name: Stormy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1750767196
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750767195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 557080535}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1750767197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750767195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f112fdf167bdd54ba2e4d5ada9b4ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventName: Stormy Day
 --- !u!1 &1758655548
 GameObject:
   m_ObjectHideFlags: 0
@@ -11285,7 +11339,7 @@ PrefabInstance:
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2459679120706292657, guid: 3574f1d8be69d1943ac3370637e01405,
         type: 3}
