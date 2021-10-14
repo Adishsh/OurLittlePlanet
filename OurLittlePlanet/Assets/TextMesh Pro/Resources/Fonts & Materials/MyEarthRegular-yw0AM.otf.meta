@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b3bdeb466a87ee847885bf1ff89a53ed
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - My Earth
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 33e64432612c8f743850b6c3c613a849, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

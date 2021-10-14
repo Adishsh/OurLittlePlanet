@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StatsDisplay : MonoBehaviour
 {
-    [SerializeField] Text Money;
-    [SerializeField] Text Resources;
-    [SerializeField] Text ResourcesGoal;
+    [SerializeField] TMP_Text Money;
+    [SerializeField] TMP_Text Resources;
+    [SerializeField] TMP_Text ResourcesGoal;
     [SerializeField] Text ExtraResourcesNeeded;
-    [SerializeField] Text Polution;
-    [SerializeField] Text m_TempPolution;
+    [SerializeField] TMP_Text Polution;
+    [SerializeField] TMP_Text m_TempPolution;
     [SerializeField] Text m_LessResourcesNeeded;
-    [SerializeField] Text m_Strikes;
-    [SerializeField] Text m_Day;
-    [SerializeField] Text m_Era;
+    [SerializeField] TMP_Text m_Strikes;
+    [SerializeField] TMP_Text m_Day;
+    [SerializeField] TMP_Text m_Era;
 
 
     public void SetMoney(int amount)

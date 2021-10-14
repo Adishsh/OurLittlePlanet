@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ronoi\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ronoi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_OurLittlePlanet.-1153333064.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ronoi\OneDrive\מסמכים\Unity\Unity Projects\Our_Little_Planet\OurLittlePlanet" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="LowPolyWater_Pack" t="Include">
+          <e p="LowPoly Island" t="Include">
+            <e p="Credits.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GeneratePlane.cs" t="Include" />
+            </e>
+            <e p="LowPolyWater.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="WaterShaded.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Board.cs" t="Include" />
+          <e p="Building.cs" t="Include" />
+          <e p="Buildings" t="Include">
+            <e p="ActivistTentBuilding.cs" t="Include" />
+            <e p="FarmBuilding.cs" t="Include" />
+            <e p="MeteorologyCenterBuilding.cs" t="Include" />
+            <e p="MineBuilding.cs" t="Include" />
+            <e p="NuclearPlantBuilding.cs" t="Include" />
+            <e p="OilPumpBilding.cs" t="Include" />
+            <e p="PlasticMeltdownBuilding.cs" t="Include" />
+            <e p="PrintingPressBuilding.cs" t="Include" />
+            <e p="SmithyBuilding.cs" t="Include" />
+            <e p="SolarPowerBuilding.cs" t="Include" />
+            <e p="SpacePortBuilding.cs" t="Include" />
+            <e p="StablesBuilding.cs" t="Include" />
+            <e p="WindBuilding.cs" t="Include" />
+          </e>
+          <e p="BuildingSlot.cs" t="Include" />
+          <e p="Card.cs" t="Include" />
+          <e p="CardData.cs" t="Include" />
+          <e p="CardImpact.cs" t="Include" />
+          <e p="CardsCollection.cs" t="Include" />
+          <e p="Deck.cs" t="Include" />
+          <e p="Discard.cs" t="Include" />
+          <e p="DiscardDisplay.cs" t="Include" />
+          <e p="EventCard.cs" t="Include" />
+          <e p="EventDeck.cs" t="Include" />
+          <e p="EventManager.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="RainyDay.cs" t="Include" />
+            <e p="StormyDay.cs" t="Include" />
+            <e p="SunnyDay.cs" t="Include" />
+          </e>
+          <e p="GameEventData.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
+          <e p="Hand.cs" t="Include" />
+          <e p="Market.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="Slot.cs" t="Include" />
+          <e p="StatsDisplay.cs" t="Include" />
+          <e p="StatsManager.cs" t="Include" />
+          <e p="WorldMap.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Fonts &amp; Materials" t="Include">
+              <e p="info.txt" t="Include" />
+              <e p="LiberationSans - OFL.txt" t="Include" />
+            </e>
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+            <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+            <e p="TMP_Bitmap.shader" t="Include" />
+            <e p="TMP_SDF Overlay.shader" t="Include" />
+            <e p="TMP_SDF SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+            <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+            <e p="TMP_SDF-Mobile SSD.shader" t="Include" />
+            <e p="TMP_SDF-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+            <e p="TMP_SDF-Surface.shader" t="Include" />
+            <e p="TMP_SDF.shader" t="Include" />
+            <e p="TMP_Sprite.shader" t="Include" />
+            <e p="TMPro.cginc" t="Include" />
+            <e p="TMPro_Mobile.cginc" t="Include" />
+            <e p="TMPro_Properties.cginc" t="Include" />
+            <e p="TMPro_Surface.cginc" t="Include" />
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="OurLittlePlanet.sln" t="IncludeFlat" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

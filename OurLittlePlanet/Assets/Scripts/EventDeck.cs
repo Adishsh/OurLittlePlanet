@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class EventDeck : MonoBehaviour
 {
     [SerializeField] private List<EventCard> m_ActiveEventCards;
     [SerializeField] private List<EventCard> m_AllEventCards;
-    [SerializeField] Text m_EventText;
+    [SerializeField] TMP_Text m_EventText;
 
 
     public EventCard SelectEventCard()
