@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         int cost = card.m_CardData.m_Cost;
-        if (m_StatsManager.m_Money > cost)
+        if (m_StatsManager.m_Money >= cost)
         {
             m_StatsManager.AddMoney(-cost);
             m_Board.BuyCard(slot);
@@ -250,7 +250,7 @@ public class GameManager : MonoBehaviour
     private void EndTurnCalculation()
     {
         m_Board.EndTurnImpactCalculations.Invoke(m_StatsManager);
-        if(m_StatsManager.m_Resources > m_ResourcesList[resourceIndex])
+        if(m_StatsManager.m_Resources >= m_ResourcesList[resourceIndex])
         {
             resourceIndex++;
         } 
