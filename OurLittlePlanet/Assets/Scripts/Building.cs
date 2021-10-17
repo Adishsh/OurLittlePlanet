@@ -28,8 +28,13 @@ public class Building : MonoBehaviour
     }
 
     // for now for Oil Pump and Activist's Tent	
-    public virtual void OnTurnEnd()
+    public virtual void OnTurnEnd(StatsManager statsManager, WorldMap map)
     {
+    }
+
+    public virtual bool CanBuildBuilding(WorldMap map)
+    {
+        return true;
     }
 
 

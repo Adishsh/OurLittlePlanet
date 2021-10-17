@@ -2729,9 +2729,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
+  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
-  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
-  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
+  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
 --- !u!1001 &555988980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6625,6 +6625,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   EndTurn:
+    m_PersistentCalls:
+      m_Calls: []
+  WinGame:
     m_PersistentCalls:
       m_Calls: []
   BuyCard:

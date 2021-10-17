@@ -8,12 +8,19 @@ public class ActivistTentBuilding : Building
     {
         List<BuildingSlot> AllSlots = map.GetAllSlots();
 
-        List<BuildingSlot> AllNonPollut = AllSlots.FindAll(building => building.building.m_CardData.m_Pollution == 0);
+        List<BuildingSlot> AllNonPollut = AllSlots.FindAll(slots => slots?.building?.m_CardData?.m_Pollution == 0);
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
         impact.resources += AllNonPollut.Count;
 
         return impact;
+    }
+
+    
+    public override bool CanBuildBuilding(WorldMap map)
+    {
+        var tents = map.GetAllSlotsWithBuildingsTypes<ActivistTentBuilding>();
+        return tents.Count == 0;
     }
 }

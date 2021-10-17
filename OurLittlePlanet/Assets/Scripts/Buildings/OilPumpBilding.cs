@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OilPumpBilding : MonoBehaviour
+public class OilPumpBilding : Building
 {
-    // Start is called before the first frame update
-    void Start()
+    int turnCount =0;
+        // for now for Oil Pump and Activist's Tent	
+    public override void OnTurnEnd(StatsManager statsManager, WorldMap map)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        turnCount++;
+        if(turnCount >= 3)
+        {
+            map.DestroyBuilding(slot.index);
+        }
     }
 }

@@ -16,13 +16,14 @@ public class BuildingSlot : MonoBehaviour
         m_AdjasentSlots = adjasentSlots;
     }
 
-    public void Build(Card card)
+    public void Build(Card card, WorldMap map)
     {
-        DestroyBuilding();
+        
         var cardData = card.m_CardData;
-        building = cardData.m_Building;
-        if(building)
+        if( cardData.m_Building &&  cardData.m_Building.CanBuildBuilding(map))
         {
+            DestroyBuilding();
+            building = cardData.m_Building;
             Vector3 newPosition = transform.position + building.transform.position;
             var newRotation= building.transform.rotation * transform.rotation;
             building = Instantiate(building, newPosition, newRotation, transform);

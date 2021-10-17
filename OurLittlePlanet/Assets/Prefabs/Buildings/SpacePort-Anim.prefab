@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1938508693719825357}
   - component: {fileID: 3263188847145661544}
   - component: {fileID: 769512721769218210}
-  - component: {fileID: 8618005799965023721}
   - component: {fileID: 5118308246580593025}
+  - component: {fileID: 3940023755276407287}
   m_Layer: 0
   m_Name: SpacePort-Anim
   m_TagString: Untagged
@@ -86,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8618005799965023721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273718037372821879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot: {fileID: 0}
 --- !u!95 &5118308246580593025
 Animator:
   serializedVersion: 3
@@ -118,6 +105,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3940023755276407287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273718037372821879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982b9a667e3ee4c44bf0d4c382e80103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4991463216470362458
 GameObject:
   m_ObjectHideFlags: 0

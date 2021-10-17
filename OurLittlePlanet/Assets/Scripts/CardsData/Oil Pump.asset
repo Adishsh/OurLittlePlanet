@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Oil Pump
   m_CardName: Oil Pump
   m_Sprite: {fileID: 21300000, guid: aaa509f2a5ce814419ff49c49f7d5232, type: 3}
-  m_Building: {fileID: 144907888372696395, guid: 29cf9d948302cca498a565c37f896112,
+  m_Building: {fileID: -8773197806615694987, guid: 29cf9d948302cca498a565c37f896112,
     type: 3}
   m_Pollution: 2
   m_Resources: 5

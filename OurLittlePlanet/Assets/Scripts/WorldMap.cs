@@ -111,6 +111,7 @@ public class WorldMap : MonoBehaviour
             return building != null && building.GetType() == typeof(T);
         });
     }
+
     public List<BuildingSlot> GetAllSlots()
     {
         return BuildingSlots;
@@ -150,11 +151,7 @@ public class WorldMap : MonoBehaviour
     public void BuildCard(int buildingSlotIndex, Card card)
     {
         BuildingSlot slot = BuildingSlots[buildingSlotIndex];
-        if(slot != null)
-        {
-            slot.DestroyBuilding();
-        }
-        slot.Build(card);
+        slot.Build(card, this);
         StatsManager.Instance.SetTempCardImpact(GetCardsImpact());
     }
 
@@ -186,7 +183,7 @@ public class WorldMap : MonoBehaviour
             Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
-                slot.building.OnTurnEnd();
+                slot.building.OnTurnEnd(statsManager, this);
             }
         }
         CardImpact totalImpact = GetCardsImpact();

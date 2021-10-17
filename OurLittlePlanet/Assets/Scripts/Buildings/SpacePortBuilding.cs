@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpacePortBuilding : MonoBehaviour
+public class SpacePortBuilding : Building
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnTurnEnd(StatsManager statsManager, WorldMap map)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        EventManager.instance.WinGame.Invoke();
     }
 }

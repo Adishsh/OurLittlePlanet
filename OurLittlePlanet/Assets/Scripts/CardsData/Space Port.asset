@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Space Port
   m_CardName: Space Port
   m_Sprite: {fileID: 21300000, guid: 500514e4dce4285499dee44c65bf427b, type: 3}
-  m_Building: {fileID: 8618005799965023721, guid: c9bfa75a0e11bb24fb23ca32775b9f51,
+  m_Building: {fileID: 3940023755276407287, guid: c9bfa75a0e11bb24fb23ca32775b9f51,
     type: 3}
   m_Pollution: 0
   m_Resources: 0

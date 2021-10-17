@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private UnityAction<Slot> BuyCardListener;
     private UnityAction DrawCardsListener;
     private UnityAction EndTurnListener;
+    private UnityAction WinGameListener;
     private UnityAction<int> BuildListener;
 
     private void Awake() 
@@ -85,6 +86,8 @@ public class GameManager : MonoBehaviour
         DrawCardsListener = new UnityAction(DrawCardsToHand);
         EndTurnListener = new UnityAction(EndTurn);
         BuildListener = new UnityAction<int>(BuildCard);
+        WinGameListener = new UnityAction(WinGame);
+
 
         EventManager.instance.SelectDiscardCard.AddListener(SelectDiscardCardListener);
         EventManager.instance.SelectCard.AddListener(SelectCardListener);
@@ -92,6 +95,8 @@ public class GameManager : MonoBehaviour
         EventManager.instance.DrawCards.AddListener(DrawCardsListener);
         EventManager.instance.EndTurn.AddListener(EndTurnListener);
         EventManager.instance.BuildCard.AddListener(BuildListener);
+        EventManager.instance.WinGame.AddListener(WinGameListener);
+
     
     }
     private void StartTurn()
@@ -235,6 +240,11 @@ public class GameManager : MonoBehaviour
     private void LoseGame()
     {
         Debug.Log("you lose");
+    }
+
+        private void WinGame()
+    {
+        Debug.Log("you Win");
     }
 
     private void EndTurnCalculation()

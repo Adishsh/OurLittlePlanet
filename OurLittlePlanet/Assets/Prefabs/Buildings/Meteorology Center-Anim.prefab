@@ -1409,7 +1409,7 @@ GameObject:
   - component: {fileID: 6072422216023831400}
   - component: {fileID: 8332051410855823266}
   - component: {fileID: 7233046246706401486}
-  - component: {fileID: 8483720661813449101}
+  - component: {fileID: -5713750694567921961}
   m_Layer: 0
   m_Name: Meteorology Center-Anim
   m_TagString: Untagged
@@ -1518,7 +1518,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8483720661813449101
+--- !u!114 &-5713750694567921961
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7539475393879025271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 72264df16c4a9df49a1bf33fe327903d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8313122246814364967

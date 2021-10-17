@@ -663,8 +663,8 @@ GameObject:
   - component: {fileID: 3556549851956425415}
   - component: {fileID: 501232898785656162}
   - component: {fileID: 2382487643822442920}
-  - component: {fileID: 144907888372696395}
   - component: {fileID: 4057491193989369441}
+  - component: {fileID: -8773197806615694987}
   m_Layer: 0
   m_Name: Oil Pump-Anim
   m_TagString: Untagged
@@ -750,19 +750,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &144907888372696395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4184045898724337789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot: {fileID: 0}
 --- !u!95 &4057491193989369441
 Animator:
   serializedVersion: 3
@@ -782,6 +769,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8773197806615694987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184045898724337789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bb8d759e137fd4d8fa3a2c0129c52f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5317548379597851305
 GameObject:
   m_ObjectHideFlags: 0
