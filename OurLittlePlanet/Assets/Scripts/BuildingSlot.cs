@@ -8,6 +8,7 @@ public class BuildingSlot : MonoBehaviour
     public List<BuildingSlot> m_AdjasentSlots {get; private set;} 
     public Building building{ get; private set;}
     public bool WasCalculated = false;
+    [SerializeField] Animator animator;
 
 
     public BuildingSlot(List<BuildingSlot> adjasentSlots)
@@ -25,7 +26,6 @@ public class BuildingSlot : MonoBehaviour
             Vector3 newPosition = transform.position + building.transform.position;
             var newRotation= building.transform.rotation * transform.rotation;
             building = Instantiate(building, newPosition, newRotation, transform);
-            building.GetComponent<Renderer>().material.color = card.m_CardData.m_Color;
             building.m_CardData = cardData;
             building.slot = this;
         }
@@ -40,6 +40,7 @@ public class BuildingSlot : MonoBehaviour
             Destroy(building.gameObject);
             building = null;
         }
+        animator.Play("BuildingSlotDestroy");
     }
 
     public bool HasCardData()

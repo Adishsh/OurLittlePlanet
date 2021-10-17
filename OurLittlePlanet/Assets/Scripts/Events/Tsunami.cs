@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StormyDay : EventCard
+public class Tsunami : EventCard
 {
     
     public override void ActivateEvent(WorldMap map, StatsManager statsManager)
     {
-        statsManager.SetExtraNeededResources(5);
+        var slotsToDestroy = map.GetFrameSlots();
+        map.DestroyBuildings(slotsToDestroy);
     }
 }

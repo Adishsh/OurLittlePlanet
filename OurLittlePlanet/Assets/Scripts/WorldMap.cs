@@ -20,17 +20,39 @@ public class WorldMap : MonoBehaviour
         }
     }
 
-    public List<BuildingSlot> GetRow(int index)
+    public List<BuildingSlot> GetRandomRowOrColumn()
+    {
+        var index = Random.Range(0, m_RowsCount);
+        var isRow = Random.Range(0, 1) == 0;
+        return isRow ? GetRow(index) : GetColumn(index);
+    }
+
+    public List<BuildingSlot> GetFrameSlots()
+    {
+         List<BuildingSlot> slots = new List<BuildingSlot>();
+         slots.AddRange(GetRow(0));
+         slots.AddRange(GetRow(m_RowsCount-1));
+         slots.AddRange(GetColumn(0));
+         slots.AddRange(GetColumn(m_RowsCount-1));
+         return slots;
+
+    }
+
+    private List<BuildingSlot> GetRow(int index)
     {
         return BuildingSlots.GetRange(index * m_RowsCount, m_RowsCount);
     }
 
-    public List<BuildingSlot> GetColumn(int index)
+    private List<BuildingSlot> GetColumn(int index)
     {
         var slots = new List<BuildingSlot>();
-        for(var i = 0; i < BuildingSlots.Count; i ++)
+            Debug.Log("curentindex  index " +index);
+
+        for(var i = 0; i < m_RowsCount-1; i ++)
         {
-            slots.Add(BuildingSlots[index + (i * m_RowsCount)]);
+            int curentindex = index + (i * m_RowsCount);
+            Debug.Log("curentindex " +curentindex);
+            slots.Add(BuildingSlots[curentindex]);
         }
         return slots;
     }
@@ -39,9 +61,9 @@ public class WorldMap : MonoBehaviour
     {
         var startIndex = Random.Range(0, m_RowsCount - 3);
         var slots = new List<BuildingSlot>();
-        for(var i = 0; i < BuildingSlots.Count; i ++)
+        for(var i = 0; i < 3; i ++)
         {
-            slots.AddRange(BuildingSlots.GetRange(startIndex * i, 3));
+            slots.AddRange(BuildingSlots.GetRange(startIndex + m_RowsCount * i, 3));
         }
         return slots;
     }
@@ -127,7 +149,6 @@ public class WorldMap : MonoBehaviour
 
     public void BuildCard(int buildingSlotIndex, Card card)
     {
-        Debug.Log(" bc ");
         BuildingSlot slot = BuildingSlots[buildingSlotIndex];
         if(slot != null)
         {
@@ -140,7 +161,16 @@ public class WorldMap : MonoBehaviour
     public void DestroyBuilding(int buildingSlotIndex)
     {
         BuildingSlots[buildingSlotIndex].DestroyBuilding();
-        StatsManager.Instance.SetTempCardImpact(GetCardsImpact());
+        var impact = GetCardsImpact();
+        StatsManager.Instance.SetTempCardImpact(impact);
+    }
+
+    public void DestroyBuildings(List<BuildingSlot> buildingSlots)
+    {
+        foreach(var slot in buildingSlots)
+        {
+            DestroyBuilding(slot.index);
+        }
     }
 
     public void SetSelectable(bool isSelectable)

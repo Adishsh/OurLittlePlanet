@@ -133,6 +133,11 @@ public class StatsManager: MonoBehaviour
         return GetNewEventCardsFromPolution() + m_ExtraEventCardsToAdd;
     }
 
+    public void SetExtraNeededResources(int extraResourcesNeeded)
+    {
+        m_ExtraNeededResources = extraResourcesNeeded;
+        m_Display.SetExtraResourcesNeeded(m_ExtraNeededResources);
+    }
     
     public void SetTempCardImpact(CardImpact impact)
     {
@@ -144,7 +149,6 @@ public class StatsManager: MonoBehaviour
         {
             m_Display.SetTempPolution(impact.polution);
             m_Display.SetResources(impact.resources);
-            m_Display.SetLessResourcesNeeded(impact.lessResourcesNeeded);
         }
     }
 

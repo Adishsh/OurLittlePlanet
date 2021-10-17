@@ -56,7 +56,7 @@ public class StatsDisplay : MonoBehaviour
         m_TempPolution.text = "";
     }
 
-    public void SetLessResourcesNeeded(int amount)
+    public void SetExtraResourcesNeeded(int amount)
     {
         ExtraResourcesNeeded.gameObject.SetActive(amount != 0);
         string AdditiveSign = amount > 0 ? "+":"-";

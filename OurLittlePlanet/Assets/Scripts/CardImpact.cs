@@ -9,5 +9,4 @@ public class CardImpact
     public int resources;
     public int extraCardsToDraw;
     public int extraEventCardsToAdd;
-    public int lessResourcesNeeded;
 }

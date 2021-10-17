@@ -25,6 +25,7 @@ public class Market : CardsCollection
 
     private void SelectMarketCard(Slot slot)
     {
+
         if(slot.card && m_isSelectable)
         {
             EventManager.instance.BuyCard.Invoke(slot);

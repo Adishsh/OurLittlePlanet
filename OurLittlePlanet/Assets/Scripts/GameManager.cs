@@ -37,8 +37,20 @@ public class GameManager : MonoBehaviour
     private void Awake() 
     {
         SetListeners();
-        SetGameState(GameState.StartTurn);
     }
+
+    private void Start() 
+    {
+        StartCoroutine(WaitAndStart());
+    }
+
+    IEnumerator WaitAndStart()
+    {
+        yield return null;
+        SetGameState(GameState.StartTurn);
+
+    }
+
 
     private void SetGameState(GameState newState)
     {
@@ -49,11 +61,19 @@ public class GameManager : MonoBehaviour
         if(newState == GameState.StartTurn)
         {
             StartTurn();
+            return;
         }
 
         if(newState == GameState.LoseGame)
         {
             LoseGame();
+            return;
+        }
+
+        if(newState == GameState.Drawing)
+        {
+             EventManager.instance.DrawCards.Invoke();
+            return;
         }
     }
 
@@ -233,7 +253,6 @@ public class GameManager : MonoBehaviour
     private void ActivateEvents()
     {
         m_Board.SetNextEvent.Invoke(m_StatsManager);
-        SetGameState(GameState.Drawing);
     }
 
     private void OnDestroy() 
