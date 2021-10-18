@@ -7,7 +7,7 @@ using TMPro;
 public class Card : MonoBehaviour
 {
     [SerializeField] TMP_Text m_CardName;
-    [SerializeField] Text m_Description;
+    [SerializeField] TMP_Text m_Description;
     [SerializeField] Text m_Cost;
     [SerializeField] Text m_Polution;
     [SerializeField] Text m_Population;
