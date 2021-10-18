@@ -12,7 +12,6 @@ public class Building : MonoBehaviour
     
     public virtual CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
-        Debug.Log("GetCardCalaulation");
         DestroyBuilding = () => OnBuildingDestroy(statsManager);
         return new CardImpact()
         {

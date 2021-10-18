@@ -72,7 +72,6 @@ public class Board : MonoBehaviour
 
     public void DiscardHand()
     {
-        Debug.Log("DiscardHand");
         var cards = m_Hand.RemoveAllCards();
 
         foreach (Card card in cards)
@@ -87,25 +86,21 @@ public class Board : MonoBehaviour
         {
             return;
         }
-        Debug.Log($"ShuffleAndGetCards m_Discard: {m_Discard.CardsAmount}");
         var cards = m_Discard.ShuffleAndGetCards();
 
         foreach (Card card in cards)
         {
             m_Deck.AddCard(card);
         }
-        Debug.Log($"RefilDeck to m_Deck {m_Deck.CardsAmount}");
     }
 
     public void DisplayDiscardPile()
     {
-        Debug.Log($"Show m_Discard");
         if (m_Discard.CardsAmount == 0)
         {
             return;
         }
         m_DiscardDisplay.gameObject.SetActive(true);
-        Debug.Log($"Show m_Discard: {m_Discard.CardsAmount}");
         var cards = m_Discard.ShuffleAndGetCards();
 
         foreach (Card card in cards)
@@ -122,7 +117,6 @@ public class Board : MonoBehaviour
         {
             return;
         }
-        Debug.Log($"Show m_Discard: {m_Discard.CardsAmount}");
         var cards = m_DiscardDisplay.RemoveAllCards();
 
         foreach (Card card in cards)
@@ -135,14 +129,12 @@ public class Board : MonoBehaviour
     {
         Card card = m_Market.DrawCard(slot);
         m_Discard.AddCard(card);
-        Debug.Log($"Discard {card}");
     }
 
     public void SellCard(Slot slot)
     {
         Card card = m_DiscardDisplay.DrawCard(slot);
         Destroy(card);
-        Debug.Log($"Discard {card}");
     }
 
     public void AddEventCardToEventDeck(int eventsToAdd)

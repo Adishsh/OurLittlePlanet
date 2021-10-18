@@ -46,12 +46,10 @@ public class WorldMap : MonoBehaviour
     private List<BuildingSlot> GetColumn(int index)
     {
         var slots = new List<BuildingSlot>();
-            Debug.Log("curentindex  index " +index);
 
         for(var i = 0; i < m_RowsCount-1; i ++)
         {
             int curentindex = index + (i * m_RowsCount);
-            Debug.Log("curentindex " +curentindex);
             slots.Add(BuildingSlots[curentindex]);
         }
         return slots;
@@ -120,11 +118,8 @@ public class WorldMap : MonoBehaviour
 
     public int GetIslandCount(List<BuildingSlot> slots, bool shouldMarkActionDone =false)
     {
-            Debug.Log(" allAdjecentSlots slots :"+slots.Count);
-
         List<BuildingSlot> allAdjecentSlots = new List<BuildingSlot>();
         slots = slots.FindAll(slot => !slot.WasCalculated);
-            Debug.Log(" allAdjecentSlots slots NotCalculated:"+slots.Count);
 
         foreach(BuildingSlot slot in slots)
         {
@@ -133,10 +128,8 @@ public class WorldMap : MonoBehaviour
                 slot.WasCalculated = true;
             }
             var adjecentSlots = GetAdjecentSlots(slot);
-            Debug.Log(" allAdjecentSlots part :"+adjecentSlots.Count);
             allAdjecentSlots.AddRange(adjecentSlots);
         }
-        Debug.Log(" allAdjecentSlots all:"+allAdjecentSlots.Count);
         foreach(BuildingSlot adjecentSlot in allAdjecentSlots)
         {
             if(slots.Contains(adjecentSlot))
@@ -144,7 +137,6 @@ public class WorldMap : MonoBehaviour
                 slots.Remove(adjecentSlot);
             }
         }
-        Debug.Log(" GetIslandCount left:"+allAdjecentSlots.Count);
         return slots.Count;
     }
 
@@ -180,7 +172,6 @@ public class WorldMap : MonoBehaviour
         StatsManager.Instance.SetTempCardImpact(null);
          foreach(var slot in BuildingSlots)
         {
-            Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
                 slot.building.OnTurnEnd(statsManager, this);
@@ -200,11 +191,9 @@ public class WorldMap : MonoBehaviour
         foreach(var slot in BuildingSlots)
         {
             slot.WasCalculated = false;
-            Debug.Log("WasCalculated = false");
         }
         foreach(var slot in BuildingSlots)
         {
-            Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
                 CardImpact cardImpact = slot.GetCardCalaulation(StatsManager.Instance, this);

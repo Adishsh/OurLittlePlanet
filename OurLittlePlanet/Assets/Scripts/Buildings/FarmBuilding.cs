@@ -16,7 +16,6 @@ public class FarmBuilding : Building
         {
             impact.resources += 1;
         }
-        Debug.Log("Farm" + AdjacentFarms.Count);
         return impact;
     }
 }

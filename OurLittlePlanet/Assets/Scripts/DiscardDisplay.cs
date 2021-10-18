@@ -8,13 +8,10 @@ public class DiscardDisplay : CardsCollection
 
     private void Awake() 
     {
-        Debug.Log("DiscardDisplay init ");
         foreach(Slot slot in slots)
         {
             slot.OnSelectSlotCard = () => SelectDiscardSlot(slot);
         }
-        Debug.Log("DiscardDisplay done");
-
     }
 
     public Card DrawCard(Slot slot)
@@ -64,7 +61,6 @@ public class DiscardDisplay : CardsCollection
     {
         if(slot.card != null)
         {
-            Debug.Log("SelectDiscardSlot Dםמ ");
             EventManager.instance.SelectDiscardCard.Invoke(slot);
         }
     }

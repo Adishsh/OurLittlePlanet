@@ -67,8 +67,6 @@ public class StatsManager: MonoBehaviour
 
     public void SetResourcesGoal(int resources)
     {
-        Debug.Log($"SetResourcesGoal:{resources}");
-
        m_GoalResources = resources;
         m_Display.SetResourcesNeeded(resources);
     }
@@ -93,9 +91,6 @@ public class StatsManager: MonoBehaviour
             int extraPolution = m_Polution - nextPolutionToAddEvent;
             int badEventToAdd = (int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent);
             nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
-            Debug.Log($"extraPolution: {extraPolution} nextPolutionToAddEvent: {nextPolutionToAddEvent}");
-
-            Debug.Log($"GetNewEventCardsFromPolution: {badEventToAdd}");
             return badEventToAdd;
         }
         return 0;
@@ -103,7 +98,6 @@ public class StatsManager: MonoBehaviour
     
     public void SetExtraCardsToDraw(int extraCardsAmount)
     {
-        Debug.Log($"AddCardsToDraw:{extraCardsAmount}");
         m_CardsToDraw = m_InitCardsToDraw + extraCardsAmount;
     }
 

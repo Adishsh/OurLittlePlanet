@@ -203,7 +203,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("not in drawing mode");
             return;
         }
-        Debug.Log($"m_StatsManager.m_CardsToDraw:{m_StatsManager.m_CardsToDraw}");
         m_Board.DrawCardToHand(m_StatsManager.m_CardsToDraw);
 
         SetGameState(GameState.PlayingCards);
@@ -231,7 +230,6 @@ public class GameManager : MonoBehaviour
     private void AddEventCardToEventDeck()
     {
        int newEventsAmount = m_StatsManager.GetEventCardsAmountToDraw();
-        Debug.Log("AddEventCardToEventDeck: "+newEventsAmount);
 
        m_Board.AddEventCardToEventDeck(newEventsAmount);
 
