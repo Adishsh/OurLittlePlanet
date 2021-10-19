@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
   m_Description: No Special Effect
   m_CardName: Power Plant
-  m_Sprite: {fileID: 21300000, guid: 860119205eea8194bb920d02b40c832f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b88e6146bea2b10409f37c18f540f8de, type: 3}
   m_Building: {fileID: 1634833367586931324, guid: 2c148d3d66d6fd04dad156399b3ce673,
     type: 3}
   m_Pollution: 3

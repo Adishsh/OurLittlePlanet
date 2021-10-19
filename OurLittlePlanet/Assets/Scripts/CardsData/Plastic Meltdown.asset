@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
   m_Description: 'Add a bad event card to the event pile each turn. '
   m_CardName: Plastic Meltdown
-  m_Sprite: {fileID: 21300000, guid: e3c78bcb6ceec254aa6033c8e6c02a82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ccac40dfaddf534c9555bffa781c788, type: 3}
   m_Building: {fileID: -2220520927291570210, guid: 4cab7995b80d70343aaa2d29a02455cf,
     type: 3}
   m_Pollution: 5

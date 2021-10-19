@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: 'Your adjacent non-polluting buildings produce 1 more resource. 
     (Can only have 1 at a time). '
   m_CardName: "Activist\u2019s Tent"
-  m_Sprite: {fileID: 21300000, guid: 498bea05fd7f99c49bec891ea2be85d9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ce2b6a980d4bd343b7f1a608e25ae89, type: 3}
   m_Building: {fileID: -6455473480010625369, guid: 9e7865db190ba2342bae47e70a1b0c33,
     type: 3}
   m_Pollution: 0

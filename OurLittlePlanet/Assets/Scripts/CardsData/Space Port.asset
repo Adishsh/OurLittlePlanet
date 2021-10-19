@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
   m_Description: YOU WIN!!!
   m_CardName: Space Port
-  m_Sprite: {fileID: 21300000, guid: 500514e4dce4285499dee44c65bf427b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12453c075acd57c4488505c5f368fe74, type: 3}
   m_Building: {fileID: 3940023755276407287, guid: c9bfa75a0e11bb24fb23ca32775b9f51,
     type: 3}
   m_Pollution: 0

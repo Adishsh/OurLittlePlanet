@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
   m_Description: Disappears after 3 rounds.
   m_CardName: Oil Pump
-  m_Sprite: {fileID: 21300000, guid: aaa509f2a5ce814419ff49c49f7d5232, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a59d8c5946f4ae6469637b14af8503e6, type: 3}
   m_Building: {fileID: -8773197806615694987, guid: 29cf9d948302cca498a565c37f896112,
     type: 3}
   m_Pollution: 2

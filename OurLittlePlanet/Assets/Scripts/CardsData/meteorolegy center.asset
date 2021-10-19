@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.30588236, g: 0.32156864, b: 0.7647059, a: 1}
   m_Description: You can look at the top card of the Event pile.
   m_CardName: Meteorolegy Center
-  m_Sprite: {fileID: 21300000, guid: 9fc55034c2f1e424c84fa97f2e8403aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 286899d3de28dc14eb29897289322190, type: 3}
   m_Building: {fileID: -5713750694567921961, guid: ed1566766f5d0fd48850dc0ac14db90d,
     type: 3}
   m_Pollution: 0
