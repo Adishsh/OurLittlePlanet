@@ -1,2 +1,2 @@
-﻿license: Demo
-link: https://www.fontspace.com/survivor-font-f43830
+﻿license: Freeware
+link: https://www.fontspace.com/excluded-font-f43356

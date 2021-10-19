@@ -18,6 +18,7 @@
       <option value="$PROJECT_DIR$/../../OurLittlePlanet2/OurLittlePlanet2/Assets/Scripts/StatsDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EventDeck.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StatsDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Card.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1z0KqK7E5lTHxPONzDKsa0wd8lT" />
@@ -30,6 +31,9 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -62,6 +66,8 @@
       <updated>1633279794117</updated>
       <workItem from="1633279849913" duration="2000" />
       <workItem from="1634209944342" duration="3278000" />
+      <workItem from="1634641048234" duration="3000" />
+      <workItem from="1634651336053" duration="624000" />
     </task>
     <servers />
   </component>

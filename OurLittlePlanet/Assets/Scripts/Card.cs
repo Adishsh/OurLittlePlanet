@@ -8,9 +8,9 @@ public class Card : MonoBehaviour
 {
     [SerializeField] TMP_Text m_CardName;
     [SerializeField] TMP_Text m_Description;
-    [SerializeField] Text m_Cost;
-    [SerializeField] Text m_Polution;
-    [SerializeField] Text m_Population;
+    [SerializeField] TMP_Text m_Cost;
+    [SerializeField] TMP_Text m_Polution;
+    [SerializeField] TMP_Text m_Population;
     [SerializeField] Image m_CardImage;
 
     public CardData m_CardData{ get; private set; }
