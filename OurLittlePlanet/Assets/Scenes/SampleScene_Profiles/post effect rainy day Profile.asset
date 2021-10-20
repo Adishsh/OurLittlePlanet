@@ -21,7 +21,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
+    value: {r: 0.6067551, g: 0.8113232, b: 0.9528302, a: 1}
   center:
     overrideState: 1
     value: {x: 0.5, y: 0.5}
@@ -97,7 +97,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: -4
+    value: -36
   tint:
     overrideState: 1
     value: 0
