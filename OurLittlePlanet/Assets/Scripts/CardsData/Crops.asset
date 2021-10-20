@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Description: No Special Effect
   m_CardName: Crops
-  m_Sprite: {fileID: 21300000, guid: 8d92c747bc8699a41a284a37fd30f33c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7d368d8ba34cbb4497608ca76792999, type: 3}
   m_Building: {fileID: 7274432640690059045, guid: 48b54002902939047ba5139956a28b20,
     type: 3}
   m_Pollution: 0
