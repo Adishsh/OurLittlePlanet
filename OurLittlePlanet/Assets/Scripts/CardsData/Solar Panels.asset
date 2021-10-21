@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Solar Panels
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 0.38933784, g: 0.42283612, b: 0.6509434, a: 1}
   m_Description: Produces 0 Energy on stormy turns.
   m_CardName: Solar Panels
-  m_Sprite: {fileID: 21300000, guid: 2a6ae6213c335114d985f3e610ae2347, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb957843136b54b4d8eb2358725c2e85, type: 3}
   m_Building: {fileID: 8516678063511700057, guid: 800ec9125fc311e44adaedfb7d0d6015,
     type: 3}
   m_Pollution: 0

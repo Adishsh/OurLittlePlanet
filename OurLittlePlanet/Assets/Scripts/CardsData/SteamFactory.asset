@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: SteamFactory
   m_EditorClassIdentifier: 
-  m_Color: {r: 1, g: 0.4745098, b: 0, a: 1}
+  m_Color: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
   m_Description: No Special Effect
   m_CardName: Steam Factory
-  m_Sprite: {fileID: 21300000, guid: 74757726802f39141bdb41931dc9a639, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fda9d79047cead2409c85ff0f25e100b, type: 3}
   m_Building: {fileID: 5303077021618470023, guid: e71be38712ed31447adc92727f9bc7c7,
     type: 3}
   m_Pollution: 2

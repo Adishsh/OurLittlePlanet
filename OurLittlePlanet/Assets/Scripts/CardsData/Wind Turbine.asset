@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Wind Turbine
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 0.4377358, g: 0.75382954, b: 1, a: 1}
   m_Description: Produce 2 more resource on stormy turns.
   m_CardName: Wind Turbine
-  m_Sprite: {fileID: 21300000, guid: f4a136ca1fa73f947906926e1894c5f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c6e5cb228df944439a16445a831789d, type: 3}
   m_Building: {fileID: 8062220034797191325, guid: 4cc18224dfce8f345b8827f08dfebdaa,
     type: 3}
   m_Pollution: 0

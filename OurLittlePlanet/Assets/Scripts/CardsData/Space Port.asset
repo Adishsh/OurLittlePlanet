@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Space Port
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.6235919, a: 1}
   m_Description: YOU WIN!!!
   m_CardName: Space Port
-  m_Sprite: {fileID: 21300000, guid: 12453c075acd57c4488505c5f368fe74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8f288a2b756f884ebd1639fbbc33486, type: 3}
   m_Building: {fileID: 3940023755276407287, guid: c9bfa75a0e11bb24fb23ca32775b9f51,
     type: 3}
   m_Pollution: 0

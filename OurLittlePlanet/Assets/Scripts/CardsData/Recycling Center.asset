@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Recycling Center
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.30566037, g: 0.32343134, b: 0.764151, a: 1}
+  m_Color: {r: 0.23450875, g: 0.9150943, b: 0, a: 1}
   m_Description: Reduce your Pollution by 3 each turn  (Cannot be reduced below threshold).
   m_CardName: Recycling Center
-  m_Sprite: {fileID: 21300000, guid: 9504e693f096257498de1e357dc3bfac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd45f30ee12b27a4c9efbabeb91481e5, type: 3}
   m_Building: {fileID: 7100079120566455792, guid: 923042322f4902142b370845f2303e48,
     type: 3}
   m_Pollution: -3
