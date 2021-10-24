@@ -13,6 +13,9 @@ public class EventCard: MonoBehaviour
     {
         statsManager.SetCurrentEvent(this);
         if(!string.IsNullOrEmpty(m_AnimationName) && m_Animator != null)
-        m_Animator.Play(m_AnimationName);
+        {
+            Debug.Log("animate event:" + m_AnimationName);
+            m_Animator.Play(m_AnimationName);
+        }
     }
 }

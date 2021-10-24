@@ -58,8 +58,9 @@ public class StatsDisplay : MonoBehaviour
 
     public void SetExtraResourcesNeeded(int amount)
     {
-        ExtraResourcesNeeded.gameObject.SetActive(amount != 0);
+        ExtraResourcesNeeded?.gameObject?.SetActive(amount != 0);
         string AdditiveSign = amount > 0 ? "+":"-";
+        if(m_LessResourcesNeeded != null)
         m_LessResourcesNeeded.text = $"{AdditiveSign} {Mathf.Abs(amount)}";
     }
     

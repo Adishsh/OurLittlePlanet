@@ -153,6 +153,7 @@ public class Board : MonoBehaviour
     private void SetAndActivateNextEvent(StatsManager statsManager)
     {
         EventCard newEvent = m_EventDeck.SelectEventCard();
+        m_EventDeck.SetNextEvent();
         newEvent.ActivateEvent(m_Map, statsManager);
     }
 

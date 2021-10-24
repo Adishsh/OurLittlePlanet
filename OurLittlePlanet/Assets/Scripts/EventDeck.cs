@@ -8,15 +8,38 @@ public class EventDeck : MonoBehaviour
 {
     [SerializeField] private List<EventCard> m_ActiveEventCards;
     [SerializeField] private List<EventCard> m_AllEventCards;
-    [SerializeField] TMP_Text m_EventText;
+    [SerializeField] private List<EventCard> m_EventCardsDiscard;
 
+    [SerializeField] TMP_Text m_EventText;
+    private EventCard m_NextEvent;
+
+    private void Awake() 
+    {
+        m_EventCardsDiscard = new List<EventCard>();
+    }
+
+    public EventCard SetNextEvent()
+    {
+        if(m_ActiveEventCards.Count == 0)
+        {
+            m_ActiveEventCards.AddRange(m_EventCardsDiscard);
+            m_EventCardsDiscard = new List<EventCard>();
+        }
+        int randomIndex = Random.Range(0, m_ActiveEventCards.Count);
+        m_NextEvent = m_ActiveEventCards[randomIndex];
+        return m_NextEvent;
+    }
 
     public EventCard SelectEventCard()
     {
-        int randomIndex = Random.Range(0, m_ActiveEventCards.Count);
-        var nextEventCard = m_ActiveEventCards[randomIndex];
-        m_EventText.text = nextEventCard.m_EventName;
-        return nextEventCard;
+        if(m_NextEvent == null)
+        {
+            SetNextEvent();
+        }
+        m_EventText.text = m_NextEvent.m_EventName;
+        m_ActiveEventCards.Remove(m_NextEvent);
+        m_EventCardsDiscard.Add(m_NextEvent);
+        return m_NextEvent;
     }
 
     public void AddEventCardToEventDeck(int eventsToAdd)
