@@ -49,7 +49,7 @@ public class EventDeck : MonoBehaviour
         for( int i=0; i < eventsToAdd; i++)
         {
             EventCard newEvent = m_AllEventCards[currentBadEventIndex];
-            if(currentBadEventIndex < m_AllEventCards.Count)
+            if(currentBadEventIndex < m_AllEventCards.Count -1)
             {
                 currentBadEventIndex++;
             }
