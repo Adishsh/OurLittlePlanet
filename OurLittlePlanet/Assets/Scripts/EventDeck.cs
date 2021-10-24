@@ -12,6 +12,7 @@ public class EventDeck : MonoBehaviour
 
     [SerializeField] TMP_Text m_EventText;
     private EventCard m_NextEvent;
+    private int currentBadEventIndex;
 
     private void Awake() 
     {
@@ -47,9 +48,12 @@ public class EventDeck : MonoBehaviour
         Debug.Log("bad event added:"+eventsToAdd);
         for( int i=0; i < eventsToAdd; i++)
         {
-            int randomIndex = Random.Range(0, m_AllEventCards.Count);
-            EventCard newEvent = m_AllEventCards[randomIndex];
-            m_ActiveEventCards.Add(newEvent);
+            EventCard newEvent = m_AllEventCards[currentBadEventIndex];
+            if(currentBadEventIndex < m_AllEventCards.Count)
+            {
+                currentBadEventIndex++;
+            }
+            m_EventCardsDiscard.Add(newEvent);
         }
     }
 

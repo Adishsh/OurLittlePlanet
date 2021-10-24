@@ -12,6 +12,7 @@ public class Deck : CardsCollection
         base.InitCardsPiled(m_CardsData, m_TopSlot);
         m_TopSlot.SetCard(base.GetTopCard(), false);
         m_TopSlot.OnSelectSlotCard = SelectDeckSlot;
+        Shuffle();
     }
 
     public Card DrawCard()

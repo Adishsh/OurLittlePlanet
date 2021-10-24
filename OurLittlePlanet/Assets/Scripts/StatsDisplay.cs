@@ -9,10 +9,9 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] TMP_Text Money;
     [SerializeField] TMP_Text Resources;
     [SerializeField] TMP_Text ResourcesGoal;
-    [SerializeField] Text ExtraResourcesNeeded;
+    [SerializeField] TMP_Text ExtraResourcesNeeded;
     [SerializeField] TMP_Text Polution;
     [SerializeField] TMP_Text m_TempPolution;
-    [SerializeField] Text m_LessResourcesNeeded;
     [SerializeField] TMP_Text m_Strikes;
     [SerializeField] TMP_Text m_Day;
     [SerializeField] TMP_Text m_Era;
@@ -60,8 +59,8 @@ public class StatsDisplay : MonoBehaviour
     {
         ExtraResourcesNeeded?.gameObject?.SetActive(amount != 0);
         string AdditiveSign = amount > 0 ? "+":"-";
-        if(m_LessResourcesNeeded != null)
-        m_LessResourcesNeeded.text = $"{AdditiveSign} {Mathf.Abs(amount)}";
+        if(ExtraResourcesNeeded != null)
+        ExtraResourcesNeeded.text = $"{AdditiveSign} {Mathf.Abs(amount)}";
     }
     
     public void SetDay(int num)
