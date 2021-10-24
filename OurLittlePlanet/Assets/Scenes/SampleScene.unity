@@ -3775,6 +3775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09da77856c487414bb6441f17fd6d58e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Hitwave
 --- !u!1 &712554683 stripped
 GameObject:
@@ -4515,6 +4517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e613b7f862fdc6459a66c1dab4eabeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Meteor
 --- !u!1001 &816127534
 PrefabInstance:
@@ -4966,6 +4970,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
+--- !u!1001 &896347717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2082076571}
+    m_Modifications:
+    - target: {fileID: 7198962849650166300, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_Name
+      value: Tornado anim for game
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198962849650166300, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 65.323586
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 103.20195
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 166.2117
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98021
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1d2cbc1a414d6184ba0464cb9d602d06, type: 3}
 --- !u!1001 &896717980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5637,6 +5715,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b296ed19bdbff645830039530e4d977, type: 3}
+--- !u!4 &1026388534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1214235803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1037966647
 GameObject:
   m_ObjectHideFlags: 0
@@ -6353,6 +6437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a143ec30bd582e94bade99f0d4af77c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Tsunami
 --- !u!1 &1172889324
 GameObject:
@@ -6796,6 +6882,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
+--- !u!1001 &1214235803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2082076571}
+    m_Modifications:
+    - target: {fileID: 4744773571722727473, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_Name
+      value: Tornado effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727473, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 65.44268
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 97.74309
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 164.21939
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744773571722727484, guid: 85a5188c98513014c82ff6f74917bbcf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 85a5188c98513014c82ff6f74917bbcf, type: 3}
 --- !u!1001 &1225811287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7525,6 +7685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf027af44344ab4aa13a86fa6fdc0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 1543592252}
+  m_AnimationName: tornado full anim
   m_EventName: Sunny Day
 --- !u!1 &1338733769 stripped
 GameObject:
@@ -9768,6 +9930,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540557809}
   m_CullTransparentMesh: 1
+--- !u!1 &1543592251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543592253}
+  - component: {fileID: 1543592252}
+  m_Layer: 0
+  m_Name: TORNADO FULL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1543592252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543592251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97b673cfe70dca74485f53a18e2016d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1543592253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543592251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.8, y: 38.95265, z: 24.44655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2082076571}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1544344724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10887,6 +11100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f112fdf167bdd54ba2e4d5ada9b4ac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Stormy Day
 --- !u!1 &1758655548
 GameObject:
@@ -11735,7 +11950,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df4742fb9077d47a52b31606313131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Rainy Day
+--- !u!4 &1898201059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7542414735028883622, guid: 1d2cbc1a414d6184ba0464cb9d602d06,
+    type: 3}
+  m_PrefabInstance: {fileID: 896347717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1901540578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11963,6 +12186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec59764fa46950c45aa99ff2a04069a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Tornado
 --- !u!1 &2034968011 stripped
 GameObject:
@@ -12017,6 +12242,38 @@ Transform:
   - {fileID: 947784294}
   m_Father: {fileID: 1577836923}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2082076570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082076571}
+  m_Layer: 0
+  m_Name: turanim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2082076571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082076570}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -54.20913, y: -109.194214, z: -195.53505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1026388534}
+  - {fileID: 1898201059}
+  m_Father: {fileID: 1543592253}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2082892688
 PrefabInstance:
