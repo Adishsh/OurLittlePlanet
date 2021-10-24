@@ -8,5 +8,6 @@ public class Hitwave : EventCard
     public override void ActivateEvent(WorldMap map, StatsManager statsManager)
     {
         statsManager.SetExtraNeededResources(10);
+        base.ActivateEvent(map, statsManager);
     }
 }

@@ -441,6 +441,7 @@ MonoBehaviour:
   - {fileID: 2006666857}
   - {fileID: 805519049}
   - {fileID: 805519049}
+  m_EventCardsDiscard: []
   m_EventText: {fileID: 1172889326}
 --- !u!222 &31459837
 CanvasRenderer:
@@ -7694,7 +7695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1543592252}
-  m_AnimationName: tornado full anim
+  m_AnimationName: Tornado full anim
   m_EventName: Sunny Day
 --- !u!1 &1338733769 stripped
 GameObject:

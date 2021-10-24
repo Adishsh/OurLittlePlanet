@@ -9,5 +9,6 @@ public class Tornado : EventCard
     {
         var slotsToDestroy = map.GetRandomRowOrColumn();
         map.DestroyBuildings(slotsToDestroy);
+        base.ActivateEvent(map, statsManager);
     }
 }

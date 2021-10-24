@@ -9,5 +9,6 @@ public class Tsunami : EventCard
     {
         var slotsToDestroy = map.GetFrameSlots();
         map.DestroyBuildings(slotsToDestroy);
+        base.ActivateEvent(map, statsManager);
     }
 }

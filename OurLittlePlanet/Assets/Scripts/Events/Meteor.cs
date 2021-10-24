@@ -9,5 +9,6 @@ public class Meteor : EventCard
     {
         var slotsToDestroy = map.GetRandom3x3();
         map.DestroyBuildings(slotsToDestroy);
+        base.ActivateEvent(map, statsManager);
     }
 }

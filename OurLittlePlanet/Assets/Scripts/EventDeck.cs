@@ -44,7 +44,7 @@ public class EventDeck : MonoBehaviour
 
     public void AddEventCardToEventDeck(int eventsToAdd)
     {
-        Debug.Log("bad event added");
+        Debug.Log("bad event added:"+eventsToAdd);
         for( int i=0; i < eventsToAdd; i++)
         {
             int randomIndex = Random.Range(0, m_AllEventCards.Count);
