@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44254085, g: 0.49163014, b: 0.5714612, a: 1}
+  m_IndirectSpecularColor: {r: 0.44254118, g: 0.49163043, b: 0.5714621, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -426,12 +426,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActiveEventCards:
   - {fileID: 1316589832}
+  - {fileID: 1316589832}
+  - {fileID: 1316589832}
   - {fileID: 1890969744}
+  - {fileID: 1890969744}
+  - {fileID: 1750767197}
   m_AllEventCards:
   - {fileID: 1750767197}
   - {fileID: 707142794}
-  - {fileID: 2006666857}
+  - {fileID: 707142794}
   - {fileID: 1154943627}
+  - {fileID: 1154943627}
+  - {fileID: 2006666857}
+  - {fileID: 2006666857}
+  - {fileID: 805519049}
   - {fileID: 805519049}
   m_EventText: {fileID: 1172889326}
 --- !u!222 &31459837
@@ -3124,9 +3132,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
+  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
-  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
-  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
+  - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
 --- !u!1001 &555988980
@@ -7793,7 +7801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StatsManager: {fileID: 1361728087}
   m_Board: {fileID: 766950377}
-  m_ResourcesList: 0200000005000000080000000b0000000e00000013000000180000001d0000002200000027000000
+  m_ResourcesList: 0200000005000000080000000b0000000e00000013000000180000001d00000022000000270000002e000000350000003c000000430000004a000000530000005c000000650000006e00000077000000820000008d00000098000000a3000000ae000000bb000000c8000000d5000000e2000000ef000000fe0000000d0100001c0100002b0100003a0100004b0100005c0100006d0100007e0100008f0100008f010000a2010000b5010000c8010000db010000f0010000050200001a0200002f02000044020000
   m_NumberOfDaysToChangeEra: 10
 --- !u!4 &1361728085
 Transform:
