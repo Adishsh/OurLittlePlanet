@@ -83,6 +83,7 @@
           <e p="StatsManager.cs" t="Include" />
           <e p="WorldMap.cs" t="Include" />
         </e>
+        <e p="Second_Angle.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
