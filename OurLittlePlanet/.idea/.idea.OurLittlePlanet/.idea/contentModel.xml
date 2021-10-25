@@ -54,6 +54,7 @@
             <e p="WindBuilding.cs" t="Include" />
           </e>
           <e p="BuildingSlot.cs" t="Include" />
+          <e p="CameraSwitch.cs" t="Include" />
           <e p="Card.cs" t="Include" />
           <e p="CardData.cs" t="Include" />
           <e p="CardImpact.cs" t="Include" />
