@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44254118, g: 0.49163043, b: 0.5714621, a: 1}
+  m_IndirectSpecularColor: {r: 0.44254085, g: 0.49163014, b: 0.5714612, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5296,6 +5296,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194229}
   - component: {fileID: 963194231}
+  - component: {fileID: 963194232}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5656,6 +5657,66 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 963194228}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1008554998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5804,6 +5865,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037966647}
   m_CullTransparentMesh: 1
+--- !u!95 &1045047076 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4426898202694788749, guid: d52f479d4761fe347bc378471812ecf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4426898202255032745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1053361044
 GameObject:
   m_ObjectHideFlags: 0
@@ -7695,8 +7762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf027af44344ab4aa13a86fa6fdc0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 1543592252}
-  m_AnimationName: Tornado full anim
+  m_Animator: {fileID: 0}
+  m_AnimationName: 
   m_EventName: Sunny Day
 --- !u!1 &1338733769 stripped
 GameObject:
@@ -11959,8 +12026,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76df4742fb9077d47a52b31606313131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 0}
-  m_AnimationName: 
+  m_Animator: {fileID: 1045047076}
+  m_AnimationName: rain full anim
   m_EventName: Rainy Day
 --- !u!4 &1898201059 stripped
 Transform:
@@ -12195,8 +12262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec59764fa46950c45aa99ff2a04069a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 0}
-  m_AnimationName: 
+  m_Animator: {fileID: 1543592252}
+  m_AnimationName: Tornado full anim
   m_EventName: Tornado
 --- !u!1 &2034968011 stripped
 GameObject:
@@ -12912,3 +12979,72 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 772687885412984271}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4426898202255032745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4426898202694788746, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_Name
+      value: Rain full
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.565903
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.34872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.734386
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202694788748, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d52f479d4761fe347bc378471812ecf7, type: 3}
