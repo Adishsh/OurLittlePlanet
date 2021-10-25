@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.67058825, g: 0.93725497, b: 0.882353, a: 1}
   m_Description: No Special Effect
   m_CardName: Watermill
-  m_Sprite: {fileID: 21300000, guid: 61be8ece3afee9f4eb190e638899bce2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 57ab8fb6850910443a3e92689ec384f8, type: 3}
   m_Building: {fileID: 3772431021142635785, guid: 09c83bfd56516e04f88b4d01fbe78726,
     type: 3}
   m_Pollution: 0
