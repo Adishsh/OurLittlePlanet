@@ -8,7 +8,7 @@ public class WindBuilding : Building
     {
         bool isRainyDay = statsManager.m_CurrentEvent?.GetType() == typeof(RainyDay) || statsManager.m_CurrentEvent?.GetType() == typeof(StormyDay);
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
-        impact.resources = isRainyDay ? m_CardData.m_Resources + 2 : m_CardData.m_Resources;
+        impact.resources = isRainyDay ? m_CardData.m_Resources + 1 : m_CardData.m_Resources;
         return impact;
     }
 }

@@ -20,4 +20,4 @@ MonoBehaviour:
     type: 3}
   m_Pollution: 1
   m_Resources: 2
-  m_Cost: 5
+  m_Cost: 10

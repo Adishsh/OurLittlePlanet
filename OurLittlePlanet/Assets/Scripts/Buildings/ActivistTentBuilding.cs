@@ -6,13 +6,18 @@ public class ActivistTentBuilding : Building
 {
     public override CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
-        List<BuildingSlot> AllSlots = map.GetAllSlots();
+        List<BuildingSlot> AllSlots = map.GetAdjecentSlots(this.slot);
 
         List<BuildingSlot> AllNonPollut = AllSlots.FindAll(slots => slots?.building?.m_CardData?.m_Pollution == 0);
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
-        impact.resources += AllNonPollut.Count;
+        if(AllNonPollut.Count == 4)
+        {
+            impact.resources += 5;
+        }
+        
+        //impact.resources += AllNonPollut.Count + 1;
 
         return impact;
     }
