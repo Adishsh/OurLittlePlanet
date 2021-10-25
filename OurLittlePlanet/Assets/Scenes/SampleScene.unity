@@ -4572,8 +4572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e613b7f862fdc6459a66c1dab4eabeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Animator: {fileID: 0}
-  m_AnimationName: 
+  m_Animator: {fileID: 5535791953373800995, guid: 8ff7932beb44a224aa673f91da4edd0b,
+    type: 3}
+  m_AnimationName: meteor anim
   m_EventName: Meteor
 --- !u!1001 &816127534
 PrefabInstance:
