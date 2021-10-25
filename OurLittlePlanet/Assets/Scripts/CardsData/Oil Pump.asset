@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Oil Pump
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+  m_Color: {r: 0.60784316, g: 1, b: 0.5882353, a: 1}
   m_Description: Disappears after 3 rounds.
   m_CardName: Oil Pump
   m_Sprite: {fileID: 21300000, guid: 3c3917086f24c05438d4afeafd0a540e, type: 3}

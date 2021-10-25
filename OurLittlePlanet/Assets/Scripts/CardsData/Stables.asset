@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Stables
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.9811321, g: 0.8688264, b: 0.23510142, a: 1}
+  m_Color: {r: 0.6, g: 0.9137255, b: 1, a: 1}
   m_Description: If you have 3 or more Stables who are not adjacent to one another,
     draw an extra card each round.
   m_CardName: Stables

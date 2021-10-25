@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: "Activist\u2019s Tent"
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.6355678, g: 0.38113207, b: 1, a: 1}
+  m_Color: {r: 0.60784316, g: 1, b: 0.5882353, a: 1}
   m_Description: 'Your adjacent non-polluting buildings produce 1 more resource. 
     (Can only have 1 at a time). '
   m_CardName: "Activist\u2019s Tent"

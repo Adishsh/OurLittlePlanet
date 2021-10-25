@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: WaterMill
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.67058825, g: 0.93725497, b: 0.882353, a: 1}
+  m_Color: {r: 0.6, g: 0.9137255, b: 1, a: 1}
   m_Description: No Special Effect
   m_CardName: Watermill
   m_Sprite: {fileID: 21300000, guid: 57ab8fb6850910443a3e92689ec384f8, type: 3}

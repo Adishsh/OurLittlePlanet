@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: WindMill
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.8249148, g: 0.6531862, b: 0.8301887, a: 1}
+  m_Color: {r: 0.5981132, g: 0.914599, b: 1, a: 1}
   m_Description: Produce 2 more resource on stormy turns.
   m_CardName: WindMill
   m_Sprite: {fileID: 21300000, guid: 28fe48d3002a03440894a59cb3a0966a, type: 3}

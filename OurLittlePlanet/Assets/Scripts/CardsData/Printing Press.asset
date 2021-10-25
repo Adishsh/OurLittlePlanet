@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Printing Press
   m_EditorClassIdentifier: 
-  m_Color: {r: 1, g: 0.56037736, b: 0.9275916, a: 1}
+  m_Color: {r: 0.6081117, g: 1, b: 0.5886792, a: 1}
   m_Description: If you have 3 or more Printing Presses who are not adjacent to one
     another, draw an extra card each round.
   m_CardName: Printing Press

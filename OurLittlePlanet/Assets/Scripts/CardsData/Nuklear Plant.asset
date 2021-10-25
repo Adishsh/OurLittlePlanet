@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Nuklear Plant
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.56037736, g: 1, b: 0.5754978, a: 1}
+  m_Color: {r: 0.8437485, g: 0.38113207, b: 1, a: 1}
   m_Description: When destroyed, gain 10 Pollution.
   m_CardName: Nuclear Plant
   m_Sprite: {fileID: 21300000, guid: 1bb1a7886fddf224586b586b1aafdbfd, type: 3}

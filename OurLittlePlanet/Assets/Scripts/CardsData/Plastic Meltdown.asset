@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c883ddcad155748bc08e7a37b815d6, type: 3}
   m_Name: Plastic Meltdown
   m_EditorClassIdentifier: 
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
   m_Description: 'Add a bad event card to the event pile each turn. '
   m_CardName: Plastic Meltdown
   m_Sprite: {fileID: 21300000, guid: 066544ae9a956bc45834bf9d2dd054c7, type: 3}
