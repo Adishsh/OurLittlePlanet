@@ -15,6 +15,7 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] TMP_Text m_Strikes;
     [SerializeField] TMP_Text m_Day;
     [SerializeField] TMP_Text m_Era;
+    [SerializeField] Animator m_EraAnimator;
 
 
     public void SetMoney(int amount)
@@ -71,5 +72,6 @@ public class StatsDisplay : MonoBehaviour
     public void SetEra(int num)
     {
         m_Era.text = num.ToString();
+        m_EraAnimator.Play("NewEra");
     }
 }
