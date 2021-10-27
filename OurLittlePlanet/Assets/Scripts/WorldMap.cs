@@ -92,11 +92,20 @@ public class WorldMap : MonoBehaviour
         if (!isInLastRow)
         {
             slots.Add(BuildingSlots[index + m_RowsCount]);
+            if(!isInLastColumn)
+            slots.Add(BuildingSlots[index + m_RowsCount + 1]);
+            if(!isInFirstColumn)
+            slots.Add(BuildingSlots[index + m_RowsCount - 1]);
+        
         }
         
         if (!isInFirstRow)
         {
             slots.Add(BuildingSlots[index - m_RowsCount]);
+            if(!isInLastColumn)
+            slots.Add(BuildingSlots[index - m_RowsCount + 1]);
+            if(!isInFirstColumn)
+            slots.Add(BuildingSlots[index - m_RowsCount - 1]);
         }
         
         if (!isInFirstColumn)
