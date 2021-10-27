@@ -135,7 +135,7 @@ public class Board : MonoBehaviour
     {
         Card card = m_Market.DrawCard(slot);
         m_Discard.AddCard(card);
-        Debug.Log($"Discard {card}");
+        Debug.Log($"BuyCard {card}");
     }
 
     public void SellCard(Slot slot)
@@ -164,6 +164,6 @@ public class Board : MonoBehaviour
     public void ChangeEra(int eraIndex)
     {
         m_Market.ChangeEra(eraIndex);
-        DisplayDiscardPile();
+        //DisplayDiscardPile();
     }
 }

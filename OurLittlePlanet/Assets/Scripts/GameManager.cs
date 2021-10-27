@@ -134,6 +134,10 @@ public class GameManager : MonoBehaviour
         {
             m_StatsManager.AddMoney(-cost);
             m_Board.BuyCard(slot);
+        }else
+        {
+            Debug.Log($"no money to buy card {card} money:{m_StatsManager.m_Money} cost:{card.m_CardData.m_Cost}");
+
         }
     }
 
