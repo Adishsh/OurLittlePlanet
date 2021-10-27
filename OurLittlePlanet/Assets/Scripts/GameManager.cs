@@ -250,7 +250,7 @@ public class GameManager : MonoBehaviour
     private void EndTurnCalculation()
     {
         m_Board.EndTurnImpactCalculations.Invoke(m_StatsManager);
-        if(m_StatsManager.m_Resources >= m_ResourcesList[resourceIndex])
+        if(m_StatsManager.m_Resources >= m_ResourcesList[resourceIndex] + m_StatsManager.m_ExtraNeededResources)
         {
             resourceIndex++;
         } 

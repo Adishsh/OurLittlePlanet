@@ -27,15 +27,27 @@ public class WorldMap : MonoBehaviour
         return isRow ? GetRow(index) : GetColumn(index);
     }
 
-    public List<BuildingSlot> GetFrameSlots()
+    public List<BuildingSlot> GetRandomFrameSlots()
     {
          List<BuildingSlot> slots = new List<BuildingSlot>();
-         slots.AddRange(GetRow(0));
-         slots.AddRange(GetRow(m_RowsCount-1));
-         slots.AddRange(GetColumn(0));
-         slots.AddRange(GetColumn(m_RowsCount-1));
-         return slots;
-
+        var index = Random.Range(0, 4);
+        if (index ==0)
+        {
+            return GetRow(0);
+        }
+        if (index ==1)
+        {
+            return GetRow(m_RowsCount-1);
+        }
+        if (index ==2)
+        {
+            return GetColumn(0);
+        }
+        if (index ==3)
+        {
+            return GetColumn(m_RowsCount-1);
+        }
+        return null;
     }
 
     private List<BuildingSlot> GetRow(int index)

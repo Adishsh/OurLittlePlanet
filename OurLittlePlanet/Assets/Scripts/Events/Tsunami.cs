@@ -7,7 +7,7 @@ public class Tsunami : EventCard
     
     public override void ActivateEvent(WorldMap map, StatsManager statsManager)
     {
-        var slotsToDestroy = map.GetFrameSlots();
+        var slotsToDestroy = map.GetRandomFrameSlots();
         map.DestroyBuildings(slotsToDestroy);
         base.ActivateEvent(map, statsManager);
     }

@@ -154,6 +154,8 @@ public class Board : MonoBehaviour
     {
         EventCard newEvent = m_EventDeck.SelectEventCard();
         m_EventDeck.SetNextEvent();
+        // reset ExtraNeededResources before activating new event
+        statsManager.SetExtraNeededResources(0);
         newEvent.ActivateEvent(m_Map, statsManager);
     }
 
