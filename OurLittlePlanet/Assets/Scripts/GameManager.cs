@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         Card card = slot.card;
         if(!card)
         {
-            Debug.LogError($"error buy card {card}");
+            Debug.Log($"error buy card {card}");
             return;
         }
         int cost = card.m_CardData.m_Cost;
@@ -159,12 +159,12 @@ public class GameManager : MonoBehaviour
         Card card =slot.card;
         if(!card)
         {
-            Debug.LogError($"error select card {card}");
+            Debug.Log($"error select card {card}");
             return;
         }
         if(gameState != GameState.PlayingCards)
         {
-            Debug.LogError($"hand is selectable not in playing mode");
+            Debug.Log($"hand is selectable not in playing mode");
             return;
         }
         
@@ -200,7 +200,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameState != GameState.Drawing)
         {
-            Debug.LogError("not in drawing mode");
+            Debug.Log("not in drawing mode");
             return;
         }
         Debug.Log($"m_StatsManager.m_CardsToDraw:{m_StatsManager.m_CardsToDraw}");
@@ -213,7 +213,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameState != GameState.PlayingCards)
         {
-            Debug.LogError("not in playing mode");
+            Debug.Log("not in playing mode");
             return;
         }
         m_Board.DiscardHand();
@@ -222,7 +222,8 @@ public class GameManager : MonoBehaviour
         UnSelectSlot();
         if (m_StatsManager.DidStrikeOut())
         {
-            Debug.LogError("LoseGame");
+            Debug.Log("LoseGame");
+            Time.timeScale = 0;
             SetGameState(GameState.LoseGame);
         }
         SetGameState(GameState.StartTurn);

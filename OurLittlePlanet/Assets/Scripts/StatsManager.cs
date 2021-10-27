@@ -159,6 +159,7 @@ public class StatsManager: MonoBehaviour
 
     public void SetEra(int num)
     {
+        Debug.Log("next era");
         m_Display.SetEra(num);
         if(strikes > 0)
         {
