@@ -21,6 +21,7 @@
             <e p="WaterShaded.shader" t="Include" />
           </e>
         </e>
+        <e p="OnMouseOver_Money.cs" t="Include" />
         <e p="Prefabs" t="Include">
           <e p="UI" t="Include">
             <e p="uipack_fixed" t="Include">

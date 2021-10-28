@@ -25,6 +25,7 @@
       <option value="$PROJECT_DIR$/Assets/Second_Angle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
+      <option value="$PROJECT_DIR$/Assets/OnMouseOver_Money.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1z0KqK7E5lTHxPONzDKsa0wd8lT" />
@@ -82,6 +83,7 @@
       <workItem from="1635149789960" duration="2609000" />
       <workItem from="1635278697329" duration="456000" />
       <workItem from="1635279613986" duration="605000" />
+      <workItem from="1635411949864" duration="1824000" />
     </task>
     <servers />
   </component>
