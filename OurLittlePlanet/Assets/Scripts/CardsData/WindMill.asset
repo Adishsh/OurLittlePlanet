@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.5981132, g: 0.914599, b: 1, a: 1}
   m_Description: Produce 2 more resource on stormy turns.
   m_CardName: WindMill
-  m_Sprite: {fileID: 21300000, guid: 28fe48d3002a03440894a59cb3a0966a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4170ed96cd552244b4118ae70daf63b, type: 3}
   m_Building: {fileID: 7520467193434481889, guid: e393ac533128f0c4caaaedbc00cdc341,
     type: 3}
   m_Pollution: 0

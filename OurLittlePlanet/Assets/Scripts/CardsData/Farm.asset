@@ -15,7 +15,7 @@ MonoBehaviour:
   m_Color: {r: 0.6, g: 0.9137255, b: 1, a: 1}
   m_Description: 'If built near at least 2 more Farms, Produce 1 more Resource. '
   m_CardName: Farm
-  m_Sprite: {fileID: 21300000, guid: 4cb6093d1b3845541927ffb7167b1ef5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: af77514bf7009de4a9f90c060691e9f7, type: 3}
   m_Building: {fileID: -1103242367942465864, guid: 748e2a35814660e4ba53991bb0e0379d,
     type: 3}
   m_Pollution: 1

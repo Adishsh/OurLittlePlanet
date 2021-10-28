@@ -16,7 +16,7 @@ MonoBehaviour:
   m_Description: Reduce your Pollution by 10 each turn  (Cannot be reduced below
     threshold)
   m_CardName: Oxygen Distillery
-  m_Sprite: {fileID: 21300000, guid: ef194a3739b47424fadf5b7d1de365d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f52c1b2301d65bc4cb3386fe34f2d1e4, type: 3}
   m_Building: {fileID: 6366445617530193488, guid: bc5b419d71a75274aa92d229d821adea,
     type: 3}
   m_Pollution: -10
