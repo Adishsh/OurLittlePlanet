@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     private UnityAction EndTurnListener;
     private UnityAction WinGameListener;
     private UnityAction<int> BuildListener;
-
+    [SerializeField] private AudioManager audiomanager;
     private void Awake() 
     {
         SetListeners();
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     private void Start() 
     {
         StartCoroutine(WaitAndStart());
+        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
     }
 
     IEnumerator WaitAndStart()

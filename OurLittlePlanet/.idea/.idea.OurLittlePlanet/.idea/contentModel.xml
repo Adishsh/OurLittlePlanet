@@ -38,6 +38,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="Board.cs" t="Include" />
           <e p="Building.cs" t="Include" />
           <e p="Buildings" t="Include">
