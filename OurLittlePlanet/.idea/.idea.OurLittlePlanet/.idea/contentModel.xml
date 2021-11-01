@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Instantiate.cs" t="Include" />
         <e p="LowPolyWater_Pack" t="Include">
           <e p="LowPoly Island" t="Include">
             <e p="Credits.txt" t="Include" />
@@ -39,6 +40,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
+          <e p="BeatManager2.cs" t="Include" />
           <e p="Board.cs" t="Include" />
           <e p="Building.cs" t="Include" />
           <e p="Buildings" t="Include">
@@ -62,6 +64,7 @@
           <e p="CardData.cs" t="Include" />
           <e p="CardImpact.cs" t="Include" />
           <e p="CardsCollection.cs" t="Include" />
+          <e p="CubeJump.cs" t="Include" />
           <e p="Deck.cs" t="Include" />
           <e p="Discard.cs" t="Include" />
           <e p="DiscardDisplay.cs" t="Include" />
@@ -80,8 +83,10 @@
           <e p="GameEventData.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Hand.cs" t="Include" />
+          <e p="LifeDisplay.cs" t="Include" />
           <e p="Market.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PopUpWindow.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="StatsDisplay.cs" t="Include" />
           <e p="StatsManager.cs" t="Include" />
@@ -123,6 +128,9 @@
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
+        </e>
+        <e p="UIBUILDER" t="Include">
+          <e p="UI.uss" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

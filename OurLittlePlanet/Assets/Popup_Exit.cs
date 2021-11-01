@@ -9,12 +9,16 @@ public class Popup_Exit : MonoBehaviour
     // Start is called before the first frame update
     public void PlayPopup()
     {
-        if (Popup_Window != null)
-        { 
-            Popup_Window.SetActive(false); 
-        }
+        Popup_Window.SetActive(false);
+    }
 
+    
+    /*
+    if (Popup_Window != null)
+    { 
+        Popup_Window.SetActive(true); 
         Debug.Log("OK");
     }
+*/
 
 }

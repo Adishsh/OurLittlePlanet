@@ -32,9 +32,13 @@
       <option value="$PROJECT_DIR$/Assets/Money_Popup.cs" />
       <option value="$PROJECT_DIR$/Assets/Money_Popup_Exit.cs" />
       <option value="$PROJECT_DIR$/Assets/Money_Popup_Enter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Popup_Exit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Popup_Enter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Popup_Exit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PopUpWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Instantiate.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestOver.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1z0KqK7E5lTHxPONzDKsa0wd8lT" />
@@ -94,6 +98,9 @@
       <workItem from="1635279613986" duration="605000" />
       <workItem from="1635411949864" duration="2374000" />
       <workItem from="1635417441356" duration="4617000" />
+      <workItem from="1635698199245" duration="1676000" />
+      <workItem from="1635754005382" duration="1340000" />
+      <workItem from="1635757703848" duration="10283000" />
     </task>
     <servers />
   </component>
