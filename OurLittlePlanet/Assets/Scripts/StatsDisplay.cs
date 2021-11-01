@@ -12,11 +12,10 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] TMP_Text ExtraResourcesNeeded;
     [SerializeField] TMP_Text Polution;
     [SerializeField] TMP_Text m_TempPolution;
-    [SerializeField] TMP_Text m_Strikes;
     [SerializeField] TMP_Text m_Day;
     [SerializeField] TMP_Text m_Era;
     [SerializeField] Animator m_EraAnimator;
-
+    [SerializeField] LifeDisplay m_Life;
 
     public void SetMoney(int amount)
     {
@@ -39,9 +38,9 @@ public class StatsDisplay : MonoBehaviour
         Polution.text = amount.ToString();
     }
 
-    public void SetStrikes(int strike)
+    public void SetLife(int life)
     {
-        m_Strikes.text = strike.ToString();
+        m_Life.SetLife(life);
     }
 
     public void SetTempPolution(int polution)

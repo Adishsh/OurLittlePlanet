@@ -16,7 +16,7 @@ public class StatsManager: MonoBehaviour
    [SerializeField] int m_PolutionAmountToAddBadEvent = 10;
 
 
-    private int strikes = 0;
+    private int life = 3;
     public int m_Money { get; private set; }
     public int m_Resources { get; private set; }
     public int m_Polution { get; private set; }
@@ -38,7 +38,7 @@ public class StatsManager: MonoBehaviour
         AddMoney(m_InitMoney);
         SetResources(m_InitResources);
         AddPolution(m_InitPolution);
-        AddStrikes(strikes);
+        AddLife(0);
         SetExtraCardsToDraw(0);
         SetNextPolutionToAddEvent();
     }
@@ -112,15 +112,15 @@ public class StatsManager: MonoBehaviour
         m_CurrentEvent = currentEvent;
     }
 
-    public void AddStrikes(int strikesToAdd = 1)
+    public void AddLife(int LifeToAdd = -1)
     {
-        strikes += strikesToAdd;
-        m_Display.SetStrikes(strikes);
+        life += LifeToAdd;
+        m_Display.SetLife(life);
     }
 
     public bool DidStrikeOut()
     {
-        return strikes >= m_StrikesAllowed;
+        return life <0;
     }
 
     public void SetNewEventCards(int extraEventsToAdd= 0)
@@ -161,9 +161,9 @@ public class StatsManager: MonoBehaviour
     {
         Debug.Log("next era");
         m_Display.SetEra(num);
-        if(strikes > 0)
+        if(life > 0)
         {
-            strikes--;
+            life--;
         }
         freeDiscardCardCount =3;
     }

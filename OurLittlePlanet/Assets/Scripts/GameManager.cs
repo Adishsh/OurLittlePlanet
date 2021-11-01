@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class GameManager : MonoBehaviour
 {
     private Slot selectedSlot;
@@ -12,7 +13,8 @@ public class GameManager : MonoBehaviour
    [SerializeField] private Board m_Board;
    [SerializeField] List<int> m_ResourcesList;
    [SerializeField] int m_NumberOfDaysToChangeEra;
-
+    [SerializeField] GameObject LoseText;    
+    [SerializeField] GameObject WinText;
 
    private int day;
    private int resourceIndex;
@@ -43,7 +45,7 @@ public class GameManager : MonoBehaviour
     private void Start() 
     {
         StartCoroutine(WaitAndStart());
-        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
+        //audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
     }
 
     IEnumerator WaitAndStart()
@@ -69,6 +71,8 @@ public class GameManager : MonoBehaviour
         if(newState == GameState.LoseGame)
         {
             LoseGame();
+             m_Board.SetDrwaingSelectable(false);
+        m_Board.SetPlayingSelectable(false);
             return;
         }
 
@@ -245,12 +249,13 @@ public class GameManager : MonoBehaviour
 
     private void LoseGame()
     {
-        Debug.Log("you lose");
+        LoseText.SetActive(true);
     }
 
         private void WinGame()
     {
-        Debug.Log("you Win");
+       WinText.SetActive(true);
+
     }
 
     private void EndTurnCalculation()
@@ -262,7 +267,7 @@ public class GameManager : MonoBehaviour
         } 
         else
         {
-            m_StatsManager.AddStrikes();
+            m_StatsManager.AddLife(-1);
         }
     }
 
