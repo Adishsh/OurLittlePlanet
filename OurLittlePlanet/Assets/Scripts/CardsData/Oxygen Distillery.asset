@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Oxygen Distillery
   m_EditorClassIdentifier: 
   m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
-  m_Description: Reduce your Pollution by 10 each turn  (Cannot be reduced below
-    threshold)
+  m_Description: Reduce your Pollution by 10 each turn
   m_CardName: Oxygen Distillery
   m_Sprite: {fileID: 21300000, guid: f52c1b2301d65bc4cb3386fe34f2d1e4, type: 3}
   m_Building: {fileID: 6366445617530193488, guid: bc5b419d71a75274aa92d229d821adea,

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wind Turbine
   m_EditorClassIdentifier: 
   m_Color: {r: 0.60784316, g: 1, b: 0.5882353, a: 1}
-  m_Description: Produce 2 more resource on stormy turns.
+  m_Description: +2 Resources on Rainy turns
   m_CardName: Wind Turbine
   m_Sprite: {fileID: 21300000, guid: 4f3e8a93b8248da4ab04a8b21c319dba, type: 3}
   m_Building: {fileID: 8062220034797191325, guid: 4cc18224dfce8f345b8827f08dfebdaa,

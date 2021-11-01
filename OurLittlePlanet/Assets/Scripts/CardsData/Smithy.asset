@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Smithy
   m_EditorClassIdentifier: 
   m_Color: {r: 0.6, g: 0.9137255, b: 1, a: 1}
-  m_Description: 'If built near a mine, gives 1 extra resource. '
+  m_Description: +1 Resource while near a Mine
   m_CardName: Smithy
   m_Sprite: {fileID: 21300000, guid: 3f77adc520b8302469ca49620bf37786, type: 3}
   m_Building: {fileID: -877642987301229828, guid: c5fdb6e1425ec2447bc2280282f0ad0d,

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SteamFactory
   m_EditorClassIdentifier: 
   m_Color: {r: 0.60784316, g: 1, b: 0.5882353, a: 1}
-  m_Description: No Special Effect
+  m_Description: 
   m_CardName: Steam Factory
   m_Sprite: {fileID: 21300000, guid: f90cc9d9d4254c94292cc95069f6146e, type: 3}
   m_Building: {fileID: 5303077021618470023, guid: e71be38712ed31447adc92727f9bc7c7,
