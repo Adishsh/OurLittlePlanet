@@ -14349,6 +14349,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1396273371739749767, guid: 8ff7932beb44a224aa673f91da4edd0b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2887044983701079543, guid: 8ff7932beb44a224aa673f91da4edd0b,
         type: 3}
       propertyPath: m_IsActive
@@ -19570,10 +19575,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3796658092131049013, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796658092131049013, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4426898201222605425, guid: d52f479d4761fe347bc378471812ecf7,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426898202430211453, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4426898202694788746, guid: d52f479d4761fe347bc378471812ecf7,
         type: 3}
@@ -19639,6 +19659,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214545030774503487, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214545030774503487, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214545030774503487, guid: d52f479d4761fe347bc378471812ecf7,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d52f479d4761fe347bc378471812ecf7, type: 3}
