@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PowerPlant
   m_EditorClassIdentifier: 
   m_Color: {r: 0.84313726, g: 0.38039216, b: 1, a: 1}
-  m_Description: No Special Effect
+  m_Description: 
   m_CardName: Power Plant
   m_Sprite: {fileID: 21300000, guid: b4167efafbce1dd41aee6819c76f8618, type: 3}
   m_Building: {fileID: 1634833367586931324, guid: 2c148d3d66d6fd04dad156399b3ce673,

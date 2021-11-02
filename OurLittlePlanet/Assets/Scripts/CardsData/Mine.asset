@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mine
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 0.8847002, b: 0.645283, a: 1}
-  m_Description: No Special Effect
+  m_Description: 
   m_CardName: Mine
   m_Sprite: {fileID: 21300000, guid: c93711e299fbc494ca7f91632f517f8e, type: 3}
   m_Building: {fileID: 9040898650382202980, guid: 16d9d61c6e386cf498ca856c0a48f1df,

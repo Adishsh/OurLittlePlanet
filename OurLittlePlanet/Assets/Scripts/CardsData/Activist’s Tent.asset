@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: "Activist\u2019s Tent"
   m_EditorClassIdentifier: 
   m_Color: {r: 0.60784316, g: 1, b: 0.5882353, a: 1}
-  m_Description: 'Your adjacent non-polluting buildings produce 1 more resource. 
-    (Can only have 1 at a time). '
+  m_Description: +5 Resources if only near non-polluting buildings
   m_CardName: "Activist\u2019s Tent"
   m_Sprite: {fileID: 21300000, guid: 8e41cf8638f4f7e4784e6b77d9aad52d, type: 3}
   m_Building: {fileID: -6455473480010625369, guid: 9e7865db190ba2342bae47e70a1b0c33,

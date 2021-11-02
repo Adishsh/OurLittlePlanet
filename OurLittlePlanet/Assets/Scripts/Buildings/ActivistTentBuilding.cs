@@ -12,7 +12,7 @@ public class ActivistTentBuilding : Building
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
-        if(AllNonPollut.Count == 4)
+        if(AllNonPollut.Count == 8)
         {
             impact.resources += 5;
         }
