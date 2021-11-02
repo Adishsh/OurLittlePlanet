@@ -22,8 +22,11 @@
             <e p="WaterShaded.shader" t="Include" />
           </e>
         </e>
+        <e p="PopUp_Close.cs" t="Include" />
+        <e p="PopUp_Close1.cs" t="Include" />
         <e p="Popup_Enter.cs" t="Include" />
         <e p="Popup_Exit.cs" t="Include" />
+        <e p="PopUp_Open.cs" t="Include" />
         <e p="Prefabs" t="Include">
           <e p="UI" t="Include">
             <e p="uipack_fixed" t="Include">
@@ -93,6 +96,7 @@
           <e p="WorldMap.cs" t="Include" />
         </e>
         <e p="Second_Angle.cs" t="Include" />
+        <e p="Test.cs" t="Include" />
         <e p="TestOver.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

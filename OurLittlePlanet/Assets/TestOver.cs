@@ -25,4 +25,5 @@ public class TestOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         isOver = false;
         PopUpTest.gameObject.SetActive(false);
     }
+    
 }
