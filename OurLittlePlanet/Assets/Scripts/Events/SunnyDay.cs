@@ -9,7 +9,6 @@ public class SunnyDay : EventCard
         statsManager.SetCurrentEvent(this);
         if(m_Animator != null)
         {
-            m_Animator.ResetTrigger("End");
             m_Animator.SetTrigger("Go");
         }
     }
