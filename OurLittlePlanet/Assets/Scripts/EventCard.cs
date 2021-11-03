@@ -14,7 +14,6 @@ public class EventCard: MonoBehaviour
         statsManager.SetCurrentEvent(this);
         if(!string.IsNullOrEmpty(m_AnimationName) && m_Animator != null)
         {
-            Debug.Log("animate event:" + m_AnimationName);
             StartCoroutine(AnimationStart());
         }
     }
@@ -22,6 +21,7 @@ public class EventCard: MonoBehaviour
      IEnumerator AnimationStart()
     {
         yield return null;
+        Debug.Log("play animation: "+m_AnimationName);
         m_Animator.Play(m_AnimationName);
     }
 

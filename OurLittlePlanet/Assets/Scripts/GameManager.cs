@@ -214,7 +214,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("not in drawing mode");
             return;
         }
-        Debug.Log($"m_StatsManager.m_CardsToDraw:{m_StatsManager.m_CardsToDraw}");
         m_Board.DrawCardToHand(m_StatsManager.m_CardsToDraw);
 
         SetGameState(GameState.PlayingCards);

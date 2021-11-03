@@ -1914,8 +1914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.1, y: 13}
-  m_SizeDelta: {x: 86.28, y: 50}
+  m_AnchoredPosition: {x: 6.152, y: 13}
+  m_SizeDelta: {x: 120.8925, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203914813
 MonoBehaviour:
@@ -8252,8 +8252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: 0.83748}
-  m_SizeDelta: {x: 33.5324, y: 38.325}
+  m_AnchoredPosition: {x: 144, y: -0.2705}
+  m_SizeDelta: {x: 79.2413, y: 40.5411}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1092472066
 MonoBehaviour:
@@ -10459,6 +10459,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451df0d7b34ce3c458d7ca5cda3bd9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1248231560 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5535791953373800995, guid: 8ff7932beb44a224aa673f91da4edd0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 910253493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1253815360
 GameObject:
   m_ObjectHideFlags: 0
@@ -11062,6 +11068,7 @@ MonoBehaviour:
   m_InitCardsToDraw: 5
   m_MoneyGivenPerRecource: 1
   m_PolutionAmountToAddBadEvent: 10
+  m_InitLife: 3
   freeDiscardCardCount: 0
 --- !u!1 &1364430076 stripped
 GameObject:
@@ -15143,8 +15150,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 109, y: 123}
-  m_SizeDelta: {x: 36.7, y: 51.924}
+  m_AnchoredPosition: {x: 152.925, y: 123}
+  m_SizeDelta: {x: 96.614, y: 51.924}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694981412
 MonoBehaviour:
@@ -15230,7 +15237,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 4.541229, y: 48.287224, z: -1.2917043, w: -36.632412}
+  m_margin: {x: 4.541229, y: 48.287224, z: -4.573864, w: -36.632412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -19732,6 +19739,11 @@ PrefabInstance:
       propertyPath: m_Animator
       value: 
       objectReference: {fileID: 1293337671}
+    - target: {fileID: 7445609341936917390, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 1248231560}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 853835099be9be244a97d65e9f881cd6, type: 3}
 --- !u!222 &9140897777428886529

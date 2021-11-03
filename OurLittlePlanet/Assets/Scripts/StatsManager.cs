@@ -14,9 +14,10 @@ public class StatsManager: MonoBehaviour
    [SerializeField] int m_InitCardsToDraw = 5;
    [SerializeField] float m_MoneyGivenPerRecource = 10f;
    [SerializeField] int m_PolutionAmountToAddBadEvent = 10;
+   [SerializeField] int m_InitLife = 3;
 
 
-    private int life = 3;
+    private int life = 0;
     public int m_Money { get; private set; }
     public int m_Resources { get; private set; }
     public int m_Polution { get; private set; }
@@ -38,7 +39,7 @@ public class StatsManager: MonoBehaviour
         AddMoney(m_InitMoney);
         SetResources(m_InitResources);
         AddPolution(m_InitPolution);
-        AddLife(0);
+        AddLife(m_InitLife);
         SetExtraCardsToDraw(0);
         SetNextPolutionToAddEvent();
     }
@@ -67,8 +68,6 @@ public class StatsManager: MonoBehaviour
 
     public void SetResourcesGoal(int resources)
     {
-        Debug.Log($"SetResourcesGoal:{resources}");
-
        m_GoalResources = resources;
         m_Display.SetResourcesNeeded(resources);
     }
@@ -93,9 +92,7 @@ public class StatsManager: MonoBehaviour
             int extraPolution = m_Polution - nextPolutionToAddEvent;
             int badEventToAdd = (int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent);
             nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
-            Debug.Log($"extraPolution: {extraPolution} nextPolutionToAddEvent: {nextPolutionToAddEvent}");
 
-            Debug.Log($"GetNewEventCardsFromPolution: {badEventToAdd}");
             return badEventToAdd;
         }
         return 0;
@@ -103,7 +100,6 @@ public class StatsManager: MonoBehaviour
     
     public void SetExtraCardsToDraw(int extraCardsAmount)
     {
-        Debug.Log($"AddCardsToDraw:{extraCardsAmount}");
         m_CardsToDraw = m_InitCardsToDraw + extraCardsAmount;
     }
 
@@ -161,9 +157,9 @@ public class StatsManager: MonoBehaviour
     {
         Debug.Log("next era");
         m_Display.SetEra(num);
-        if(life > 0)
+        if(life < m_InitLife)
         {
-            life--;
+            AddLife(1);
         }
         freeDiscardCardCount =3;
     }

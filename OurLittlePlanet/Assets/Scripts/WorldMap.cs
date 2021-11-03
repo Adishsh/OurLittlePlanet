@@ -226,11 +226,9 @@ public class WorldMap : MonoBehaviour
         foreach(var slot in BuildingSlots)
         {
             slot.WasCalculated = false;
-            Debug.Log("WasCalculated = false");
         }
         foreach(var slot in BuildingSlots)
         {
-            Debug.Log("GetEndTurnPolution");
             if(slot.HasCardData())
             {
                 CardImpact cardImpact = slot.GetCardCalaulation(StatsManager.Instance, this);

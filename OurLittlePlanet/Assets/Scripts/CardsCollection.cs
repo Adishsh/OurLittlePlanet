@@ -33,7 +33,6 @@ public class CardsCollection : MonoBehaviour
     {
         Transform ParentTransform = slot.gameObject.transform;
 
-        Debug.Log($"init card{cardData.m_CardName} in {ParentTransform}");
         Card card = Instantiate(cardPrefab, ParentTransform.position, ParentTransform.rotation, ParentTransform);
         card.SetUpCard(cardData);
         slot.SetCard(card, false);
