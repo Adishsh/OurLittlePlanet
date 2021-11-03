@@ -173,12 +173,17 @@ public class WorldMap : MonoBehaviour
     {
         BuildingSlot slot = BuildingSlots[buildingSlotIndex];
         slot.Build(card, this);
-        StatsManager.Instance.SetTempCardImpact(GetCardsImpact());
+        RecalculateCardsImpact();
     }
 
     public void DestroyBuilding(int buildingSlotIndex)
     {
         BuildingSlots[buildingSlotIndex].DestroyBuilding();
+        RecalculateCardsImpact();
+    }
+    
+    public void RecalculateCardsImpact()
+    {
         var impact = GetCardsImpact();
         StatsManager.Instance.SetTempCardImpact(impact);
     }

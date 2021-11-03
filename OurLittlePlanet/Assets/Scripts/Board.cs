@@ -157,7 +157,7 @@ public class Board : MonoBehaviour
         // reset ExtraNeededResources before activating new event
         statsManager.SetExtraNeededResources(0);
         newEvent.ActivateEvent(m_Map, statsManager);
-        EndTurnImpactCalculations.Invoke(statsManager);
+        m_Map.RecalculateCardsImpact();
 
     }
 
