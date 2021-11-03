@@ -28,6 +28,7 @@ public class StatsManager: MonoBehaviour
     public int m_ExtraEventCardsToAdd{ get; private set; }
     public int freeDiscardCardCount;
     private int nextPolutionToAddEvent;
+    private EventCard m_nextEvent;
 
     private void Awake() 
     {
@@ -177,5 +178,22 @@ public class StatsManager: MonoBehaviour
     public void BadEventAdded()
     {
         m_Display.DisplayBadEventAdded();
+    }
+
+    public void DisplayNextEvent(bool show)
+    {
+        if(!show)
+        {
+            m_Display.DisplayNextEvent(null);
+        }
+            else
+        {
+            m_Display.DisplayNextEvent(m_nextEvent?.m_EventName);
+        }
+    }
+
+    public void SetNextEvent(EventCard nextEvent)
+    {
+        m_nextEvent = nextEvent;
     }
 }

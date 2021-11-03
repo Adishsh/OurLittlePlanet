@@ -6,6 +6,11 @@ public class MeteorologyCenterBuilding : Building
 {
     public override void OnTurnEnd(StatsManager statsManager, WorldMap map)
     {
-        //TODO display next event
+        statsManager.DisplayNextEvent(true);
+    }
+
+    protected override void OnBuildingDestroy(StatsManager statsManager)
+    {
+        statsManager.DisplayNextEvent(false);
     }
 }

@@ -20,6 +20,7 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] GameObject m_GoalWarning;
     [SerializeField] Animator m_BadEventAddedAnimation;
     [SerializeField] TMP_Text m_NextPolutionLimit;
+    [SerializeField] TMP_Text m_NextEventText;
 
 
 
@@ -99,5 +100,18 @@ public class StatsDisplay : MonoBehaviour
     public void SetNextPolutionLimit(int nextPolution)
     {
         m_NextPolutionLimit.text = nextPolution.ToString();
+    }    
+
+    public void DisplayNextEvent(string nextEventText)
+    {
+        if(string.IsNullOrEmpty(nextEventText))
+        {
+            m_NextEventText.gameObject.SetActive(false);
+        }
+        else
+        {
+            m_NextEventText.gameObject.SetActive(true);
+            m_NextEventText.text = nextEventText;
+        }
     }    
 }
