@@ -47,6 +47,7 @@ public class StatsManager: MonoBehaviour
     public void SetNextPolutionToAddEvent()
     {
         nextPolutionToAddEvent += m_PolutionAmountToAddBadEvent;
+        m_Display.SetNextPolutionLimit(nextPolutionToAddEvent);
     }
 
     public void AddMoney(int addedMoney)
@@ -92,7 +93,7 @@ public class StatsManager: MonoBehaviour
             int extraPolution = m_Polution - nextPolutionToAddEvent;
             int badEventToAdd = (int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent);
             nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
-
+            m_Display.SetNextPolutionLimit(nextPolutionToAddEvent);
             return badEventToAdd;
         }
         return 0;
@@ -145,6 +146,7 @@ public class StatsManager: MonoBehaviour
         {
             m_Display.SetTempPolution(impact.polution);
             m_Display.SetResources(impact.resources);
+            DisplayWarnings(impact.polution, impact.resources);
         }
     }
 
@@ -162,5 +164,18 @@ public class StatsManager: MonoBehaviour
             AddLife(1);
         }
         freeDiscardCardCount =3;
+    }
+
+    public void DisplayWarnings(int newPolution, int CurrentResources)
+    {
+     //   Debug.Log($"m_Polution + newPolution{m_Polution +newPolution} >= {nextPolutionToAddEvent}");
+      //  Debug.Log($"CurrentResources {CurrentResources} < {m_GoalResources} + {m_ExtraNeededResources}");
+        m_Display.SetPolutionWarning(m_Polution + newPolution > nextPolutionToAddEvent);
+        m_Display.SetGoalWarning(CurrentResources <= m_GoalResources + m_ExtraNeededResources);
+    }
+
+    public void BadEventAdded()
+    {
+        m_Display.DisplayBadEventAdded();
     }
 }

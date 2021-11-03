@@ -7,11 +7,10 @@ public class SunnyDay : EventCard
     public override void ActivateEvent(WorldMap map, StatsManager statsManager)
     {
         statsManager.SetCurrentEvent(this);
-        if(!string.IsNullOrEmpty(m_AnimationName) && m_Animator != null)
+        if(m_Animator != null)
         {
+            m_Animator.ResetTrigger("End");
             m_Animator.SetTrigger("Go");
-        m_Animator.ResetTrigger("End");
-
         }
     }
 }

@@ -16,6 +16,12 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] TMP_Text m_Era;
     [SerializeField] Animator m_EraAnimator;
     [SerializeField] LifeDisplay m_Life;
+    [SerializeField] GameObject m_PolutionWarning;
+    [SerializeField] GameObject m_GoalWarning;
+    [SerializeField] Animator m_BadEventAddedAnimation;
+    [SerializeField] TMP_Text m_NextPolutionLimit;
+
+
 
     public void SetMoney(int amount)
     {
@@ -73,4 +79,25 @@ public class StatsDisplay : MonoBehaviour
         m_Era.text = num.ToString();
         m_EraAnimator.Play("NewEra");
     }
+
+    public void SetPolutionWarning(bool isOn)
+    {
+        m_PolutionWarning.SetActive(isOn);
+    }
+
+    public void SetGoalWarning(bool isOn)
+    {
+        Debug.Log("goal warning "+isOn);
+        m_GoalWarning.SetActive(isOn);
+    }
+
+    public void DisplayBadEventAdded()
+    {
+        m_BadEventAddedAnimation?.SetTrigger("Go");
+    }
+
+    public void SetNextPolutionLimit(int nextPolution)
+    {
+        m_NextPolutionLimit.text = nextPolution.ToString();
+    }    
 }
