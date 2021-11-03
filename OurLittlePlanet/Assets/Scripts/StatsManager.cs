@@ -182,18 +182,12 @@ public class StatsManager: MonoBehaviour
 
     public void DisplayNextEvent(bool show)
     {
-        if(!show)
-        {
-            m_Display.DisplayNextEvent(null);
-        }
-            else
-        {
-            m_Display.DisplayNextEvent(m_nextEvent?.m_EventName);
-        }
+        m_Display.DisplayNextEvent(show);
     }
 
     public void SetNextEvent(EventCard nextEvent)
     {
         m_nextEvent = nextEvent;
+        m_Display.SetNextEvent(nextEvent.m_EventName);
     }
 }

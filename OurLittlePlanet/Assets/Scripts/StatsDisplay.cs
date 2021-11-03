@@ -102,16 +102,13 @@ public class StatsDisplay : MonoBehaviour
         m_NextPolutionLimit.text = nextPolution.ToString();
     }    
 
-    public void DisplayNextEvent(string nextEventText)
+    public void DisplayNextEvent(bool shouldShow)
     {
-        if(string.IsNullOrEmpty(nextEventText))
-        {
-            m_NextEventText.gameObject.SetActive(false);
-        }
-        else
-        {
-            m_NextEventText.gameObject.SetActive(true);
-            m_NextEventText.text = nextEventText;
-        }
+        m_NextEventText.gameObject.SetActive(shouldShow);
+    }  
+
+    public void SetNextEvent(string nextEventText)
+    {
+        m_NextEventText.text = nextEventText;
     }    
 }
