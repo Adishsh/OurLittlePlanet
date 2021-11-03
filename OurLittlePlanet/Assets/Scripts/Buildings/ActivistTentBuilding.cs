@@ -8,11 +8,11 @@ public class ActivistTentBuilding : Building
     {
         List<BuildingSlot> AllSlots = map.GetAdjecentSlots(this.slot);
 
-        List<BuildingSlot> AllNonPollut = AllSlots.FindAll(slots => slots?.building?.m_CardData?.m_Pollution == 0);
+        List<BuildingSlot> AllPolluting = AllSlots.FindAll(slots => slots?.building?.m_CardData?.m_Pollution > 0);
 
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
 
-        if(AllNonPollut.Count == 8)
+        if(AllPolluting.Count == 0)
         {
             impact.resources += 5;
         }
