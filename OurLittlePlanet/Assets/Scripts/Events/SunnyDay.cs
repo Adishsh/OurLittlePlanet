@@ -10,6 +10,8 @@ public class SunnyDay : EventCard
         if(!string.IsNullOrEmpty(m_AnimationName) && m_Animator != null)
         {
             m_Animator.SetTrigger("Go");
+        m_Animator.ResetTrigger("End");
+
         }
     }
 }

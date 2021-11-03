@@ -15,6 +15,8 @@ public class Tornado : EventCard
             Debug.Log("animate event:" + m_AnimationName);
             m_Animator.SetInteger("Column", index);
         m_Animator.SetTrigger("Go");
+        m_Animator.ResetTrigger("End");
+
 
         }
     }

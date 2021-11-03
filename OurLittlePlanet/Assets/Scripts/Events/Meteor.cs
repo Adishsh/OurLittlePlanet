@@ -14,6 +14,8 @@ public class Meteor : EventCard
         if(m_Animator != null)
         {
             m_Animator.SetTrigger("Go");
+        m_Animator.ResetTrigger("End");
+
         }
     }
 }
