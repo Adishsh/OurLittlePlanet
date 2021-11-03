@@ -15,6 +15,7 @@ public class Discard : CardsCollection
     public override void AddCard(Card card)
     {
         m_TopSlot.SetCard(card);
+        card.m_TooltipDiractionUp = true;
         base.AddCard(card);
     }
 

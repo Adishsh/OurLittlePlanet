@@ -172,7 +172,7 @@ public class StatsManager: MonoBehaviour
      //   Debug.Log($"m_Polution + newPolution{m_Polution +newPolution} >= {nextPolutionToAddEvent}");
       //  Debug.Log($"CurrentResources {CurrentResources} < {m_GoalResources} + {m_ExtraNeededResources}");
         m_Display.SetPolutionWarning(m_Polution + newPolution > nextPolutionToAddEvent);
-        m_Display.SetGoalWarning(CurrentResources <= m_GoalResources + m_ExtraNeededResources);
+        m_Display.SetGoalWarning(CurrentResources < m_GoalResources + m_ExtraNeededResources);
     }
 
     public void BadEventAdded()
