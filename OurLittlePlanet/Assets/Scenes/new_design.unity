@@ -4363,7 +4363,7 @@ MonoBehaviour:
     type: 3}
   m_TopSlot: {fileID: 618233722}
   m_CardsData:
-  - {fileID: 11400000, guid: d65f0ccc6602c7f4a9619337592a85f9, type: 2}
+  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
