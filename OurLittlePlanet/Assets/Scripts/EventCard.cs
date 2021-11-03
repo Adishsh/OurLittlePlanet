@@ -15,7 +15,21 @@ public class EventCard: MonoBehaviour
         if(!string.IsNullOrEmpty(m_AnimationName) && m_Animator != null)
         {
             Debug.Log("animate event:" + m_AnimationName);
-            m_Animator.Play(m_AnimationName);
+            StartCoroutine(AnimationStart());
+        }
+    }
+
+     IEnumerator AnimationStart()
+    {
+        yield return null;
+        m_Animator.Play(m_AnimationName);
+    }
+
+    public void StopCurrentAnimation()
+    {
+        if(m_Animator != null)
+        {
+            m_Animator.SetTrigger("End");
         }
     }
 }

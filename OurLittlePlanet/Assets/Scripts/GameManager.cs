@@ -45,9 +45,9 @@ public class GameManager : MonoBehaviour
     private void Start() 
     {
         StartCoroutine(WaitAndStart());
-        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
-        audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
-        audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
+//        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
+//        audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
+ //       audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
     }
 
     IEnumerator WaitAndStart()
@@ -227,6 +227,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("not in playing mode");
             return;
         }
+        //go to animator and stop its animation
+        m_StatsManager.m_CurrentEvent.StopCurrentAnimation();
         m_Board.DiscardHand();
         EndTurnCalculation();
         AddEventCardToEventDeck();

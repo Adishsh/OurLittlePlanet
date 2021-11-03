@@ -20,9 +20,9 @@ public class WorldMap : MonoBehaviour
         }
     }
 
-    public List<BuildingSlot> GetRandomRowOrColumn()
+    public List<BuildingSlot> GetRandomRowOrColumn(out int index)
     {
-        var index = Random.Range(0, m_RowsCount);
+        index = Random.Range(0, m_RowsCount);
         var isRow = Random.Range(0, 1) == 0;
         return isRow ? GetRow(index) : GetColumn(index);
     }
