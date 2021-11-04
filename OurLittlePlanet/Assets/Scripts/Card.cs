@@ -16,20 +16,37 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] Image m_CardImage;
     [SerializeField] GameObject m_tooltipLeft;
     [SerializeField] GameObject m_tooltipUp;
+    [SerializeField] Animator m_Animator;
 
-    public CardData m_CardData{ get; private set; }
+    public CardData m_CardData { get; private set; }
     public bool m_isFrontUp { get; private set; }
     public bool m_TooltipDiractionUp;
+     public float speed = 2f;
+ 
+     private Vector3 start;
+     private Vector3 des;
+     private float fraction = 0; 
 
     private void Start()
     {
-        var parent =  gameObject.transform.parent;
+        des = Vector3.zero;
+        var parent = gameObject.transform.parent;
+    }
+
+    private void Update() 
+    {
+         if (fraction < 1) {
+             fraction += Time.deltaTime * speed;
+             transform.localPosition = Vector3.Lerp(start, des, fraction);
+         }
     }
 
     public void MoveCardToSlot(Slot newParent)
     {
+        m_Animator?.SetBool("Glow", false);
         gameObject.transform.SetParent(newParent.transform);
-        transform.localPosition = Vector3.zero;
+        start = transform.localPosition;
+        fraction = 0;
     }
 
     public void Flip(bool frontUp)
@@ -47,7 +64,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         m_Polution.text = cardData.m_Pollution.ToString();
         m_Population.text = cardData.m_Resources.ToString();
 
-        if( m_CardData.m_Sprite)
+        if (m_CardData.m_Sprite)
         {
             m_CardImage.sprite = m_CardData.m_Sprite;
         }
@@ -58,8 +75,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void OnPointerEnter(PointerEventData eventData)
     {
         var tooltip = m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
-        if(!string.IsNullOrEmpty(m_CardData.m_Description))
-         tooltip.SetActive(true);
+        if (!string.IsNullOrEmpty(m_CardData.m_Description))
+            tooltip.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -72,5 +89,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     {
         m_tooltipLeft.SetActive(false);
         m_tooltipUp.SetActive(false);
+    }
+    public void selectCard(bool isSelected)
+    {
+        m_Animator?.SetBool("Glow", isSelected);
+
     }
 }

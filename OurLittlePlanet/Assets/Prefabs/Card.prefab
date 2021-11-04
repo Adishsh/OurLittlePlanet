@@ -346,6 +346,78 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3213656459145164429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102227473981258324}
+  - component: {fileID: 4240208582578552373}
+  - component: {fileID: 8869984238270446598}
+  m_Layer: 5
+  m_Name: glow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2102227473981258324
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213656459145164429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2459679120706292657}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 91.3, y: 121.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4240208582578552373
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213656459145164429}
+  m_CullTransparentMesh: 1
+--- !u!114 &8869984238270446598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213656459145164429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: bd3a28ce85fbf4144881c551b85f0fc5, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &3603417406078605721
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +569,7 @@ GameObject:
   - component: {fileID: 7388503139488172630}
   - component: {fileID: 7940844947998575143}
   - component: {fileID: 1516800789521680904}
+  - component: {fileID: 5902345868865926215}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -521,6 +594,7 @@ RectTransform:
   - {fileID: 8369577087233118422}
   - {fileID: 3243502930854933414}
   - {fileID: 5561052800703931795}
+  - {fileID: 2102227473981258324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -550,7 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -588,7 +662,9 @@ MonoBehaviour:
   m_CardImage: {fileID: 3602339279047742460}
   m_tooltipLeft: {fileID: 8939026684371155998}
   m_tooltipUp: {fileID: 3896918351040500734}
+  m_Animator: {fileID: 5902345868865926215}
   m_TooltipDiractionUp: 0
+  speed: 3
 --- !u!114 &1516800789521680904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -615,6 +691,25 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!95 &5902345868865926215
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081725042649462136}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28b1e7ed891a46846bfc5de0c0cbb276, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4619941272135108712
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +808,9 @@ MonoBehaviour:
   m_CardImage: {fileID: 0}
   m_tooltipLeft: {fileID: 0}
   m_tooltipUp: {fileID: 0}
+  m_Animator: {fileID: 0}
   m_TooltipDiractionUp: 0
+  speed: 0.5
 --- !u!114 &6974932703304680820
 MonoBehaviour:
   m_ObjectHideFlags: 0
