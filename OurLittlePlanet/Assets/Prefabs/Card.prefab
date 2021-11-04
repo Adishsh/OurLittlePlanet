@@ -438,7 +438,7 @@ RectTransform:
   m_GameObject: {fileID: 3896918351040500734}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.91249985, y: 0.83747005, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7519466496977239361}
   m_Father: {fileID: 2459679120706292657}
@@ -446,8 +446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40.4, y: 58.8}
-  m_SizeDelta: {x: 89.0873, y: 109.0084}
+  m_AnchoredPosition: {x: 40.4, y: 72.3}
+  m_SizeDelta: {x: 117.37, y: 109.0084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7544972460603500849
 CanvasRenderer:
@@ -470,14 +470,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.74509805, b: 0.54509807, a: 1}
+  m_Color: {r: 0.7764706, g: 1, b: 0.78306097, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 2ff729347334ed846b2623b97662d709, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1120,8 +1120,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.61
-  m_fontSizeBase: 9.61
+  m_fontSize: 10.03
+  m_fontSizeBase: 10.03
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -54.515102, z: 0, w: 9.637436}
+  m_margin: {x: 3.1668892, y: -54.515102, z: 5.9378967, w: -2.8168998}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1610,7 +1610,7 @@ RectTransform:
   m_GameObject: {fileID: 8939026684371155998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.91249985, y: 0.83747005, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3695799715010091935}
   m_Father: {fileID: 2459679120706292657}
@@ -1618,8 +1618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -62.623898, y: -59.64358}
-  m_SizeDelta: {x: 89.0873, y: 109.0084}
+  m_AnchoredPosition: {x: -66.9, y: -59.64358}
+  m_SizeDelta: {x: 124.05, y: 109.0084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &540180109035800783
 CanvasRenderer:
@@ -1642,14 +1642,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9294118, g: 0.74509805, b: 0.54509807, a: 1}
+  m_Color: {r: 0.7764706, g: 1, b: 0.78306097, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 2ff729347334ed846b2623b97662d709, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
