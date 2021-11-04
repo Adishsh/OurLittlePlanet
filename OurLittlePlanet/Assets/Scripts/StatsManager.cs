@@ -76,9 +76,10 @@ public class StatsManager: MonoBehaviour
 
     public void AddPolution(int polution)
     {
-        if(polution + m_Polution < nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent)
+        int lastPolutionLimitation = nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent;
+        if(polution< 0 && polution + m_Polution < lastPolutionLimitation)
         {
-            m_Polution = nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent;
+            m_Polution = lastPolutionLimitation;
         }
         else
         {
@@ -89,10 +90,10 @@ public class StatsManager: MonoBehaviour
 
     private int GetNewEventCardsFromPolution()
     {
-        if(m_Polution > nextPolutionToAddEvent)
+        if(m_Polution >= nextPolutionToAddEvent)
         {
             int extraPolution = m_Polution - nextPolutionToAddEvent;
-            int badEventToAdd = (int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent);
+            int badEventToAdd = Mathf.Max(1,(int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent));
             nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
             m_Display.SetNextPolutionLimit(nextPolutionToAddEvent);
             return badEventToAdd;
@@ -118,7 +119,7 @@ public class StatsManager: MonoBehaviour
 
     public bool DidStrikeOut()
     {
-        return life <0;
+        return life <= 0;
     }
 
     public void SetNewEventCards(int extraEventsToAdd= 0)
@@ -171,7 +172,7 @@ public class StatsManager: MonoBehaviour
     {
      //   Debug.Log($"m_Polution + newPolution{m_Polution +newPolution} >= {nextPolutionToAddEvent}");
       //  Debug.Log($"CurrentResources {CurrentResources} < {m_GoalResources} + {m_ExtraNeededResources}");
-        m_Display.SetPolutionWarning(m_Polution + newPolution > nextPolutionToAddEvent);
+        m_Display.SetPolutionWarning(m_Polution + newPolution >= nextPolutionToAddEvent);
         m_Display.SetGoalWarning(CurrentResources < m_GoalResources + m_ExtraNeededResources);
     }
 

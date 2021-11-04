@@ -82,6 +82,10 @@ public class AudioManager : MonoBehaviour
 
     private void Play_Sound(AudioClip clip, AudioSource source)
     {
+        if(source == null)
+        {
+            return;
+        }
         source.clip = clip;
         source.Play();
     }

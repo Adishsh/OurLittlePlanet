@@ -95,7 +95,6 @@ public class GameManager : MonoBehaviour
         BuildListener = new UnityAction<int>(BuildCard);
         WinGameListener = new UnityAction(WinGame);
 
-
         EventManager.instance.SelectDiscardCard.AddListener(SelectDiscardCardListener);
         EventManager.instance.SelectCard.AddListener(SelectCardListener);
         EventManager.instance.BuyCard.AddListener(BuyCardListener);
@@ -103,9 +102,8 @@ public class GameManager : MonoBehaviour
         EventManager.instance.EndTurn.AddListener(EndTurnListener);
         EventManager.instance.BuildCard.AddListener(BuildListener);
         EventManager.instance.WinGame.AddListener(WinGameListener);
-
-    
     }
+
     private void StartTurn()
     {
         day++;
