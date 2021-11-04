@@ -14,7 +14,7 @@ public class ActivistTentBuilding : Building
 
         if(AllPolluting.Count == 0)
         {
-            impact.resources += 5;
+            impact.resources += 4;
         }
         
         //impact.resources += AllNonPollut.Count + 1;
