@@ -29,6 +29,9 @@ public class StatsManager: MonoBehaviour
     public int freeDiscardCardCount;
     private int nextPolutionToAddEvent;
     private EventCard m_nextEvent;
+    public bool CardIsDragged;
+    public BuildingSlot buildingSlotSelected;
+
 
     private void Awake() 
     {

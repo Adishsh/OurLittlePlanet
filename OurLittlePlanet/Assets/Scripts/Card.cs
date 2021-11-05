@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] TMP_Text m_CardName;
     [SerializeField] TMP_Text m_Description;
@@ -84,15 +84,39 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         m_tooltipLeft.SetActive(false);
         m_tooltipUp.SetActive(false);
     }
-
+   
     public void OnPointerDown(PointerEventData eventData)
     {
         m_tooltipLeft.SetActive(false);
         m_tooltipUp.SetActive(false);
     }
+    
     public void selectCard(bool isSelected)
     {
         m_Animator?.SetBool("Glow", isSelected);
+    }
 
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        StatsManager.Instance.CardIsDragged = true;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        StatsManager.Instance.CardIsDragged = false;
+        if(StatsManager.Instance.buildingSlotSelected!= null)
+        {
+            EventManager.instance.BuildCard.Invoke(StatsManager.Instance.buildingSlotSelected.index);
+        }else
+        {
+
+        start = transform.localPosition;
+        fraction = 0;
+        }
     }
 }

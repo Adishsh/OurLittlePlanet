@@ -198,8 +198,11 @@ public class GameManager : MonoBehaviour
 
     private void BuildCard(int selectedBuildingSlot)
     {
+            Debug.Log("BuildCard 1");
         if(selectedSlot != null)
         {
+            Debug.Log("BuildCard 2");
+
             m_Board.BuildCard(selectedSlot, selectedBuildingSlot);
             UnSelectSlot();
         }

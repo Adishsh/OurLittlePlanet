@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BuildingSlot : MonoBehaviour
 {
@@ -51,11 +52,36 @@ public class BuildingSlot : MonoBehaviour
 
     private void OnMouseUp()
     {
-        EventManager.instance.BuildCard.Invoke(index);
+            Debug.Log("BuildCard 3");
+
+
+            EventManager.instance.BuildCard.Invoke(index);
     }
     
     public CardImpact GetCardCalaulation(StatsManager statsManager, WorldMap map)
     {
         return building?.GetCardCalaulation(statsManager, map);
+    }
+
+    void OnMouseOver()
+    {
+        if(StatsManager.Instance.CardIsDragged)
+        {
+            StatsManager.Instance.buildingSlotSelected = this;
+           animator.SetBool("Hover", true);
+        }
+    }
+
+    void OnMouseExit()
+    {
+           animator.SetBool("Hover", false);
+
+        if(StatsManager.Instance.CardIsDragged)
+        {
+        }
+        if(StatsManager.Instance.buildingSlotSelected == this)
+        {
+            StatsManager.Instance.buildingSlotSelected =null;
+        }
     }
 }

@@ -11866,6 +11866,8 @@ MonoBehaviour:
   m_PolutionAmountToAddBadEvent: 10
   m_InitLife: 3
   freeDiscardCardCount: 0
+  CardIsDragged: 0
+  buildingSlotSelected: {fileID: 0}
 --- !u!1 &1367543812
 GameObject:
   m_ObjectHideFlags: 0
