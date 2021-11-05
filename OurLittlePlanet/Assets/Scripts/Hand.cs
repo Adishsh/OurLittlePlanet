@@ -17,6 +17,7 @@ public class Hand : CardsCollection
     public Card DrawCard(Slot slot)
     {
         Card card = slot.card;
+        card.allowDrag = false;
         slot.SetCard(null, false);
         slot.gameObject.SetActive(false);
         base.DrawCard(GetCardIndex(card));
@@ -43,6 +44,7 @@ public class Hand : CardsCollection
         }
         Slot slot = CreateNewSlot();
         slot.SetCard(card);
+        card.allowDrag = true;
         base.AddCard(card);
     }
 
@@ -50,9 +52,13 @@ public class Hand : CardsCollection
     {
         var cards = m_Cards;
         foreach(Slot slot in slots)
-        {         
+        {    
+            if(slot != null && slot.card != null)     
+            slot.card.allowDrag = false;
+            
             slot.SetCard(null, false);
             slot.gameObject.SetActive(false);
+            
         }
         base.Clear();
         return cards;

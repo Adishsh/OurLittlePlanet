@@ -22,6 +22,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public bool m_isFrontUp { get; private set; }
     public bool m_TooltipDiractionUp;
      public float speed = 2f;
+     public bool allowDrag;
  
      private Vector3 start;
      private Vector3 des;
@@ -98,16 +99,29 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(!allowDrag)
+        {
+            return;
+        }
         StatsManager.Instance.CardIsDragged = true;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if(!allowDrag)
+        {
+            return;
+        }
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if(!allowDrag)
+        {
+            return;
+        }
+
         StatsManager.Instance.CardIsDragged = false;
         if(StatsManager.Instance.buildingSlotSelected!= null)
         {
