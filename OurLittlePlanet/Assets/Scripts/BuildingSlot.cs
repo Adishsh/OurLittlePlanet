@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class BuildingSlot : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class BuildingSlot : MonoBehaviour
     public Building building{ get; private set;}
     public bool WasCalculated = false;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject resourcesPanel;
+    [SerializeField] TextMeshPro resources;
+    [SerializeField] TextMeshPro polution;
+
+
 
 
     public BuildingSlot(List<BuildingSlot> adjasentSlots)
@@ -21,6 +27,9 @@ public class BuildingSlot : MonoBehaviour
     {
         
         var cardData = card.m_CardData;
+        resources.text = cardData.m_Resources.ToString();
+        polution.text = cardData.m_Pollution.ToString();
+
         if( cardData.m_Building &&  cardData.m_Building.CanBuildBuilding(map))
         {
             DestroyBuilding();
@@ -70,6 +79,10 @@ public class BuildingSlot : MonoBehaviour
             StatsManager.Instance.buildingSlotSelected = this;
            animator.SetBool("Hover", true);
         }
+        if(building != null)
+        {
+            resourcesPanel.SetActive(true);
+        }
     }
 
     void OnMouseExit()
@@ -83,5 +96,7 @@ public class BuildingSlot : MonoBehaviour
         {
             StatsManager.Instance.buildingSlotSelected =null;
         }
+        resourcesPanel.SetActive(false);
     }
+
 }
