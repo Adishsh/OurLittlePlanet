@@ -9,7 +9,13 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     [SerializeField] public Card card;
     public Action OnSelectSlotCard;
     private bool m_isSelected;
-
+    private Animator m_Animator;
+    
+    private void Awake() 
+    {
+          m_Animator = GetComponent<Animator>();  
+    }
+    
     public void OnPointerClick (PointerEventData eventData)
     {
         OnSelectSlotCard();
@@ -27,6 +33,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public void SelectSlot(bool isSelected)
     {
         m_isSelected = isSelected;
+        m_Animator.SetBool("glow", isSelected);
     }
 
 }
