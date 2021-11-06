@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DiscardDisplay : CardsCollection
 {
     [SerializeField] List<Slot> slots;
+     [SerializeField] TMP_Text m_Cost;
+     [SerializeField] GameObject m_FreeTitle;
+     [SerializeField] GameObject m_NonFreeTitle;
+
 
     private void Awake() 
     {
@@ -23,7 +28,18 @@ public class DiscardDisplay : CardsCollection
         slot.SetCard(null, false);
         slot.gameObject.SetActive(false);
         base.DrawCard(GetCardIndex(card));
+        SetTitle();
         return card;
+    }
+
+    public void SetTitle()
+    {
+        bool hasFree = StatsManager.Instance.freeDiscardCardCount > 0;
+        int cost = StatsManager.Instance.m_Era*10 +10;
+        m_FreeTitle.SetActive(hasFree);
+        m_NonFreeTitle.SetActive(!hasFree);
+        m_Cost.text = cost.ToString();
+
     }
 
     private Slot CreateNewSlot()
@@ -39,6 +55,7 @@ public class DiscardDisplay : CardsCollection
 
     public override void AddCard(Card card)
     {
+        SetTitle();
         if(card == null)
         {
             return;

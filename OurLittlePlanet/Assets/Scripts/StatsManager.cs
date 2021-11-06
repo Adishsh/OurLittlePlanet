@@ -17,7 +17,7 @@ public class StatsManager: MonoBehaviour
    [SerializeField] int m_InitLife = 3;
 
 
-    private int life = 0;
+    public int life { get; private set; }
     public int m_Money { get; private set; }
     public int m_Resources { get; private set; }
     public int m_Polution { get; private set; }
@@ -31,6 +31,7 @@ public class StatsManager: MonoBehaviour
     private EventCard m_nextEvent;
     public bool CardIsDragged;
     public BuildingSlot buildingSlotSelected;
+    public int m_Era { get; private set; }
 
 
     private void Awake() 
@@ -163,12 +164,13 @@ public class StatsManager: MonoBehaviour
     public void SetEra(int num)
     {
         Debug.Log("next era");
+        m_Era = num;
         m_Display.SetEra(num);
         if(life < m_InitLife)
         {
             AddLife(1);
         }
-        freeDiscardCardCount =3;
+        freeDiscardCardCount =1;
     }
 
     public void DisplayWarnings(int newPolution, int CurrentResources)

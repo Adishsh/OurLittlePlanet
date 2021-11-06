@@ -154,11 +154,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (m_StatsManager.m_Money < 10)
+            int cost = StatsManager.Instance.m_Era*10 +10;
+            if (m_StatsManager.m_Money < cost)
             {
                 return;
             }
-            m_StatsManager.AddMoney(-10);
+            m_StatsManager.AddMoney(-cost);
         }
         m_Board.SellCard(slot);
     }
