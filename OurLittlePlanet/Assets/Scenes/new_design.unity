@@ -1503,6 +1503,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149302195}
   m_CullTransparentMesh: 1
+--- !u!95 &159697003 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3359695348464687290, guid: 2f9aad9be9b729a45a8ba21b680b4ff9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3172742523405321773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &164813566
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,6 +4112,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b296ed19bdbff645830039530e4d977, type: 3}
+--- !u!95 &535520620 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6784642338273767641, guid: 2c0e279ff63e71f4eb566ffca49bb6dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 939232057696336051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &537651729 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8099090522929442043, guid: 07c83ac8793dd9048ab6dc8ee72fa6b6,
@@ -12717,6 +12729,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1589945370}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1487993787 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4426898202694788749, guid: d52f479d4761fe347bc378471812ecf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4426898202255032745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1492013510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17700,6 +17718,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
+--- !u!95 &2054901050 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5535791953373800995, guid: 8ff7932beb44a224aa673f91da4edd0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 910253493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061926722
 GameObject:
   m_ObjectHideFlags: 0
@@ -19299,6 +19323,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 190908603}
     m_Modifications:
+    - target: {fileID: 7445609340128391116, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 535520620}
+    - target: {fileID: 7445609340454794010, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 1165033798}
+    - target: {fileID: 7445609340868496855, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 1487993787}
     - target: {fileID: 7445609341150424252, guid: 853835099be9be244a97d65e9f881cd6,
         type: 3}
       propertyPath: m_Pivot.x
@@ -19409,6 +19448,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventDeck
       objectReference: {fileID: 0}
+    - target: {fileID: 7445609341498933709, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 159697003}
+    - target: {fileID: 7445609341936917390, guid: 853835099be9be244a97d65e9f881cd6,
+        type: 3}
+      propertyPath: m_Animator
+      value: 
+      objectReference: {fileID: 2054901050}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 853835099be9be244a97d65e9f881cd6, type: 3}
 --- !u!1001 &8099090522393200362
