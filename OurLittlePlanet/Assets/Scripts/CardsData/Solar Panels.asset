@@ -19,5 +19,5 @@ MonoBehaviour:
   m_Building: {fileID: 8516678063511700057, guid: 800ec9125fc311e44adaedfb7d0d6015,
     type: 3}
   m_Pollution: 0
-  m_Resources: 4
+  m_Resources: 6
   m_Cost: 90
