@@ -53,7 +53,7 @@ public class EventDeck : MonoBehaviour
             {
                 currentBadEventIndex++;
             }
-            m_EventCardsDiscard.Add(newEvent);
+            m_ActiveEventCards.Add(newEvent);
         }
     }
 

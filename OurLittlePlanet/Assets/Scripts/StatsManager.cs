@@ -123,7 +123,7 @@ public class StatsManager: MonoBehaviour
 
     public bool DidStrikeOut()
     {
-        return life <= 0;
+        return life <= 0 || m_Polution >= 100;
     }
 
     public void SetNewEventCards(int extraEventsToAdd= 0)

@@ -665,6 +665,7 @@ MonoBehaviour:
   m_Animator: {fileID: 5902345868865926215}
   m_TooltipDiractionUp: 0
   speed: 3
+  allowDrag: 0
 --- !u!114 &1516800789521680904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,6 +812,7 @@ MonoBehaviour:
   m_Animator: {fileID: 0}
   m_TooltipDiractionUp: 0
   speed: 0.5
+  allowDrag: 0
 --- !u!114 &6974932703304680820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,7 +1665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.43137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
