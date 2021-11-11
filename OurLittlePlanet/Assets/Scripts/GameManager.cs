@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
    [SerializeField] int m_NumberOfDaysToChangeEra;
     [SerializeField] GameObject LoseText;    
     [SerializeField] GameObject WinText;
+   [SerializeField] private TutorialAnimator m_Tutorial;
+   [SerializeField] private TutorialAnimator m_NewEra;
+
 
    private int day;
    private int resourceIndex;
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
     private UnityAction WinGameListener;
     private UnityAction<int> BuildListener;
     [SerializeField] private AudioManager audiomanager;
+    
     private void Awake() 
     {
         SetListeners();
@@ -54,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
         SetGameState(GameState.StartTurn);
-
+        m_Tutorial.StartAnimation();
     }
 
 
@@ -115,6 +119,7 @@ public class GameManager : MonoBehaviour
             currentEra = era;
             m_StatsManager.SetEra(era);
             m_Board.ChangeEra(era);
+            m_NewEra.StartAnimation();
         }
         SetRecourcesGoal();
         ActivateEvents();
