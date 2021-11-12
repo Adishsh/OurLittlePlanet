@@ -46,12 +46,12 @@ public class StatsManager: MonoBehaviour
         AddPolution(m_InitPolution);
         AddLife(m_InitLife);
         SetExtraCardsToDraw(0);
-        SetNextPolutionToAddEvent();
+        SetNextPolutionToAddEvent(1);
     }
 
-    public void SetNextPolutionToAddEvent()
+    public void SetNextPolutionToAddEvent(int badEventsAdded)
     {
-        nextPolutionToAddEvent += m_PolutionAmountToAddBadEvent;
+        nextPolutionToAddEvent += m_PolutionAmountToAddBadEvent * badEventsAdded;
         m_Display.SetNextPolutionLimit(nextPolutionToAddEvent);
     }
 
@@ -81,19 +81,20 @@ public class StatsManager: MonoBehaviour
 
     public void AddPolution(int polution)
     {
-        int change;
+        int change = GetPosiablePolutionToAdd(polution);
+        m_Polution += change;
+        m_Display.SetPolution(m_Polution, change);
+    }
+
+    private int GetPosiablePolutionToAdd(int newPolution)
+    {
+        int change = newPolution;
         int lastPolutionLimitation = nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent;
-        if(polution< 0 && polution + m_Polution < lastPolutionLimitation)
+        if(newPolution< 0 && newPolution + m_Polution < lastPolutionLimitation)
         {
             change = lastPolutionLimitation - m_Polution;
-            m_Polution = lastPolutionLimitation;
-        }
-        else
-        {
-            change = polution;
-            m_Polution += polution;
-        }    
-        m_Display.SetPolution(m_Polution, change);
+        } 
+       return change;
     }
 
     private int GetNewEventCardsFromPolution()
@@ -101,9 +102,8 @@ public class StatsManager: MonoBehaviour
         if(m_Polution >= nextPolutionToAddEvent)
         {
             int extraPolution = m_Polution - nextPolutionToAddEvent;
-            int badEventToAdd = Mathf.Max(1,(int)Mathf.Ceil((float)extraPolution/m_PolutionAmountToAddBadEvent));
-            nextPolutionToAddEvent += badEventToAdd * m_PolutionAmountToAddBadEvent;
-            m_Display.SetNextPolutionLimit(nextPolutionToAddEvent);
+            int badEventToAdd = (int)Mathf.Floor((float)extraPolution/m_PolutionAmountToAddBadEvent) + 1;
+            SetNextPolutionToAddEvent(badEventToAdd);
             return badEventToAdd;
         }
         return 0;
@@ -137,7 +137,13 @@ public class StatsManager: MonoBehaviour
 
     public int GetEventCardsAmountToDraw()
     {
-        return GetNewEventCardsFromPolution() + m_ExtraEventCardsToAdd;
+        int addFromPolution = GetNewEventCardsFromPolution();
+        int totalEventsToAdd = addFromPolution + m_ExtraEventCardsToAdd;
+        if(totalEventsToAdd > 0)
+        {
+            BadEventAdded(addFromPolution>0);
+        }
+        return totalEventsToAdd;
     }
 
     public void SetExtraNeededResources(int extraResourcesNeeded)
@@ -154,9 +160,11 @@ public class StatsManager: MonoBehaviour
         } 
         else
         {
-            m_Display.SetTempPolution(impact.polution);
-            m_Display.SetResources(impact.resources, impact.resources-m_Resources);
-            DisplayWarnings(impact.polution, impact.resources);
+            int tempPolution = GetPosiablePolutionToAdd(impact.polution);
+            int resourceChange = impact.resources-m_Resources;
+            m_Display.SetTempPolution(tempPolution);
+            m_Display.SetResources(impact.resources, resourceChange);
+            DisplayWarnings(tempPolution, impact.resources);
             m_Resources =  impact.resources;
         }
     }
@@ -186,9 +194,9 @@ public class StatsManager: MonoBehaviour
         m_Display.SetGoalWarning(CurrentResources < m_GoalResources + m_ExtraNeededResources);
     }
 
-    public void BadEventAdded()
+    public void BadEventAdded(bool fromPolution)
     {
-        m_Display.DisplayBadEventAdded();
+        m_Display.DisplayBadEventAdded(fromPolution);
     }
 
     public void DisplayNextEvent(bool show)

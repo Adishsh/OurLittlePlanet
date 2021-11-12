@@ -254,10 +254,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("AddEventCardToEventDeck: "+newEventsAmount);
 
        m_Board.AddEventCardToEventDeck(newEventsAmount);
-       if(newEventsAmount>0)
-       {
-           m_StatsManager.BadEventAdded();
-       }
 
     }
 

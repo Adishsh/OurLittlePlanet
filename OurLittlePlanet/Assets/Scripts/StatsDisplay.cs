@@ -121,9 +121,10 @@ public class StatsDisplay : MonoBehaviour
         m_GoalWarning.SetActive(isOn);
     }
 
-    public void DisplayBadEventAdded()
+    public void DisplayBadEventAdded(bool fromPolution)
     {
-        m_BadEventAddedAnimation?.SetTrigger("Go");
+        string trigger = fromPolution?"AddedFromPolution" :"AddedFromCard";
+        m_BadEventAddedAnimation?.SetTrigger(trigger);
     }
 
     public void SetNextPolutionLimit(int nextPolution)
