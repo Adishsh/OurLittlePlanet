@@ -107,7 +107,6 @@ public class StatsDisplay : MonoBehaviour
     public void SetEra(int num)
     {
         m_Era.text = num.ToString();
-        m_EraAnimator.Play("NewEra");
     }
 
     public void SetPolutionWarning(bool isOn)

@@ -244,6 +244,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("LoseGame");
             Time.timeScale = 0;
             SetGameState(GameState.LoseGame);
+            return;
         }
         SetGameState(GameState.StartTurn);
     }
