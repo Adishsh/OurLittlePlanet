@@ -43,7 +43,7 @@ public class StatsDisplay : MonoBehaviour
             MoneyChange.text = $"{additiveSign}{change.ToString()}";
             m_MoneyAdded.SetTrigger("Show");
         }
-        StartCoroutine(DelayedAction( ()=>{Money.text = amount.ToString();}, 1.5f));
+        StartCoroutine(DelayedAction( ()=>{Money.text = amount.ToString();}, 1f));
     }
   
     public void SetResources(int amount, int change)
@@ -54,7 +54,7 @@ public class StatsDisplay : MonoBehaviour
             ResourcesChange.text = $"{additiveSign}{change.ToString()}";
             ResourcesAdded.SetTrigger("Show");
         }
-        StartCoroutine(DelayedAction( ()=>{Resources.text = amount.ToString();}, 1.5f));
+        StartCoroutine(DelayedAction( ()=>{Resources.text = amount.ToString();}, 1f));
     }
 
     public void SetResourcesNeeded(int amount)
@@ -71,7 +71,7 @@ public class StatsDisplay : MonoBehaviour
             PolutionChange.text = $"{additiveSign}{change.ToString()}";
             PolutionAdded.SetTrigger("Show");
         }
-        StartCoroutine(DelayedAction( ()=>{Polution.text = amount.ToString();}, 1.5f));
+        StartCoroutine(DelayedAction( ()=>{Polution.text = amount.ToString();}, 1f));
     }
 
     public void SetLife(int life)
