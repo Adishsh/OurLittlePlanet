@@ -32,7 +32,7 @@ public class StatsDisplay : MonoBehaviour
 
     IEnumerator DelayedAction(Action action, float seconds)
     {
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(0.25f);
         action.Invoke();
     }
     public void SetMoney(int amount, int change)
