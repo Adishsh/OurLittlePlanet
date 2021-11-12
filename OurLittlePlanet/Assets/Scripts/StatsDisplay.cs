@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class StatsDisplay : MonoBehaviour
 {
     [SerializeField] TMP_Text Money;
+    [SerializeField] TMP_Text MoneyChange;
+    [SerializeField] Animator m_MoneyAdded;
     [SerializeField] TMP_Text Resources;
+    [SerializeField] TMP_Text ResourcesChange;
+    [SerializeField] Animator ResourcesAdded;
     [SerializeField] TMP_Text ResourcesGoal;
     [SerializeField] TMP_Text ExtraResourcesNeeded;
     [SerializeField] TMP_Text Polution;
+    [SerializeField] TMP_Text PolutionChange;
+    [SerializeField] Animator PolutionAdded;
     [SerializeField] TMP_Text m_TempPolution;
     [SerializeField] TMP_Text m_Day;
     [SerializeField] TMP_Text m_Era;
@@ -23,15 +30,31 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] TMP_Text m_NextEventText;
 
 
-
-    public void SetMoney(int amount)
+    IEnumerator DelayedAction(Action action, float seconds)
     {
-        Money.text = amount.ToString();
+        yield return new WaitForSeconds(seconds);
+        action.Invoke();
+    }
+    public void SetMoney(int amount, int change)
+    {
+        if(change != 0)
+        {
+            string additiveSign = change > 0?"+":"";
+            MoneyChange.text = $"{additiveSign}{change.ToString()}";
+            m_MoneyAdded.SetTrigger("Show");
+        }
+        StartCoroutine(DelayedAction( ()=>{Money.text = amount.ToString();}, 1.5f));
     }
   
-    public void SetResources(int amount)
+    public void SetResources(int amount, int change)
     {
-        Resources.text = amount.ToString();
+        if(change != 0)
+        {
+            string additiveSign = change > 0?"+":"";
+            ResourcesChange.text = $"{additiveSign}{change.ToString()}";
+            ResourcesAdded.SetTrigger("Show");
+        }
+        StartCoroutine(DelayedAction( ()=>{Resources.text = amount.ToString();}, 1.5f));
     }
 
     public void SetResourcesNeeded(int amount)
@@ -40,9 +63,15 @@ public class StatsDisplay : MonoBehaviour
         ResourcesGoal.gameObject.SetActive(amount > 0);
     }
 
-    public void SetPolution(int amount)
+    public void SetPolution(int amount, int change)
     {
-        Polution.text = amount.ToString();
+        if(change != 0)
+        {
+            string additiveSign = change > 0?"+":"";
+            PolutionChange.text = $"{additiveSign}{change.ToString()}";
+            PolutionAdded.SetTrigger("Show");
+        }
+        StartCoroutine(DelayedAction( ()=>{Polution.text = amount.ToString();}, 1.5f));
     }
 
     public void SetLife(int life)

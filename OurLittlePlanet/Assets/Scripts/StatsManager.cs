@@ -58,13 +58,14 @@ public class StatsManager: MonoBehaviour
     public void AddMoney(int addedMoney)
     {
         m_Money += addedMoney;
-        m_Display.SetMoney(m_Money);
+        m_Display.SetMoney(m_Money, addedMoney);
     }
 
     public void SetResources(int resources)
     {
+        int change = resources -m_Resources;
         m_Resources = resources;
-        m_Display.SetResources(resources);
+        m_Display.SetResources(resources, change);
     }
 
     public void GainMoneyForRecources()
@@ -80,16 +81,19 @@ public class StatsManager: MonoBehaviour
 
     public void AddPolution(int polution)
     {
+        int change;
         int lastPolutionLimitation = nextPolutionToAddEvent - m_PolutionAmountToAddBadEvent;
         if(polution< 0 && polution + m_Polution < lastPolutionLimitation)
         {
+            change = lastPolutionLimitation - m_Polution;
             m_Polution = lastPolutionLimitation;
         }
         else
         {
+            change = polution;
             m_Polution += polution;
         }    
-        m_Display.SetPolution(m_Polution);
+        m_Display.SetPolution(m_Polution, change);
     }
 
     private int GetNewEventCardsFromPolution()
@@ -151,8 +155,9 @@ public class StatsManager: MonoBehaviour
         else
         {
             m_Display.SetTempPolution(impact.polution);
-            m_Display.SetResources(impact.resources);
+            m_Display.SetResources(impact.resources, impact.resources-m_Resources);
             DisplayWarnings(impact.polution, impact.resources);
+            m_Resources =  impact.resources;
         }
     }
 

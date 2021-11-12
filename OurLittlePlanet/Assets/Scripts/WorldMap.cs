@@ -214,6 +214,7 @@ public class WorldMap : MonoBehaviour
         }
         CardImpact totalImpact = GetCardsImpact();
             statsManager.AddPolution(totalImpact.polution);
+            Debug.Log($"AddPolution:{totalImpact.polution}");
             statsManager.SetResources(totalImpact.resources);
             statsManager.GainMoneyForRecources();
             statsManager.SetExtraCardsToDraw(totalImpact.extraCardsToDraw);
