@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\ronoi\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ronoi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_OurLittlePlanet.-1153333064.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ronoi\OneDrive\מסמכים\Unity\Unity Projects\Our_Little_Planet\OurLittlePlanet" t="IncludeRecursive">
+    <e p="C:\Users\ronoi\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_OurLittlePlanet.1017936516.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ronoi\OneDrive\מסמכים\Unity\Unity Projects\OurLittlePlanet\OurLittlePlanet" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FREE CASUAL PACK SFX" t="Include">
+          <e p="WELCOME_FREE CASUAL PACK SFX (README).txt" t="Include" />
+        </e>
         <e p="Instantiate.cs" t="Include" />
         <e p="LowPolyWater_Pack" t="Include">
           <e p="LowPoly Island" t="Include">
@@ -20,6 +23,13 @@
           </e>
           <e p="Shaders" t="Include">
             <e p="WaterShaded.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Nature Sound FX" t="Include">
+          <e p="__Gift__" t="Include">
+            <e p="Weapons SFX" t="Include">
+              <e p="Weapons SFX Full Package.txt" t="Include" />
+            </e>
           </e>
         </e>
         <e p="PopUp_Close.cs" t="Include" />
@@ -83,16 +93,19 @@
             <e p="Tornado.cs" t="Include" />
             <e p="Tsunami.cs" t="Include" />
           </e>
+          <e p="ExitGame.cs" t="Include" />
           <e p="GameEventData.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Hand.cs" t="Include" />
           <e p="LifeDisplay.cs" t="Include" />
+          <e p="LoadLevel.cs" t="Include" />
           <e p="Market.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PopUpWindow.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
           <e p="StatsDisplay.cs" t="Include" />
           <e p="StatsManager.cs" t="Include" />
+          <e p="TutorialAnimator.cs" t="Include" />
           <e p="WorldMap.cs" t="Include" />
         </e>
         <e p="Second_Angle.cs" t="Include" />
