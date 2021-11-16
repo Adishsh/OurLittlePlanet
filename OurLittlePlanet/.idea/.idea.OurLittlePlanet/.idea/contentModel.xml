@@ -105,6 +105,7 @@
           <e p="Slot.cs" t="Include" />
           <e p="StatsDisplay.cs" t="Include" />
           <e p="StatsManager.cs" t="Include" />
+          <e p="Textnext.cs" t="Include" />
           <e p="TutorialAnimator.cs" t="Include" />
           <e p="WorldMap.cs" t="Include" />
         </e>
@@ -114,6 +115,9 @@
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
+            <e p="OFL.txt" t="Include" />
+            <e p="readme.txt" t="Include" />
+            <e p="UFL.txt" t="Include" />
           </e>
           <e p="Resources" t="Include">
             <e p="Fonts &amp; Materials" t="Include">

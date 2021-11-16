@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: d4f210983b3840144858a38008036ae5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 361033996555621596
+    second: Dialog_Vector_Background - Large_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,7 +140,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dialog_Vector_Background - Large_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1614
+        height: 1845
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 55, y: 78, z: 80, w: 58}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4998cc186a20500800000000000000
+      internalID: 361033996555621596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
