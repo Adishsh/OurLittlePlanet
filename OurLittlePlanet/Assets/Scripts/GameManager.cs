@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         yield return null;
         SetGameState(GameState.StartTurn);
-    //    m_Tutorial.StartAnimation();
+        m_Tutorial.StartAnimation();
     }
 
 
