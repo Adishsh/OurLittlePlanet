@@ -116,7 +116,6 @@ public class Board : MonoBehaviour
 
     public void HideDiscardPile()
     {
-        StatsManager.Instance.freeDiscardCardCount =0;
         m_DiscardDisplay.gameObject.SetActive(false);
         if (m_DiscardDisplay.CardsAmount == 0)
         {

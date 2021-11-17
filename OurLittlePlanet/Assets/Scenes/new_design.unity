@@ -12410,7 +12410,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -60.950916, w: 0}
+  m_margin: {x: -36.29587, y: 0, z: -60.950916, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15371,7 +15371,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -60.266907, w: -7.1744328}
+  m_margin: {x: -26.877914, y: 0, z: -60.266907, w: -7.1744328}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -31664,7 +31664,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 154.28038, w: 0}
+  m_margin: {x: 0, y: 0, z: 107.48847, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -33016,6 +33016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.w
       value: -9.865421
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255120775375911481, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -24.743732
       objectReference: {fileID: 0}
     - target: {fileID: 8255120775375911481, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
