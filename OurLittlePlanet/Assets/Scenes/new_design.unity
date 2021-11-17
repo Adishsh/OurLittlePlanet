@@ -3259,7 +3259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 974, y: -80.1}
+  m_AnchoredPosition: {x: 974, y: -80.1001}
   m_SizeDelta: {x: 582.6667, y: 47.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195927347
@@ -7731,7 +7731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.300049, y: -2.5}
+  m_AnchoredPosition: {x: -4.2998047, y: -2.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543669525
@@ -13062,7 +13062,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.6, y: -30.758179}
+  m_AnchoredPosition: {x: -5.6, y: -30.7583}
   m_SizeDelta: {x: 166.36, y: -57.803703}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &946420695
@@ -13788,7 +13788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.375, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.2, y: -22.400024}
+  m_AnchoredPosition: {x: -22.200195, y: -22.399902}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990997097
@@ -20850,7 +20850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -77.1499, y: 24.339966}
+  m_AnchoredPosition: {x: -77.1499, y: 24.339844}
   m_SizeDelta: {x: -209.89998, y: 125.37}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1410957993
@@ -23515,7 +23515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -4.92218}
+  m_AnchoredPosition: {x: 2, y: -4.922119}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539034846 stripped
@@ -32558,7 +32558,7 @@ PrefabInstance:
     - target: {fileID: 4785924291864370436, guid: 2f9aad9be9b729a45a8ba21b680b4ff9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2088.1685
+      value: -2088.168
       objectReference: {fileID: 0}
     - target: {fileID: 4785924291864370436, guid: 2f9aad9be9b729a45a8ba21b680b4ff9,
         type: 3}
