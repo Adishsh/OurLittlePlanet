@@ -9652,7 +9652,7 @@ GameObject:
   - component: {fileID: 707142793}
   - component: {fileID: 707142794}
   m_Layer: 5
-  m_Name: Hitwave
+  m_Name: Heatwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32006,7 +32006,7 @@ PrefabInstance:
     - target: {fileID: 134737332727701849, guid: 2f9aad9be9b729a45a8ba21b680b4ff9,
         type: 3}
       propertyPath: m_Name
-      value: HitWave
+      value: Heatwave
       objectReference: {fileID: 0}
     - target: {fileID: 3359695348464687290, guid: 2f9aad9be9b729a45a8ba21b680b4ff9,
         type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4785924291864370436}
   - component: {fileID: 3359695348464687290}
   m_Layer: 0
-  m_Name: HitWave
+  m_Name: Heatwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
