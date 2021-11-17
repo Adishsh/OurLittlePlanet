@@ -11,7 +11,8 @@ public class SolarPowerBuilding : Building
         Debug.Log($"SolarPowerBuilding - GetCardCalaulation isRainyDay: {isRainyDay}");
         
         CardImpact impact = base.GetCardCalaulation(statsManager, map);
-        impact.resources = isRainyDay ? 0 : m_CardData.m_Resources;
+        impact.resources = 3;
+        impact.resources += isRainyDay ? 0 : m_CardData.m_Resources;
         return impact;
     }
 }

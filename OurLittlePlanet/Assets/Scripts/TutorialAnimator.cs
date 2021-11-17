@@ -6,18 +6,21 @@ public class TutorialAnimator : MonoBehaviour
 {
     private Animator m_Animator;
     // Start is called before the first frame update
-    private void Awake() {
+    private void Start() {
         m_Animator = GetComponent<Animator>();
-        
     }
 
     public void StartAnimation()
     {
-        m_Animator.SetTrigger("Start");
+        if(m_Animator == null)
+        {
+            m_Animator = GetComponent<Animator>();
+        }
+        m_Animator?.SetTrigger("Start");
     }
 
     public void OnClick()
     {
-        m_Animator.SetTrigger("Clicked");
+        m_Animator?.SetTrigger("Clicked");
     }
 }

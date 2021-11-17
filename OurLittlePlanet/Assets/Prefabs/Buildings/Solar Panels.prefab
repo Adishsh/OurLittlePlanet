@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3302085479958364592}
   - component: {fileID: 1908548410909904405}
   - component: {fileID: 4438422653064919775}
-  - component: {fileID: 8516678063511700057}
+  - component: {fileID: 6957325991555934085}
   m_Layer: 0
   m_Name: Solar Panels
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8516678063511700057
+--- !u!114 &6957325991555934085
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2781128433077623562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 107e16dea51fc9842a5c3afe0751b7b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ea925fb4bf48124694327a4003c633e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slot: {fileID: 0}
