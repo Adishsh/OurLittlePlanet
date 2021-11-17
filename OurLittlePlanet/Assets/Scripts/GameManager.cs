@@ -49,9 +49,9 @@ public class GameManager : MonoBehaviour
     private void Start() 
     {
         StartCoroutine(WaitAndStart());
-//        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
-//        audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
- //       audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
+        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
+        audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
+        audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
     }
 
     IEnumerator WaitAndStart()

@@ -19523,7 +19523,7 @@ MonoBehaviour:
   WinText: {fileID: 1375695262}
   m_Tutorial: {fileID: 794200082}
   m_NewEra: {fileID: 1793799469}
-  audiomanager: {fileID: 0}
+  audiomanager: {fileID: 4662166872863245988}
 --- !u!4 &1361728085
 Transform:
   m_ObjectHideFlags: 0
@@ -32415,7 +32415,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -890890121324329297, guid: 4b990930c9f701045a4ba1837bb725af,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 2eaa1a0d354e6e945b1996c889bd3b05, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -32560,7 +32560,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 9059515303425451414, guid: 4b990930c9f701045a4ba1837bb725af,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 69a015912ada9754c958b394edf0a22b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -32674,6 +32674,8 @@ MonoBehaviour:
     AudioSourceRef: {fileID: 4662166872190535475}
   - SourceType: 5
     AudioSourceRef: {fileID: 4662166871604671198}
+  - SourceType: 2
+    AudioSourceRef: {fileID: 4662166871604671198}
 --- !u!1 &4662166872863245989
 GameObject:
   m_ObjectHideFlags: 0
@@ -32720,7 +32722,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 3726188765567770176, guid: 4b990930c9f701045a4ba1837bb725af,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 6cbcc3d16a4d38045a74e73de1296f35, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
