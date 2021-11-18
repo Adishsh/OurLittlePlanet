@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Solar Panels
   m_EditorClassIdentifier: 
   m_Color: {r: 0.84313726, g: 0.38039216, b: 1, a: 1}
-  m_Description: Produces -3 Resources on Rainy turns
+  m_Description: Produces +3 Resources on non-Rainy turns
   m_CardName: Solar Panels
   m_Sprite: {fileID: 21300000, guid: b3d763f6d22bf5341a7bb36ab87042fb, type: 3}
   m_Building: {fileID: 6957325991555934085, guid: 800ec9125fc311e44adaedfb7d0d6015,
     type: 3}
   m_Pollution: 0
-  m_Resources: 6
+  m_Resources: 3
   m_Cost: 90
