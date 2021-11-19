@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
    [SerializeField] int m_NumberOfDaysToChangeEra;
     [SerializeField] GameObject LoseText;    
     [SerializeField] GameObject WinText;
-   [SerializeField] private TutorialAnimator m_Tutorial;
+   [SerializeField] private TutorialShowInOrder m_Tutorial;
    [SerializeField] private TutorialAnimator m_NewEra;
     [SerializeField] Menu m_Menu;    
 
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
             StartGame();
         }
         m_Menu.HideMenu();
-        m_Tutorial.StartAnimation();
+        m_Tutorial.StartTutorial();
     }
 
 
