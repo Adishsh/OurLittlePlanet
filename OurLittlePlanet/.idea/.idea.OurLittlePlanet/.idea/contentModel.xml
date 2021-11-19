@@ -25,13 +25,6 @@
             <e p="WaterShaded.shader" t="Include" />
           </e>
         </e>
-        <e p="Nature Sound FX" t="Include">
-          <e p="__Gift__" t="Include">
-            <e p="Weapons SFX" t="Include">
-              <e p="Weapons SFX Full Package.txt" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="PopUp_Close.cs" t="Include" />
         <e p="PopUp_Close1.cs" t="Include" />
         <e p="Popup_Enter.cs" t="Include" />
@@ -111,6 +104,17 @@
           <e p="WorldMap.cs" t="Include" />
         </e>
         <e p="Second_Angle.cs" t="Include" />
+        <e p="Sounds" t="Include">
+          <e p="SFX" t="Include">
+            <e p="Nature Sound FX" t="Include">
+              <e p="__Gift__" t="Include">
+                <e p="Weapons SFX" t="Include">
+                  <e p="Weapons SFX Full Package.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Test.cs" t="Include" />
         <e p="TestOver.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">

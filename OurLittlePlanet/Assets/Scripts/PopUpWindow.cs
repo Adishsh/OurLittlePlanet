@@ -13,7 +13,9 @@ public class PopUpWindow : MonoBehaviour
     {
         //instantiatedObject = Instantiate(prefab, Object.transform.position, Quaternion.identity) as GameObject;
             prefab.gameObject.SetActive(true); 
-        
+      
+            
+                
     }
 
     

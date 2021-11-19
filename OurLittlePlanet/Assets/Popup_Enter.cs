@@ -10,6 +10,7 @@ public class Popup_Enter : MonoBehaviour
     public void PlayPopup()
     {
         Popup_Window.SetActive(true);
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Tutorial_PopUp_01));
     }
 
     
