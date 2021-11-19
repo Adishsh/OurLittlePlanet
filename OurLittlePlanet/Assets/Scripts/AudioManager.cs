@@ -112,6 +112,26 @@ public class AudioManager : MonoBehaviour
         return null;
     }
     
-    
+    public void MuteAudio(bool isOn)
+    {
+         for (int i = 0; i < SoundType_And_Ref_List.Count; i++)
+        {
+           SoundType_And_Ref_List[i].AudioSourceRef.mute =isOn;
+        }
+
+    }
+
+    public void SetVolume(float volume)
+    {
+        for (int i = 0; i < SoundType_And_Ref_List.Count; i++)
+        {
+           SoundType_And_Ref_List[i].AudioSourceRef.volume = volume;
+        }
+    }
+
+    public float GetVolume()
+    {
+        return SoundType_And_Ref_List[0].AudioSourceRef.volume;
+    }
 
 }
