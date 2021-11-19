@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject WinText;
    [SerializeField] private TutorialAnimator m_Tutorial;
    [SerializeField] private TutorialAnimator m_NewEra;
+    [SerializeField] Menu m_Menu;    
 
 
    private int day;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     enum GameState
     {
+        Beginning,
         StartTurn,
         Drawing,
         PlayingCards,
@@ -48,16 +50,30 @@ public class GameManager : MonoBehaviour
 
     private void Start() 
     {
-        StartCoroutine(WaitAndStart());
         audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background);
+        m_Menu.ShowMenu(false);
+    }
+    
+    public void StartGame() 
+    {
+        m_Menu.HideMenu();
+        SetGameState(GameState.StartTurn);
         audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
         audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
     }
 
-    IEnumerator WaitAndStart()
+    public void RestartGame() 
     {
-        yield return null;
-        SetGameState(GameState.StartTurn);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+    }
+
+    public void StartTutorial() 
+    {
+        if(gameState == GameState.Beginning)
+        {
+            StartGame();
+        }
+        m_Menu.HideMenu();
         m_Tutorial.StartAnimation();
     }
 
