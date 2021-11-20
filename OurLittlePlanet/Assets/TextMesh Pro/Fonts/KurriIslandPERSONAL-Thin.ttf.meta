@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 34d47a7542d2c154085c9a40fa013d60
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kurri Island PERSONAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0287e63802e33bb48a687d98379cfe72, type: 3}
+  - {fileID: 12800000, guid: 708ef305f38fa9d46ba13bc77d2d9166, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

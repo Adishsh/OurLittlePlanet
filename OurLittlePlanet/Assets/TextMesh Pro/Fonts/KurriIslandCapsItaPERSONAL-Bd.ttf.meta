@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: e9405989e7d4747438c82c931a1a208a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kurri Island Caps Ita PERSONAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 688f47c2c9e27544e910fe3daf4f0da6, type: 3}
+  - {fileID: 12800000, guid: 28f99472859584b4f8c2b45e4bf6d700, type: 3}
+  - {fileID: 12800000, guid: 77d0bb2595d15f840998649d68197218, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

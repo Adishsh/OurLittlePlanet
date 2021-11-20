@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 1bfcd2ee30111784bb604e547ae95e80
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kurri Island Ita PERSONAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 422f12aeb54dcf145bb638dc15098390, type: 3}
+  - {fileID: 12800000, guid: f49477918e8c4b44eb22c5bd8917dc23, type: 3}
+  - {fileID: 12800000, guid: c597c5b3beaf55a4cb63b75deef35901, type: 3}
+  - {fileID: 12800000, guid: aa4604e3ef2114a4e92f4fe82b50abe3, type: 3}
+  - {fileID: 12800000, guid: b320112ab0050234c9ddfb78135edcdc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

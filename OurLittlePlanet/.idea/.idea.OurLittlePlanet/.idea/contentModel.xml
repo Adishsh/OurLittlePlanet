@@ -94,13 +94,16 @@
           <e p="LifeDisplay.cs" t="Include" />
           <e p="LoadLevel.cs" t="Include" />
           <e p="Market.cs" t="Include" />
+          <e p="Menu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PopUpWindow.cs" t="Include" />
           <e p="Slot.cs" t="Include" />
+          <e p="SoundMenu.cs" t="Include" />
           <e p="StatsDisplay.cs" t="Include" />
           <e p="StatsManager.cs" t="Include" />
           <e p="Textnext.cs" t="Include" />
           <e p="TutorialAnimator.cs" t="Include" />
+          <e p="TutorialShowInOrder.cs" t="Include" />
           <e p="WorldMap.cs" t="Include" />
         </e>
         <e p="Second_Angle.cs" t="Include" />
