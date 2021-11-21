@@ -21,6 +21,7 @@ public class Discard : CardsCollection
 
     public List<Card> ShuffleAndGetCards()
     {
+            Debug.Log($"Ron- Shuffle");
         base.Shuffle();
         var cards = m_Cards;
         m_Cards = new List<Card>();

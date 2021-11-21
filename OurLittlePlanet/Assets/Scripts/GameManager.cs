@@ -138,6 +138,7 @@ public class GameManager : MonoBehaviour
             m_StatsManager.SetEra(era);
             m_Board.ChangeEra(era);
             m_NewEra.StartAnimation();
+            Debug.Log($"Ron- new era");
         }
         SetRecourcesGoal();
         ActivateEvents();
@@ -162,6 +163,7 @@ public class GameManager : MonoBehaviour
         {
             m_StatsManager.AddMoney(-cost);
             m_Board.BuyCard(slot);
+            Debug.Log($"Ron- Buy Card from market");
         }else
         {
             Debug.Log($"no money to buy card {card} money:{m_StatsManager.m_Money} cost:{card.m_CardData.m_Cost}");
@@ -184,6 +186,7 @@ public class GameManager : MonoBehaviour
             }
             m_StatsManager.AddMoney(-cost);
         }
+        Debug.Log($"Ron- Sell Card from discard");
         m_Board.SellCard(slot);
     }
 
@@ -208,6 +211,7 @@ public class GameManager : MonoBehaviour
         selectedSlot = slot;
         selectedSlot.SelectSlot(true);
         m_Board.SetBuildSelectable(true);
+        Debug.Log($"Ron- hand cardSelected");
     }
 
     private void UnSelectSlot()
@@ -280,6 +284,7 @@ public class GameManager : MonoBehaviour
     {
         if(!winGame)
         {
+            Debug.Log($"Ron- Lose");
             LoseText.SetActive(true);
             LoseDayNum.text = day.ToString();
         }
@@ -289,6 +294,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameState != GameState.LoseGame)
         {
+            Debug.Log($"Ron- Win");
             WinText.SetActive(true);
             winGame =true;        
         }

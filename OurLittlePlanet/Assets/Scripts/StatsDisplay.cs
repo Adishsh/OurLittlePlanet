@@ -124,6 +124,8 @@ public class StatsDisplay : MonoBehaviour
     {
         string trigger = fromPolution?"AddedFromPolution" :"AddedFromCard";
         m_BadEventAddedAnimation?.SetTrigger(trigger);
+            Debug.Log($"Ron- bad event added");
+
     }
 
     public void SetNextPolutionLimit(int nextPolution)

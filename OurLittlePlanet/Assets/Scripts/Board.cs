@@ -104,6 +104,8 @@ public class Board : MonoBehaviour
         {
             return;
         }
+            Debug.Log($"Ron- Discard Display on");
+
         m_DiscardDisplay.gameObject.SetActive(true);
         Debug.Log($"Show m_Discard: {m_Discard.CardsAmount}");
         var cards = m_Discard.ShuffleAndGetCards();
