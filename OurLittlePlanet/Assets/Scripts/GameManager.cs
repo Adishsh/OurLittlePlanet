@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
    [SerializeField] List<int> m_ResourcesList;
    [SerializeField] int m_NumberOfDaysToChangeEra;
     [SerializeField] GameObject LoseText;    
+    [SerializeField] TMP_Text LoseDayNum;    
     [SerializeField] GameObject WinText;
    [SerializeField] private TutorialShowInOrder m_Tutorial;
    [SerializeField] private TutorialAnimator m_NewEra;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
    private int day;
    private int resourceIndex;
    private int currentEra;
-
+    private bool winGame;
 
     enum GameState
     {
@@ -276,13 +278,20 @@ public class GameManager : MonoBehaviour
 
     private void LoseGame()
     {
-        LoseText.SetActive(true);
+        if(!winGame)
+        {
+            LoseText.SetActive(true);
+            LoseDayNum.text = day.ToString();
+        }
     }
 
-        private void WinGame()
+    private void WinGame()
     {
-       WinText.SetActive(true);
-
+        if(gameState != GameState.LoseGame)
+        {
+            WinText.SetActive(true);
+            winGame =true;        
+        }
     }
 
     private void EndTurnCalculation()
