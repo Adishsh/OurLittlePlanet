@@ -1823,7 +1823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -45.83333}
+  m_AnchoredPosition: {x: 200, y: -45.833374}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101091715
@@ -10136,7 +10136,7 @@ MonoBehaviour:
     type: 3}
   m_TopSlot: {fileID: 618233722}
   m_CardsData:
-  - {fileID: 11400000, guid: b36912ed35bd0074baec391c2e2657b0, type: 2}
+  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
@@ -17069,7 +17069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.6, y: -30.758484}
+  m_AnchoredPosition: {x: -5.6, y: -30.758545}
   m_SizeDelta: {x: 166.36, y: -57.803703}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &946420695
@@ -28919,7 +28919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -4.92218}
+  m_AnchoredPosition: {x: 2, y: -4.922119}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539034846 stripped
@@ -31229,7 +31229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.904968, y: -9.217224}
+  m_AnchoredPosition: {x: -8.905029, y: -9.217163}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631977469
