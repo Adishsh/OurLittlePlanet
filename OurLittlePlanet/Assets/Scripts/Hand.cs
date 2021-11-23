@@ -15,7 +15,9 @@ public class Hand : CardsCollection
     }
 
     public Card DrawCard(Slot slot)
+    
     {
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Click_02));
         Card card = slot.card;
         card.allowDrag = false;
         slot.SetCard(null, false);
@@ -69,6 +71,7 @@ public class Hand : CardsCollection
     {
         if(slot.card != null && m_isSelectable)
         {
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Click_01));
             EventManager.instance.SelectCard.Invoke(slot);
         }
     }

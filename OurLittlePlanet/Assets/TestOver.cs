@@ -17,6 +17,7 @@ public class TestOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         Debug.Log("Mouse enter");
         isOver = true;
         PopUpTest.gameObject.SetActive(true);
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Hover_02));
     }
 
     public void OnPointerExit(PointerEventData eventData)

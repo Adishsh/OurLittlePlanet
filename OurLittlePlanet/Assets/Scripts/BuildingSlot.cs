@@ -42,6 +42,7 @@ public class BuildingSlot : MonoBehaviour
             building = Instantiate(building, newPosition, newRotation, transform);
             building.m_CardData = cardData;
             building.slot = this;
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Construction));
         }
     }
 
