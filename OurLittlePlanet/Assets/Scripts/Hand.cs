@@ -42,6 +42,7 @@ public class Hand : CardsCollection
         {
             return;
         }
+        card.Flip(true);
         Slot slot = CreateNewSlot();
         slot.SetCard(card);
         card.allowDrag = true;
