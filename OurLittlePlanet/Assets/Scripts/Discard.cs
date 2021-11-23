@@ -33,6 +33,10 @@ public class Discard : CardsCollection
     {
         int cardIndex = GetCardIndex(card);
         RemoveCards(cardIndex);
+        if(card!= null)
+        {
+            Destroy(card);
+        }
         if(cardIndex >= CardsAmount)
         {
             Card newTopCard = CardsAmount > 0 ? m_Cards[CardsAmount -1]: null;

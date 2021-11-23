@@ -762,7 +762,7 @@ MonoBehaviour:
   m_tooltipUp: {fileID: 3896918351040500734}
   m_Animator: {fileID: 5902345868865926215}
   m_TooltipDiractionUp: 0
-  speed: 3
+  speed: 1.8
   allowDrag: 0
 --- !u!114 &1516800789521680904
 MonoBehaviour:
