@@ -10669,9 +10669,9 @@ RectTransform:
   m_Father: {fileID: 1464433342}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -94.800026, y: -940.19995}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 45.15, y: 30.599976}
   m_SizeDelta: {x: 90.3, y: 61.19995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &515318228
@@ -19912,10 +19912,10 @@ RectTransform:
   m_Father: {fileID: 1464433342}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -4.4000244, y: -1019.57697}
-  m_SizeDelta: {x: 276.4, y: 55.846}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -27.923004}
+  m_SizeDelta: {x: 0, y: 55.84601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &985203019
 MonoBehaviour:
@@ -20407,9 +20407,9 @@ RectTransform:
   m_Father: {fileID: 1464433342}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 88, y: -941}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.15, y: 30.599976}
   m_SizeDelta: {x: 90.3, y: 61.19995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016802851
@@ -29149,6 +29149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1464433342}
+  - component: {fileID: 1464433343}
   m_Layer: 5
   m_Name: tutorialControls
   m_TagString: Untagged
@@ -29173,11 +29174,19 @@ RectTransform:
   m_Father: {fileID: 1418100616}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 16.01}
+  m_SizeDelta: {x: 242.2, y: 130.63}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &1464433343
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464433341}
+  m_CullTransparentMesh: 1
 --- !u!4 &1469189211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b296ed19bdbff645830039530e4d977,
