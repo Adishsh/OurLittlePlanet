@@ -53,6 +53,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void Flip(bool frontUp)
     {
         m_isFrontUp = frontUp;
+        m_Animator.SetBool("Flip", !frontUp);
     }
 
     public void SetUpCard(CardData cardData)

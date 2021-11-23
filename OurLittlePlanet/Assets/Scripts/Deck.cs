@@ -10,6 +10,10 @@ public class Deck : CardsCollection
     private void Start() 
     {
         base.InitCardsPiled(m_CardsData, m_TopSlot);
+        foreach(var card in m_Cards)
+        {
+            card.Flip(false);
+        }
         m_TopSlot.SetCard(base.GetTopCard(), false);
         m_TopSlot.OnSelectSlotCard = SelectDeckSlot;
         Shuffle();
@@ -24,6 +28,7 @@ public class Deck : CardsCollection
 
     public override void AddCard(Card card)
     {
+        card.Flip(false);
         Debug.Log("AddCard to deck");
         m_TopSlot.SetCard(card);
         base.AddCard(card);

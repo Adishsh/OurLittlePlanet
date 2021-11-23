@@ -142,7 +142,8 @@ public class Board : MonoBehaviour
     public void SellCard(Slot slot)
     {
         Card card = m_DiscardDisplay.DrawCard(slot);
-        Destroy(card);
+        if(card && card.gameObject)
+        Destroy(card.gameObject);
         Debug.Log($"Discard {card}");
     }
 

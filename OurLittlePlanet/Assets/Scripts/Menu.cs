@@ -15,18 +15,23 @@ public class Menu : MonoBehaviour
 
     public void Instructions(bool isOn)
     {
-        m_Instructions.SetActive(isOn);
+        bool isActive = m_Instructions.activeSelf;
+        HideSmallMenus();
+        m_Instructions.SetActive(!isActive);
     }
 
     public void Credits(bool isOn)
     {
-        m_Credits.SetActive(isOn);
-
+        bool isActive = m_Credits.activeSelf;
+        HideSmallMenus();
+        m_Credits.SetActive(!isActive);
     }
 
     public void SoundMenu(bool isOn)
     {
-        m_SoundMenu.SetActive(isOn);
+        bool isActive = m_SoundMenu.activeSelf;
+        HideSmallMenus();
+        m_SoundMenu.SetActive(!isActive);
     }
 
     public void ShowMenu(bool gameInProggress = true)
@@ -35,6 +40,14 @@ public class Menu : MonoBehaviour
         m_StartButton.SetActive(!gameInProggress);
         m_RestartButton.SetActive(gameInProggress);
         m_BackButton.SetActive(gameInProggress);
+        HideSmallMenus();
+    }
+
+    private void HideSmallMenus()
+    {
+        m_Credits.SetActive(false);
+        m_Instructions.SetActive(false);
+        m_SoundMenu.SetActive(false);
     }
 
     public void HideMenu()
