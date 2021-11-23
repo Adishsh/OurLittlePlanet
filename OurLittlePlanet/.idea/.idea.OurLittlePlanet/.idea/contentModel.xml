@@ -122,6 +122,7 @@
         <e p="TestOver.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
+            <e p="ABSOLUTELY_VITAL_INFORMATION.txt" t="Include" />
             <e p="LiberationSans - OFL.txt" t="Include" />
             <e p="OFL.txt" t="Include" />
             <e p="readme.txt" t="Include" />

@@ -33,11 +33,12 @@ public class AudioManager : MonoBehaviour
 
         ______Player_Sounds____ = 1,
         Music_Background= 2,
-        GamePlay = 3,
+        Music_Background2 = 3,
         Atmosphere = 4,
-        PowerUp = 5,
-        Music_02 = 6,
-        
+        Atmosphere2 = 5,
+        Atmosphere3 = 6,
+        Atmosphere4 = 7,
+        Gameplay = 8,
         
         
         
@@ -45,7 +46,10 @@ public class AudioManager : MonoBehaviour
         
         // UI_Sounds
         Click_01 = 100,
-        Tutorial_PopUp_01 = 101,
+        Click_02 = 101,
+        Hover_01 = 102,
+        Hover_02 = 103,
+        Tutorial_PopUp_01 = 104,
         // Gameplay Sounds
         Bump =200,
         Shrink = 201,

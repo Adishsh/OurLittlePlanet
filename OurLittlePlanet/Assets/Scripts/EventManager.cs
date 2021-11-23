@@ -50,6 +50,7 @@ public class EventManager : MonoBehaviour {
 
     public void EndTurnPressed()
     {
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Gameplay));
         EndTurn.Invoke();
     }
 /*

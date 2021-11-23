@@ -43,14 +43,14 @@
       <option value="$PROJECT_DIR$/Assets/Popup_Exit.cs" />
       <option value="$PROJECT_DIR$/Assets/PopUp_Open1.cs" />
       <option value="$PROJECT_DIR$/Assets/PopUp_Close1.cs" />
-      <option value="$PROJECT_DIR$/Assets/PopUp_Open.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ExitGame.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Textnext.cs" />
       <option value="$PROJECT_DIR$/Assets/CameraOrbit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraOrbit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PopUpWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/PopUp_Open.cs" />
       <option value="$PROJECT_DIR$/Assets/Popup_Enter.cs" />
     </changedPaths>
   </component>
@@ -116,6 +116,7 @@
       <workItem from="1635757703848" duration="10283000" />
       <workItem from="1635788230994" duration="13312000" />
       <workItem from="1637069229545" duration="10777000" />
+      <workItem from="1637673580849" duration="2318000" />
     </task>
     <servers />
   </component>

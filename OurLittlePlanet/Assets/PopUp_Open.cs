@@ -12,7 +12,7 @@ public class PopUp_Open : MonoBehaviour , IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         PopUp_Window.SetActive(true);
-        AudioManager.S.Play_Sound(AudioManager.SoundTypes.PopUpOpen);
+        AudioManager.S.Play_Sound(AudioManager.SoundTypes.Hover_01);
         Debug.Log("OK_OPEN");
     }
     /*

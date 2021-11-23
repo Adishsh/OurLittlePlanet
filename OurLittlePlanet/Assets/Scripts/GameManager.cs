@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour
     {
         m_Menu.HideMenu();
         SetGameState(GameState.StartTurn);
-        audiomanager.Play_Sound(AudioManager.SoundTypes.GamePlay);
+        audiomanager.Play_Sound(AudioManager.SoundTypes.Music_Background2);
         audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere);
+        audiomanager.Play_Sound(AudioManager.SoundTypes.Atmosphere2);
     }
 
     public void RestartGame() 
