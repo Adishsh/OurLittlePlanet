@@ -13944,13 +13944,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 1.82
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3.209237e+14, z: 1.81e-43, w: 3.2063407e+14}
+  m_BoundingSphereOverride: {x: 0, y: 2.451624, z: 8.04e-43, w: 2.5e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -36873,8 +36873,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5804602166352854010, guid: 18df5b99e337c004da4aee7906f7f90d,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5804602166352854010, guid: 18df5b99e337c004da4aee7906f7f90d,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25
+      value: 24.97
       objectReference: {fileID: 0}
     - target: {fileID: 5804602166352854010, guid: 18df5b99e337c004da4aee7906f7f90d,
         type: 3}
