@@ -56,7 +56,10 @@ public class AudioManager : MonoBehaviour
         Buycard =200,
         Shrink = 201,
         PopUpOpen = 202,
-
+        FailiBuycard =203,
+        EraChange =204,
+        Lose =205,
+        Win =206,
 
     }
 
@@ -78,7 +81,7 @@ public class AudioManager : MonoBehaviour
 
     private void Play_Sound(AudioClip clip, AudioSource source)
     {
-        if(source == null)
+        if(source == null || clip == null)
         {
             return;
         }
@@ -103,12 +106,12 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource Get_AudioSource_Of(SoundTypes soundType)
     {
-        return Get_SoundType_And_Ref_By(soundType).AudioSourceRef;
+        return Get_SoundType_And_Ref_By(soundType)?.AudioSourceRef;
     }
 
     private AudioClip Get_AudioClip_Of(SoundTypes soundType)
     {
-        return Get_SoundType_And_Ref_By(soundType).AudioClipRef;
+        return Get_SoundType_And_Ref_By(soundType)?.AudioClipRef;
         for (int i = 0; i < SoundType_And_Ref_List.Count; i++)
         {
             if (SoundType_And_Ref_List[i].SoundType == soundType)

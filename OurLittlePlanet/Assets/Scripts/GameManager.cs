@@ -165,8 +165,10 @@ public class GameManager : MonoBehaviour
             m_StatsManager.AddMoney(-cost);
             m_Board.BuyCard(slot);
             Debug.Log($"Ron- Buy Card from market");
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Buycard));
         }else
         {
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.FailiBuycard));
             Debug.Log($"no money to buy card {card} money:{m_StatsManager.m_Money} cost:{card.m_CardData.m_Cost}");
 
         }
@@ -183,9 +185,11 @@ public class GameManager : MonoBehaviour
             int cost = StatsManager.Instance.m_Era*10 +10;
             if (m_StatsManager.m_Money < cost)
             {
+                AudioManager.S.Play_Sound((AudioManager.SoundTypes.FailiBuycard));
                 return;
             }
             m_StatsManager.AddMoney(-cost);
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Buycard));
         }
         Debug.Log($"Ron- Sell Card from discard");
         m_Board.SellCard(slot);
@@ -285,7 +289,7 @@ public class GameManager : MonoBehaviour
     {
         if(!winGame)
         {
-            Debug.Log($"Ron- Lose");
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Lose));
             LoseText.SetActive(true);
             LoseDayNum.text = day.ToString();
         }
@@ -295,7 +299,7 @@ public class GameManager : MonoBehaviour
     {
         if(gameState != GameState.LoseGame)
         {
-            Debug.Log($"Ron- Win");
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Win));
             WinText.SetActive(true);
             winGame =true;        
         }
