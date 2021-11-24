@@ -29,6 +29,7 @@ public class Market : CardsCollection
         if(slot.card && m_isSelectable)
         {
             EventManager.instance.BuyCard.Invoke(slot);
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Buycard));
         }
     }
     

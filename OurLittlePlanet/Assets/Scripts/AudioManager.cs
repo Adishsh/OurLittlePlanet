@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
         Construction = 105,
         Bad_Event = 106,
         // Gameplay Sounds
-        Bump =200,
+        Buycard =200,
         Shrink = 201,
         PopUpOpen = 202,
 

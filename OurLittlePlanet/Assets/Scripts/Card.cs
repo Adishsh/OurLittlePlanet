@@ -79,6 +79,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         var tooltip = m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
         if (!string.IsNullOrEmpty(m_CardData.m_Description))
             tooltip.SetActive(true);
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Hover_01));
     }
 
     public void OnPointerExit(PointerEventData eventData)

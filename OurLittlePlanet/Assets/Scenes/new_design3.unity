@@ -4635,7 +4635,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.802
+  m_Volume: 0.956
   m_Pitch: 1.99
   Loop: 0
   Mute: 0
@@ -5900,7 +5900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4662166872863245991}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &314126321
 GameObject:
@@ -9139,6 +9139,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447273337}
   m_CullTransparentMesh: 1
+--- !u!1 &447585215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447585217}
+  - component: {fileID: 447585216}
+  m_Layer: 0
+  m_Name: Audio_Source_UI5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &447585216
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447585215}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4178556174905132894, guid: 4b990930c9f701045a4ba1837bb725af,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 3
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.33
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &447585217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447585215}
+  m_LocalRotation: {x: -0, y: 0.9832312, z: -0.18236342, w: 0}
+  m_LocalPosition: {x: 17.310919, y: 15.617109, z: 431.36234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4662166872863245991}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456298481
 GameObject:
   m_ObjectHideFlags: 0
@@ -16484,7 +16612,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.802
-  m_Pitch: 1.03
+  m_Pitch: 0.92
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -22712,7 +22840,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4662166872863245991}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1165033796
 PrefabInstance:
@@ -39333,8 +39461,8 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.802
-  m_Pitch: 1.99
+  m_Volume: 0.9
+  m_Pitch: 1.55
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -39825,7 +39953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4662166872863245991}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989499012
 GameObject:
@@ -39857,7 +39985,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.698
+  m_Volume: 0.599
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -45021,11 +45149,17 @@ MonoBehaviour:
     AudioClipRef: {fileID: 8300000, guid: f03b335860965c14aa64caba73fc0f1c, type: 3}
     AudioSourceRef: {fileID: 1972381255}
   - SoundType: 105
-    AudioClipRef: {fileID: 8300000, guid: c8cf04e1bbb88af4984bb55f7ab5e888, type: 3}
+    AudioClipRef: {fileID: 8300000, guid: ef8a3aed406d3ff45b30b38cbc924d7b, type: 3}
     AudioSourceRef: {fileID: 785753067}
   - SoundType: 106
     AudioClipRef: {fileID: 8300000, guid: 630dd6bd56d7f85478f3f81b6ad17b11, type: 3}
     AudioSourceRef: {fileID: 1984214504}
+  - SoundType: 200
+    AudioClipRef: {fileID: 8300000, guid: dd303f9aefa185a47bade94aec07a892, type: 3}
+    AudioSourceRef: {fileID: 1972381255}
+  - SoundType: 102
+    AudioClipRef: {fileID: 8300000, guid: 259263a8acb2fce4390115ee28dc0233, type: 3}
+    AudioSourceRef: {fileID: 447585216}
 --- !u!1 &4662166872863245989
 GameObject:
   m_ObjectHideFlags: 0
@@ -45061,6 +45195,7 @@ Transform:
   - {fileID: 222771253}
   - {fileID: 1972381256}
   - {fileID: 785753068}
+  - {fileID: 447585217}
   - {fileID: 298447141}
   - {fileID: 1164735644}
   - {fileID: 1984214505}
