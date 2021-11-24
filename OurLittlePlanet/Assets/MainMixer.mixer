@@ -100,7 +100,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Group
+  m_Name: Bad_Event
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c3246f84b07df34429191968fec99282
   m_Children: []
@@ -213,11 +213,11 @@ AudioMixerSnapshotController:
   m_SnapshotID: 3baced693c00cab43b6d885f5cb6b155
   m_FloatValues:
     4e464cf23e2e26942833f04d753b4eaf: -14.221897
-    19ad3b330ae40d84784bb637b421be54: -0.3976258
+    19ad3b330ae40d84784bb637b421be54: -6.991066
     f44c96b40c79551409d3a8feafc52385: 0.44032478
     293ad857c8c796e418ed0ecac8076d87: -4.653023
     7eb60199304038346ac71aeb679f19d0: 12.587965
-    610f790a53e2989448c02767b02aec87: -4.560346
+    610f790a53e2989448c02767b02aec87: -7.8940816
     5305c66aaaac8ad42a134b007b74992a: -3.8468575
     3c66ee7c2904bcc43b9395f041a98fec: -529
     a1f11aaca5d318b45a6b6dc14b7d77b9: -0.7045173

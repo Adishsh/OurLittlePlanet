@@ -124,6 +124,7 @@ public class StatsDisplay : MonoBehaviour
     {
         string trigger = fromPolution?"AddedFromPolution" :"AddedFromCard";
         m_BadEventAddedAnimation?.SetTrigger(trigger);
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Bad_Event));
             Debug.Log($"Ron- bad event added");
 
     }

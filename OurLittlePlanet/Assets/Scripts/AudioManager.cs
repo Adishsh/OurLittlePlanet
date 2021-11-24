@@ -51,6 +51,7 @@ public class AudioManager : MonoBehaviour
         Hover_02 = 103,
         Cards_Shuffle = 104,
         Construction = 105,
+        Bad_Event = 106,
         // Gameplay Sounds
         Bump =200,
         Shrink = 201,
