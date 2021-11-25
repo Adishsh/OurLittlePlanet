@@ -59,7 +59,8 @@ public class AudioManager : MonoBehaviour
         FailiBuycard =203,
         EraChange =204,
         Lose =205,
-        Win =206,
+        Lose2 =206,
+        Win =207,
 
     }
 

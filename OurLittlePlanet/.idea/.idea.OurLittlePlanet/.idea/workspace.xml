@@ -56,7 +56,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PopUpWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/PopUp_Open.cs" />
       <option value="$PROJECT_DIR$/Assets/Popup_Enter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TestOver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hand.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EventManager.cs" />
@@ -65,9 +64,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StatsDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Slot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Market.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Card.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlaySound.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LifeDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1z0KqK7E5lTHxPONzDKsa0wd8lT" />
@@ -134,7 +135,7 @@
       <workItem from="1637069229545" duration="10777000" />
       <workItem from="1637673580849" duration="8026000" />
       <workItem from="1637746168000" duration="1126000" />
-      <workItem from="1637830902616" duration="2675000" />
+      <workItem from="1637830902616" duration="4911000" />
     </task>
     <servers />
   </component>

@@ -290,6 +290,7 @@ public class GameManager : MonoBehaviour
         if(!winGame)
         {
             AudioManager.S.Play_Sound((AudioManager.SoundTypes.Lose));
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Lose2));
             LoseText.SetActive(true);
             LoseDayNum.text = day.ToString();
         }

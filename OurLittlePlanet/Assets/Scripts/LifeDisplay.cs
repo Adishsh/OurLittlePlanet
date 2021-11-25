@@ -14,11 +14,13 @@ public class LifeDisplay : MonoBehaviour
         if(change == 1)
         {
             m_Hearts[lifeCount -1].gameObject.GetComponent<Animator>().SetTrigger("Shine");
+            
 
         }
         if(change == -1)
         {
             m_Hearts[lifeCount].gameObject.GetComponent<Animator>().SetTrigger("Shine");
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.Shrink));
         }
             for(int i =0 ; i < m_Hearts.Count; i++)
             {
