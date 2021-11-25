@@ -18,6 +18,6 @@ MonoBehaviour:
   m_Sprite: {fileID: 21300000, guid: 3c3917086f24c05438d4afeafd0a540e, type: 3}
   m_Building: {fileID: -8773197806615694987, guid: 29cf9d948302cca498a565c37f896112,
     type: 3}
-  m_Pollution: 2
-  m_Resources: 4
+  m_Pollution: 3
+  m_Resources: 5
   m_Cost: 30
