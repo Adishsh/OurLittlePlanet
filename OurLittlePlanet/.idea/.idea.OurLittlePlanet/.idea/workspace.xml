@@ -67,6 +67,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Market.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Card.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlaySound.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1z0KqK7E5lTHxPONzDKsa0wd8lT" />
@@ -133,6 +134,7 @@
       <workItem from="1637069229545" duration="10777000" />
       <workItem from="1637673580849" duration="8026000" />
       <workItem from="1637746168000" duration="1126000" />
+      <workItem from="1637830902616" duration="2675000" />
     </task>
     <servers />
   </component>
