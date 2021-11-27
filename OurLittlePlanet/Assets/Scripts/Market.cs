@@ -6,7 +6,7 @@ public class Market : CardsCollection
 {
     [SerializeField] private List<Slot> slots;
     [SerializeField] private List<EraList> m_EraCards;
-
+    Slot selectedMarketSlot = null;
     
     private void Start() 
     {
@@ -22,13 +22,34 @@ public class Market : CardsCollection
             }
         }
     }
+    public void UnsellectSlot()
+    {
+        if(selectedMarketSlot != null)
+        {
+            selectedMarketSlot.SelectSlot(false);
+            selectedMarketSlot= null;
+        }
+    }
 
     private void SelectMarketCard(Slot slot)
     {
-
         if(slot.card && m_isSelectable)
         {
-            EventManager.instance.BuyCard.Invoke(slot);
+            if(selectedMarketSlot == slot)
+            {
+                selectedMarketSlot.SelectSlot(false);
+                EventManager.instance.BuyCard.Invoke(slot);
+                selectedMarketSlot = null;
+            }
+            else
+            {
+                if(selectedMarketSlot != null)
+                {
+                    selectedMarketSlot.SelectSlot(false);
+                }
+                selectedMarketSlot = slot;
+                selectedMarketSlot.SelectSlot(true);
+            }
         }
     }
     
