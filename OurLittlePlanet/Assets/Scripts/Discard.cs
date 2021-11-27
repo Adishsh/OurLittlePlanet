@@ -16,6 +16,7 @@ public class Discard : CardsCollection
     {
         m_TopSlot.SetCard(card);
         card.m_TooltipDiractionUp = true;
+        card.allowDrag = false;
         base.AddCard(card);
     }
 

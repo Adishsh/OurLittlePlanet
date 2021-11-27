@@ -90,8 +90,12 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
    
     public void OnPointerDown(PointerEventData eventData)
     {
-        m_tooltipLeft.SetActive(false);
-        m_tooltipUp.SetActive(false);
+        var tooltip = m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
+        var otherTooltip = !m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
+     
+        tooltip.SetActive(!tooltip.activeSelf && !string.IsNullOrEmpty(m_CardData.m_Description));
+
+        otherTooltip.SetActive(false);
     }
     
     public void selectCard(bool isSelected)
@@ -115,6 +119,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             return;
         }
         transform.position = Input.mousePosition;
+        m_tooltipLeft.SetActive(false);
+        m_tooltipUp.SetActive(false);
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -123,7 +130,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             return;
         }
-
         StatsManager.Instance.CardIsDragged = false;
         if(StatsManager.Instance.buildingSlotSelected!= null)
         {

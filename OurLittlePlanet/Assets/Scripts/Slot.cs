@@ -10,7 +10,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public Action OnSelectSlotCard;
     private bool m_isSelected;
     private Animator m_Animator;
-    
+
     private void Awake() 
     {
           m_Animator = GetComponent<Animator>();  

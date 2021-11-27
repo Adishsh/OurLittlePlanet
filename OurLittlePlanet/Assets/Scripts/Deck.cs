@@ -13,6 +13,7 @@ public class Deck : CardsCollection
         foreach(var card in m_Cards)
         {
             card.Flip(false);
+            card.m_TooltipDiractionUp = true;
         }
         m_TopSlot.SetCard(base.GetTopCard(), false);
         m_TopSlot.OnSelectSlotCard = SelectDeckSlot;
