@@ -39,6 +39,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
          if (fraction < 1) {
              fraction += Time.deltaTime * speed;
              transform.localPosition = Vector3.Lerp(start, des, fraction);
+             if(m_tooltipUp.activeSelf)
+             m_tooltipUp.SetActive(false);
+             if(m_tooltipLeft.activeSelf)
+             m_tooltipLeft.SetActive(false);
          }
     }
 
