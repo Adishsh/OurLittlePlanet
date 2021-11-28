@@ -169,4 +169,9 @@ public class Board : MonoBehaviour
         m_Market.ChangeEra(eraIndex);
         //DisplayDiscardPile();
     }
+
+    public bool IsHandSlot(Slot slot)
+    {
+        return m_Hand.slots.Contains(slot);
+    }
 }

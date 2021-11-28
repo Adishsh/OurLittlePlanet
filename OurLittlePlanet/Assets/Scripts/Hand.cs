@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hand : CardsCollection
 {
-    [SerializeField] List<Slot> slots;
+    [SerializeField] public List<Slot> slots;
 
     private void Awake() 
     {

@@ -22,34 +22,12 @@ public class Market : CardsCollection
             }
         }
     }
-    public void UnsellectSlot()
-    {
-        if(selectedMarketSlot != null)
-        {
-            selectedMarketSlot.SelectSlot(false);
-            selectedMarketSlot= null;
-        }
-    }
 
     private void SelectMarketCard(Slot slot)
     {
         if(slot.card && m_isSelectable)
         {
-            if(selectedMarketSlot == slot)
-            {
-                selectedMarketSlot.SelectSlot(false);
-                EventManager.instance.BuyCard.Invoke(slot);
-                selectedMarketSlot = null;
-            }
-            else
-            {
-                if(selectedMarketSlot != null)
-                {
-                    selectedMarketSlot.SelectSlot(false);
-                }
-                selectedMarketSlot = slot;
-                selectedMarketSlot.SelectSlot(true);
-            }
+            EventManager.instance.SelectCard.Invoke(slot);
         }
     }
     

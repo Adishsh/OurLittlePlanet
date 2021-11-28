@@ -88,16 +88,28 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        #if UNITY_IOS || UNITY_ANDROID || UNITY_WP_8_1
+        Debug.Log("not mobile");
+    #else
         m_tooltipLeft.SetActive(false);
         m_tooltipUp.SetActive(false);
+    #endif
     }
    
     public void OnPointerDown(PointerEventData eventData)
     {
+        bool activateTooltip;
+        
         var tooltip = m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
         var otherTooltip = !m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
+
+    #if UNITY_IOS || UNITY_ANDROID || UNITY_WP_8_1
+        activateTooltip = true;
+    #else
+        activateTooltip = !tooltip.activeSelf;
+    #endif
      
-        tooltip.SetActive(!tooltip.activeSelf && !string.IsNullOrEmpty(m_CardData.m_Description));
+        tooltip.SetActive(activateTooltip && !string.IsNullOrEmpty(m_CardData.m_Description));
 
         otherTooltip.SetActive(false);
     }
@@ -144,5 +156,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         start = transform.localPosition;
         fraction = 0;
         }
+    }
+    public void HideTooltip()
+    {
+        m_tooltipLeft.SetActive(false);
+        m_tooltipUp.SetActive(false);
     }
 }

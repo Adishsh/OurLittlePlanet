@@ -208,21 +208,40 @@ public class GameManager : MonoBehaviour
             Debug.Log($"hand is selectable not in playing mode");
             return;
         }
-        
+        bool wasSelected = selectedSlot == slot;
         if(selectedSlot != null)
         {
-            selectedSlot.SelectSlot(false);
+            UnSelectSlot();
         }
         selectedSlot = slot;
         selectedSlot.SelectSlot(true);
-        m_Board.SetBuildSelectable(true);
+        if(m_Board.IsHandSlot(selectedSlot))
+        {
+            if(!wasSelected)
+            {
+                m_Board.SetBuildSelectable(true);
+            }
+        }
+        else
+        {
+            if(wasSelected)
+            {
+                EventManager.instance.BuyCard.Invoke(slot);
+                UnSelectSlot();
+            }
+        }
         Debug.Log($"Ron- hand cardSelected");
+        
+            if(wasSelected)
+                        UnSelectSlot();
+
     }
 
     private void UnSelectSlot()
     {
         if(selectedSlot)
         {
+            selectedSlot.card?.HideTooltip();
             selectedSlot.SelectSlot(false);
             m_Board.SetBuildSelectable(false);
             selectedSlot = null;
@@ -232,7 +251,7 @@ public class GameManager : MonoBehaviour
     private void BuildCard(int selectedBuildingSlot)
     {
             Debug.Log("BuildCard 1");
-        if(selectedSlot != null)
+        if(selectedSlot != null && m_Board.IsHandSlot(selectedSlot) )
         {
             Debug.Log("BuildCard 2");
 
