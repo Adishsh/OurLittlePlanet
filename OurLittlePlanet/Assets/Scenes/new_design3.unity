@@ -3387,6 +3387,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2187761072953166139, guid: b34c0236d41794b4d8b9eb14cbb372db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070195786554867152, guid: b34c0236d41794b4d8b9eb14cbb372db,
         type: 3}
       propertyPath: m_IsActive
@@ -17655,6 +17660,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2187761072953166139, guid: b34c0236d41794b4d8b9eb14cbb372db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070195786554867152, guid: b34c0236d41794b4d8b9eb14cbb372db,
         type: 3}
       propertyPath: m_IsActive
@@ -18616,6 +18626,11 @@ PrefabInstance:
     - target: {fileID: 1191173124589453348, guid: b34c0236d41794b4d8b9eb14cbb372db,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187761072953166139, guid: b34c0236d41794b4d8b9eb14cbb372db,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4070195786554867152, guid: b34c0236d41794b4d8b9eb14cbb372db,
@@ -29218,6 +29233,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2187761072953166139, guid: b34c0236d41794b4d8b9eb14cbb372db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4070195786554867152, guid: b34c0236d41794b4d8b9eb14cbb372db,
         type: 3}
       propertyPath: m_IsActive
@@ -32231,6 +32251,11 @@ PrefabInstance:
     - target: {fileID: 1191173124589453348, guid: b34c0236d41794b4d8b9eb14cbb372db,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187761072953166139, guid: b34c0236d41794b4d8b9eb14cbb372db,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4070195786554867152, guid: b34c0236d41794b4d8b9eb14cbb372db,
