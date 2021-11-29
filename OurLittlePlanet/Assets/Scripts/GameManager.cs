@@ -215,6 +215,7 @@ public class GameManager : MonoBehaviour
         }
         selectedSlot = slot;
         selectedSlot.SelectSlot(true);
+        selectedSlot.card?.ShowTooltip();
         if(m_Board.IsHandSlot(selectedSlot))
         {
             if(!wasSelected)
