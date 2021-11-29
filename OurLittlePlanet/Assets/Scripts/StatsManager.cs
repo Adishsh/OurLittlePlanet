@@ -15,7 +15,7 @@ public class StatsManager: MonoBehaviour
    [SerializeField] float m_MoneyGivenPerRecource = 10f;
    [SerializeField] int m_PolutionAmountToAddBadEvent = 10;
    [SerializeField] int m_InitLife = 3;
-
+   [SerializeField] EnviromentAnimation m_EnvPolution;
 
     public int life { get; private set; }
     public int m_Money { get; private set; }
@@ -84,6 +84,10 @@ public class StatsManager: MonoBehaviour
         int change = GetPosiablePolutionToAdd(polution);
         m_Polution += change;
         m_Display.SetPolution(m_Polution, change);
+        if(change > 0)
+        {
+            m_EnvPolution.SetPolution(m_Polution);
+        }
     }
 
     private int GetPosiablePolutionToAdd(int newPolution)
