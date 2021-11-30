@@ -1,54 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CameraSwitch : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> m_Cameras;
+    [SerializeField] private TMP_Text m_CurrCameraText;
 
-    public GameObject cam1;
-    public GameObject cam2;
-    public GameObject cam3;
-    public GameObject cam4;
-
+    private int currentCameraIndex = 0;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Key1"))
-
         {
-            cam1.SetActive(true);
-            cam2.SetActive(false);
-            cam3.SetActive(false);
-            cam4.SetActive(false);
+            SwitchToCamera(0);
         }
         
         if (Input.GetButtonDown("Key2"))
 
         {
-            cam1.SetActive(false);
-            cam2.SetActive(true);
-            cam3.SetActive(false);
-            cam4.SetActive(false);
+            SwitchToCamera(1);
         }
         
         if (Input.GetButtonDown("Key3"))
 
         {
-            cam1.SetActive(false);
-            cam2.SetActive(false);
-            cam3.SetActive(true);
-            cam4.SetActive(false);
+            SwitchToCamera(2);
         }
-        
         
         if (Input.GetButtonDown("Key4"))
 
         {
-            cam1.SetActive(false);
-            cam2.SetActive(false);
-            cam3.SetActive(false);
-            cam4.SetActive(true);
+            SwitchToCamera(3);
         }
+    }
+
+    private void SwitchToCamera(int cameraIndex)
+    {
+        if(cameraIndex >= m_Cameras.Count)
+        {
+            return;
+        }
+
+        currentCameraIndex = cameraIndex;
+        m_CurrCameraText.text = (currentCameraIndex + 1).ToString();
+        for(int i =0; i< m_Cameras.Count; i++)
+        {
+            m_Cameras[i].SetActive(cameraIndex == i);
+        }
+    }
+
+    public void MoveToNextCamera()
+    {
+        int nextCameraIndex = (currentCameraIndex + 1) % m_Cameras.Count;
+        Debug.Log("nextCameraIndex+"+nextCameraIndex);
+        SwitchToCamera(nextCameraIndex);
     }
 }
