@@ -16,8 +16,8 @@ public class Tornado : EventCard
             m_Animator.SetInteger("Column", index);
         m_Animator.SetTrigger("Go");
         m_Animator.ResetTrigger("End");
-
-
         }
+        AudioManager.S.Play_Sound((m_SoundType));
+
     }
 }

@@ -11,5 +11,6 @@ public class SunnyDay : EventCard
         {
             m_Animator.SetTrigger("Go");
         }
+        AudioManager.S.Play_Sound((m_SoundType));
     }
 }

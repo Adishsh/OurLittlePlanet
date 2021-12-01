@@ -14871,6 +14871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 159697003}
+  m_SoundType: 0
   m_AnimationName: hitwave anim
   m_EventName: Heatwave
 --- !u!1 &712554683 stripped
@@ -17532,6 +17533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 2054901050}
+  m_SoundType: 0
   m_AnimationName: meteor anim
   m_EventName: Meteor
 --- !u!1001 &809194712
@@ -23371,6 +23373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 535520620}
+  m_SoundType: 0
   m_AnimationName: tsunamy anim
   m_EventName: Tsunami
 --- !u!1 &1159551708
@@ -27188,6 +27191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1422771594}
+  m_SoundType: 106
   m_AnimationName: 
   m_EventName: Sunny Day
 --- !u!1 &1350203641
@@ -37340,6 +37344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1165033798}
+  m_SoundType: 0
   m_AnimationName: stormy snow anim
   m_EventName: Stormy Day
 --- !u!1 &1758655548
@@ -39065,6 +39070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1487993787}
+  m_SoundType: 0
   m_AnimationName: rain full anim
   m_EventName: Rainy Day
 --- !u!4 &1898201059 stripped
@@ -42212,6 +42218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 1543592252}
+  m_SoundType: 0
   m_AnimationName: Tornado full anim
   m_EventName: Tornado
 --- !u!1 &2006726264

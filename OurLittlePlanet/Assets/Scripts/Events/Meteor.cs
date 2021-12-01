@@ -16,7 +16,9 @@ public class Meteor : EventCard
             m_Animator.SetTrigger("Go");
             //m_Animator.ResetTrigger("End");
         }
+        AudioManager.S.Play_Sound((m_SoundType));
     }
+    
     private void DestroyBuildings(WorldMap map)
     {
         var slotsToDestroy = map.GetRandom3x3();
