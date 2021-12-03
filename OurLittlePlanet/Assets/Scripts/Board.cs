@@ -160,7 +160,9 @@ public class Board : MonoBehaviour
         statsManager.SetExtraNeededResources(0);
         newEvent.ActivateEvent(m_Map, statsManager);
         statsManager.SetNextEvent(nextEvent);
-        m_Map.RecalculateCardsImpact();
+        var impact = m_Map.RecalculateCardsImpact();
+        StatsManager.Instance.SetTempCardImpact(impact);
+
 
     }
 

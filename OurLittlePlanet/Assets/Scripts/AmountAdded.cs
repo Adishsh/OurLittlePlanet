@@ -26,7 +26,7 @@ public class AmountAdded : MonoBehaviour
     private void SetAmount(TMP_Text text, int amount)
     {
         text.gameObject.SetActive(amount != 0);
-        string sign = amount > 0 ? "+":"-";
+        string sign = amount > 0 ? "+":"";
         text.text = $"{sign}{amount.ToString()}";
     }
 }

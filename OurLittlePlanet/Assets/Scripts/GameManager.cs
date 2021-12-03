@@ -170,7 +170,6 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.S.Play_Sound((AudioManager.SoundTypes.FailiBuycard));
             Debug.Log($"no money to buy card {card} money:{m_StatsManager.m_Money} cost:{card.m_CardData.m_Cost}");
-
         }
     }
 

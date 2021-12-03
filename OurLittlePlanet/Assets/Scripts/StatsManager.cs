@@ -21,6 +21,7 @@ public class StatsManager: MonoBehaviour
     public int m_Money { get; private set; }
     public int m_Resources { get; private set; }
     public int m_Polution { get; private set; }
+    public int m_TempPolution { get; private set; }
     public int m_CardsToDraw { get; private set; }
     public EventCard m_CurrentEvent { get; private set; }
     public int m_ExtraNeededResources{ get; private set; }
@@ -164,11 +165,11 @@ public class StatsManager: MonoBehaviour
         } 
         else
         {
-            int tempPolution = GetPosiablePolutionToAdd(impact.polution);
+            m_TempPolution = GetPosiablePolutionToAdd(impact.polution);
             int resourceChange = impact.resources-m_Resources;
-            m_Display.SetTempPolution(tempPolution);
+            m_Display.SetTempPolution(m_TempPolution);
             m_Display.SetResources(impact.resources, resourceChange);
-            DisplayWarnings(tempPolution, impact.resources);
+            DisplayWarnings(m_TempPolution, impact.resources);
             m_Resources =  impact.resources;
         }
     }

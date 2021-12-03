@@ -6,6 +6,7 @@ public class WorldMap : MonoBehaviour
 {
     [SerializeField] private List<BuildingSlot> BuildingSlots;
     [SerializeField] int m_RowsCount;
+    [SerializeField] AmountAdded m_AmountAddedAnimator;
 
     private void Awake() 
     {
@@ -173,19 +174,23 @@ public class WorldMap : MonoBehaviour
     {
         BuildingSlot slot = BuildingSlots[buildingSlotIndex];
         slot.Build(card, this);
-        RecalculateCardsImpact();
+        CardImpact cardImpact=RecalculateCardsImpact();
+        m_AmountAddedAnimator.PlayAmountAdded(cardImpact.polution - StatsManager.Instance.m_TempPolution, cardImpact.resources - StatsManager.Instance.m_Resources, Camera.main, slot.transform);
+        StatsManager.Instance.SetTempCardImpact(cardImpact);
     }
 
     public void DestroyBuilding(int buildingSlotIndex)
     {
         BuildingSlots[buildingSlotIndex].DestroyBuilding();
-        RecalculateCardsImpact();
+        var impact =RecalculateCardsImpact();
+        StatsManager.Instance.SetTempCardImpact(impact);
+
     }
     
-    public void RecalculateCardsImpact()
+    public CardImpact RecalculateCardsImpact()
     {
         var impact = GetCardsImpact();
-        StatsManager.Instance.SetTempCardImpact(impact);
+        return impact;
     }
 
     public void DestroyBuildings(List<BuildingSlot> buildingSlots)
