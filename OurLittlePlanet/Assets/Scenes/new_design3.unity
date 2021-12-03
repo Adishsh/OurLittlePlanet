@@ -10351,7 +10351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19, y: -11}
+  m_AnchoredPosition: {x: 19, y: -10.9999695}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484666144
@@ -19908,7 +19908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42f1a0da58edf14e86650b6abf20f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polutionAnimationStages: 010000000200000003000000
+  polutionAnimationStages: 0a0000002800000050000000
 --- !u!95 &949142426
 Animator:
   serializedVersion: 3
@@ -31324,7 +31324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19, y: -13}
+  m_AnchoredPosition: {x: 19, y: -12.9999695}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505807686
