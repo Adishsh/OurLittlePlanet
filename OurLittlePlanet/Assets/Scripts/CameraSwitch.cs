@@ -57,5 +57,6 @@ public class CameraSwitch : MonoBehaviour
         int nextCameraIndex = (currentCameraIndex + 1) % m_Cameras.Count;
         Debug.Log("nextCameraIndex+"+nextCameraIndex);
         SwitchToCamera(nextCameraIndex);
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Camera));
     }
 }

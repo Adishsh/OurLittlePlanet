@@ -11,6 +11,9 @@
           <e p="WELCOME_FREE CASUAL PACK SFX (README).txt" t="Include" />
         </e>
         <e p="Instantiate.cs" t="Include" />
+        <e p="LowPolyEarth" t="Include">
+          <e p="EarthSpinScript.cs" t="Include" />
+        </e>
         <e p="LowPolyWater_Pack" t="Include">
           <e p="LowPoly Island" t="Include">
             <e p="Credits.txt" t="Include" />
@@ -45,6 +48,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AmountAdded.cs" t="Include" />
           <e p="AudioManager.cs" t="Include" />
           <e p="BeatManager2.cs" t="Include" />
           <e p="Board.cs" t="Include" />
@@ -75,6 +79,7 @@
           <e p="Deck.cs" t="Include" />
           <e p="Discard.cs" t="Include" />
           <e p="DiscardDisplay.cs" t="Include" />
+          <e p="EnviromentAnimation.cs" t="Include" />
           <e p="EventCard.cs" t="Include" />
           <e p="EventDeck.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />

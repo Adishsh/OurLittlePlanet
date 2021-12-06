@@ -38,7 +38,6 @@
       <option value="$PROJECT_DIR$/../../OurLittlePlanet2/OurLittlePlanet2/Assets/Scripts/StatsDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EventDeck.cs" />
       <option value="$PROJECT_DIR$/Assets/Second_Angle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
       <option value="$PROJECT_DIR$/Assets/OnMouseOver_Money.cs" />
       <option value="$PROJECT_DIR$/Assets/Money_Popup.cs" />
       <option value="$PROJECT_DIR$/Assets/Money_Popup_Exit.cs" />
@@ -68,6 +67,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlaySound.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LifeDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlaySoundCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" />
     </changedPaths>
   </component>
@@ -136,6 +137,7 @@
       <workItem from="1637673580849" duration="8026000" />
       <workItem from="1637746168000" duration="1126000" />
       <workItem from="1637830902616" duration="5805000" />
+      <workItem from="1638784671407" duration="1984000" />
     </task>
     <servers />
   </component>

@@ -39,6 +39,13 @@ public class AudioManager : MonoBehaviour
         Atmosphere3 = 6,
         Atmosphere4 = 7,
         Gameplay = 8,
+        Sunny = 9,
+        Rainy = 10,
+        Stormy = 11,
+        Heatwave = 12,
+        Tornado = 13,
+        Tsunami = 14,
+        Meteor = 15,
         
         
         
@@ -52,6 +59,7 @@ public class AudioManager : MonoBehaviour
         Cards_Shuffle = 104,
         Construction = 105,
         Bad_Event = 106,
+        Camera = 107,
         // Gameplay Sounds
         Buycard =200,
         Shrink = 201,
