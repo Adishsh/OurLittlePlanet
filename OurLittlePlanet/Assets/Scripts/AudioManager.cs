@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     {
         None = 0,
 
-        ______Player_Sounds____ = 1,
+        Music_Background3 = 1,
         Music_Background= 2,
         Music_Background2 = 3,
         Atmosphere = 4,

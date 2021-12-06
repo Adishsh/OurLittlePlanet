@@ -28,5 +28,15 @@ public class LifeDisplay : MonoBehaviour
                 m_Hearts[i].color = i < lifeCount ? Color.white: m_Fade;
             }
             oldLifeCount = lifeCount;
+
+            if (lifeCount == 1)
+            {
+                AudioManager.S.Play_Sound((AudioManager.SoundTypes.Music_Background3));
+            }
+            
+            if (lifeCount == 2)
+            {
+                AudioManager.S.Play_Sound((AudioManager.SoundTypes.Music_Background2));
+            }
     }
 }
