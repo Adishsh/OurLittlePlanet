@@ -175,7 +175,7 @@ public class WorldMap : MonoBehaviour
         BuildingSlot slot = BuildingSlots[buildingSlotIndex];
         slot.Build(card, this);
         CardImpact cardImpact=RecalculateCardsImpact();
-        m_AmountAddedAnimator.PlayAmountAdded(cardImpact.polution - StatsManager.Instance.m_TempPolution, cardImpact.resources - StatsManager.Instance.m_Resources, Camera.main, slot.transform);
+        m_AmountAddedAnimator.PlayAmountAdded(slot.transform,cardImpact.polution - StatsManager.Instance.m_TempPolution, cardImpact.resources - StatsManager.Instance.m_Resources);
         StatsManager.Instance.SetTempCardImpact(cardImpact);
     }
 

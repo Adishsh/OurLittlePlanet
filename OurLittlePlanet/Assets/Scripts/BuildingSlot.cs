@@ -16,6 +16,7 @@ public class BuildingSlot : MonoBehaviour
     [SerializeField] TextMeshPro resources;
     [SerializeField] TextMeshPro polution;
     [SerializeField] TextMeshPro Buildingname;
+    [SerializeField] AmountAdded m_CardHoverAnimator;
 
     private Coroutine showingResources;
     private bool IsHovering;
@@ -66,8 +67,6 @@ public class BuildingSlot : MonoBehaviour
     private void OnMouseUp()
     {
         Debug.Log("BuildCard 3");
-
-
         EventManager.instance.BuildCard.Invoke(index);
     }
 
@@ -94,7 +93,10 @@ public class BuildingSlot : MonoBehaviour
      IEnumerator ShowResourcesPanel()
     {
         yield  return new WaitForSeconds(0.6f);
-        resourcesPanel.SetActive(IsHovering);
+        if(IsHovering && !StatsManager.Instance.CardIsDragged)
+        {
+        m_CardHoverAnimator.PlayAmountAdded(transform , building.m_CardData.m_Pollution, building.m_CardData.m_Resources, building.m_CardData.m_CardName);
+        }
 
     }
     void OnMouseExit()
@@ -111,6 +113,7 @@ public class BuildingSlot : MonoBehaviour
         resourcesPanel.SetActive(false);
         if (building != null && showingResources != null)
         {
+            m_CardHoverAnimator.Hide();
             StopCoroutine(showingResources);
             showingResources = null;
         }
