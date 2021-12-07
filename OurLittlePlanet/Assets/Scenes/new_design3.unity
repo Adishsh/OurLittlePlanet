@@ -12242,9 +12242,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Each day starts with an Event, a forecast of the following day. \r\n\r\nAs
-    you receive this planet at it's prime, you should expect comfortable weather.
-    However, polluting the planet makes it much more volatile. "
+  m_text: "Each day starts with a Weather Event, a forecast of the following day.
+    \r\n\r\nAs you receive this planet at it's prime, you should expect comfortable
+    weather. However, polluting the planet makes it much more volatile. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6f5f9c4cb242b04a84c74cc551f77ba, type: 2}
   m_sharedMaterial: {fileID: 7032278934013993221, guid: f6f5f9c4cb242b04a84c74cc551f77ba,
@@ -18151,8 +18151,8 @@ MonoBehaviour:
   - {fileID: 2042170554}
   - {fileID: 1907410336}
   - {fileID: 552397919}
-  - {fileID: 1930230769}
   - {fileID: 2058994686}
+  - {fileID: 1930230769}
   - {fileID: 1423622334}
   m_Background: {fileID: 1418100615}
   m_AnimatorsBoolText: Show
