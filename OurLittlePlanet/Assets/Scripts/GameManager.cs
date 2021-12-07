@@ -285,10 +285,10 @@ public class GameManager : MonoBehaviour
         }
         //go to animator and stop its animation
         m_StatsManager.m_CurrentEvent.StopCurrentAnimation();
+        UnSelectSlot();
         m_Board.DiscardHand();
         EndTurnCalculation();
-        AddEventCardToEventDeck();
-        UnSelectSlot();
+
         if (m_StatsManager.DidStrikeOut())
         {
             Debug.Log("LoseGame");
@@ -296,16 +296,26 @@ public class GameManager : MonoBehaviour
             SetGameState(GameState.LoseGame);
             return;
         }
+        // wait for bad event animation
+        bool addedEvent = AddEventCardToEventDeck();
+        float timeToWait = addedEvent ? 5f: 2f;
+        SetGameState(GameState.EndOfTurn);
+        StartCoroutine(StartTurnAfterDelay(timeToWait));
+    }
+    
+    private IEnumerator StartTurnAfterDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         SetGameState(GameState.StartTurn);
     }
     
-    private void AddEventCardToEventDeck()
+    private bool AddEventCardToEventDeck()
     {
        int newEventsAmount = m_StatsManager.GetEventCardsAmountToDraw();
         Debug.Log("AddEventCardToEventDeck: "+newEventsAmount);
 
        m_Board.AddEventCardToEventDeck(newEventsAmount);
-
+        return newEventsAmount >0;
     }
 
     private void LoseGame()
