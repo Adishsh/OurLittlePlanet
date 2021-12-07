@@ -211,6 +211,7 @@ public class GameManager : MonoBehaviour
         if(selectedSlot != null)
         {
             UnSelectSlot();
+
         }
         selectedSlot = slot;
         selectedSlot.SelectSlot(true);
@@ -220,6 +221,11 @@ public class GameManager : MonoBehaviour
             if(!wasSelected)
             {
                 m_Board.SetBuildSelectable(true);
+            }
+            else
+            {
+                if(!StatsManager.Instance.CardIsDragged)
+                    UnSelectSlot();
             }
         }
         else
@@ -231,9 +237,6 @@ public class GameManager : MonoBehaviour
             }
         }
         Debug.Log($"Ron- hand cardSelected");
-        
-            if(wasSelected)
-                        UnSelectSlot();
 
     }
 
@@ -257,6 +260,7 @@ public class GameManager : MonoBehaviour
 
             m_Board.BuildCard(selectedSlot, selectedBuildingSlot);
             UnSelectSlot();
+
         }
     }
 
