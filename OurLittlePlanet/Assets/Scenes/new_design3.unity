@@ -3350,6 +3350,7 @@ GameObject:
   - component: {fileID: 144847752}
   - component: {fileID: 144847751}
   - component: {fileID: 144847753}
+  - component: {fileID: 144847754}
   m_Layer: 5
   m_Name: BackgroundIMG (1)
   m_TagString: Untagged
@@ -3460,6 +3461,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 144847754}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Go
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1361728086}
         m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
         m_MethodName: EndTurnPressed
@@ -3472,6 +3485,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &144847754
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144847749}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a85a7b6c67429c4983a932c527dae21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &148305557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15674,6 +15706,7 @@ MonoBehaviour:
   m_Animator: {fileID: 159697003}
   m_SoundType: 12
   m_AnimationName: hitwave anim
+  timeForEvent: 0
   m_EventName: Heatwave
 --- !u!1 &712554683 stripped
 GameObject:
@@ -18348,6 +18381,7 @@ MonoBehaviour:
   m_Animator: {fileID: 2054901050}
   m_SoundType: 15
   m_AnimationName: meteor anim
+  timeForEvent: 0
   m_EventName: Meteor
 --- !u!1001 &809194712
 PrefabInstance:
@@ -24443,6 +24477,7 @@ MonoBehaviour:
   m_Animator: {fileID: 535520620}
   m_SoundType: 14
   m_AnimationName: tsunamy anim
+  timeForEvent: 0
   m_EventName: Tsunami
 --- !u!1 &1159551708
 GameObject:
@@ -28322,6 +28357,7 @@ MonoBehaviour:
   m_Animator: {fileID: 1422771594}
   m_SoundType: 9
   m_AnimationName: 
+  timeForEvent: 0
   m_EventName: Sunny Day
 --- !u!1 &1350203641
 GameObject:
@@ -34410,7 +34446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.033203125, y: 0.29180145}
+  m_AnchoredPosition: {x: 0.033203125, y: 0.29180908}
   m_SizeDelta: {x: -50.4206, y: -64.1981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584887929
@@ -34467,6 +34503,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 144847754}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Go
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1584887930
@@ -38581,6 +38629,7 @@ MonoBehaviour:
   m_Animator: {fileID: 1165033798}
   m_SoundType: 11
   m_AnimationName: stormy snow anim
+  timeForEvent: 0
   m_EventName: Stormy Day
 --- !u!1 &1758655548
 GameObject:
@@ -40326,6 +40375,7 @@ MonoBehaviour:
   m_Animator: {fileID: 1487993787}
   m_SoundType: 10
   m_AnimationName: rain full anim
+  timeForEvent: 0
   m_EventName: Rainy Day
 --- !u!4 &1898201059 stripped
 Transform:
@@ -43612,6 +43662,7 @@ MonoBehaviour:
   m_Animator: {fileID: 1543592252}
   m_SoundType: 13
   m_AnimationName: Tornado full anim
+  timeForEvent: 0
   m_EventName: Tornado
 --- !u!1 &2006726264
 GameObject:
@@ -50547,7 +50598,7 @@ PrefabInstance:
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 60415
+      value: 1996549119
       objectReference: {fileID: 0}
     - target: {fileID: 8255120775151678752, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}

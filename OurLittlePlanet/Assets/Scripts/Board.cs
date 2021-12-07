@@ -17,7 +17,6 @@ public class Board : MonoBehaviour
 
 
     public Action<StatsManager> EndTurnImpactCalculations => m_Map.CalcEndTurnImpact;
-    public Action<StatsManager> SetNextEvent => SetAndActivateNextEvent;
     private void Awake() 
     {
         m_Discard.SetDiscardShow(DisplayDiscardPile);
@@ -152,7 +151,7 @@ public class Board : MonoBehaviour
         m_EventDeck.AddEventCardToEventDeck(eventsToAdd);
     }
 
-    private void SetAndActivateNextEvent(StatsManager statsManager)
+    public float SetAndActivateNextEvent(StatsManager statsManager)
     {
         EventCard newEvent = m_EventDeck.SelectEventCard();
         EventCard nextEvent = m_EventDeck.SetNextEvent();
@@ -162,7 +161,7 @@ public class Board : MonoBehaviour
         statsManager.SetNextEvent(nextEvent);
         var impact = m_Map.RecalculateCardsImpact();
         StatsManager.Instance.SetTempCardImpact(impact);
-
+        return newEvent.timeForEvent;
 
     }
 

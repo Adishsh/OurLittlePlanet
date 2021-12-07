@@ -7,6 +7,7 @@ public class EventCard: MonoBehaviour
     [SerializeField] public Animator m_Animator;
     [SerializeField] public AudioManager.SoundTypes m_SoundType;
     [SerializeField] public string m_AnimationName;
+    [SerializeField] public float timeForEvent;
     
     public string m_EventName;
 

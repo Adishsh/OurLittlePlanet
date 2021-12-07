@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         Beginning,
         StartTurn,
         Drawing,
+        Event,
         PlayingCards,
         EndOfTurn,
         LoseGame,
@@ -133,7 +134,8 @@ public class GameManager : MonoBehaviour
         m_StatsManager.SetDay(day);
 
         int era =day / m_NumberOfDaysToChangeEra;
-        if(era > currentEra)
+        bool eraChange = era > currentEra;
+        if(eraChange)
         {
             currentEra = era;
             m_StatsManager.SetEra(era);
@@ -142,8 +144,21 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Ron- new era");
         }
         SetRecourcesGoal();
+        SetGameState(GameState.Event);
+        StartCoroutine(StartEventAfterDelay(!eraChange? 0: 5f));
+    }
+
+    private IEnumerator StartEventAfterDelay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         ActivateEvents();
-        SetGameState(GameState.Drawing);
+        SetGameState( GameState.Drawing);
+    }
+
+    private IEnumerator StartStateAfterDelay(float seconds, GameState state)
+    {
+        yield return new WaitForSeconds(seconds);
+        SetGameState(state);
     }
 
     private void SetRecourcesGoal()
@@ -296,17 +311,10 @@ public class GameManager : MonoBehaviour
             SetGameState(GameState.LoseGame);
             return;
         }
-        // wait for bad event animation
         bool addedEvent = AddEventCardToEventDeck();
-        float timeToWait = addedEvent ? 5f: 2f;
+        float timeToWait = addedEvent ? 4f: 1.5f;
         SetGameState(GameState.EndOfTurn);
-        StartCoroutine(StartTurnAfterDelay(timeToWait));
-    }
-    
-    private IEnumerator StartTurnAfterDelay(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        SetGameState(GameState.StartTurn);
+        StartCoroutine(StartStateAfterDelay(timeToWait, GameState.StartTurn));
     }
     
     private bool AddEventCardToEventDeck()
@@ -352,9 +360,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ActivateEvents()
+    private float ActivateEvents()
     {
-        m_Board.SetNextEvent.Invoke(m_StatsManager);
+        return m_Board.SetAndActivateNextEvent(m_StatsManager);
     }
 
     private void OnDestroy() 
