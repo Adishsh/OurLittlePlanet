@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         Beginning,
         StartTurn,
         Drawing,
-        Event,
+        EraChange,
         PlayingCards,
         EndOfTurn,
         LoseGame,
@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
 
         int era =day / m_NumberOfDaysToChangeEra;
         bool eraChange = era > currentEra;
+        SetRecourcesGoal();
         if(eraChange)
         {
             currentEra = era;
@@ -142,15 +143,15 @@ public class GameManager : MonoBehaviour
             m_Board.ChangeEra(era);
             m_NewEra.StartAnimation();
             Debug.Log($"Ron- new era");
+            SetGameState(GameState.EraChange);
+        }else
+        {
+            StartEventAfterEraEnd();
         }
-        SetRecourcesGoal();
-        SetGameState(GameState.Event);
-        StartCoroutine(StartEventAfterDelay(!eraChange? 0: 5f));
     }
 
-    private IEnumerator StartEventAfterDelay(float seconds)
+    public void StartEventAfterEraEnd()
     {
-        yield return new WaitForSeconds(seconds);
         ActivateEvents();
         SetGameState( GameState.Drawing);
     }
@@ -303,7 +304,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         //go to animator and stop its animation
-        m_StatsManager.m_CurrentEvent.StopCurrentAnimation();
+        m_StatsManager?.m_CurrentEvent?.StopCurrentAnimation();
         UnSelectSlot();
         m_Board.DiscardHand();
         EndTurnCalculation();
@@ -316,7 +317,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         bool addedEvent = AddEventCardToEventDeck();
-        float timeToWait = addedEvent ? 4f: 1.5f;
+        float timeToWait = addedEvent ? 4f: 1f;
         SetGameState(GameState.EndOfTurn);
         StartCoroutine(StartStateAfterDelay(timeToWait, GameState.StartTurn));
     }

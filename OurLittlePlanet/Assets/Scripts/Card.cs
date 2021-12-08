@@ -102,12 +102,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
    
     public void OnPointerDown(PointerEventData eventData)
     {
-        bool activateTooltip;
-        
         var tooltip = m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
         var otherTooltip = !m_TooltipDiractionUp ? m_tooltipUp : m_tooltipLeft;
-
-     
     }
     
     public void selectCard(bool isSelected)
