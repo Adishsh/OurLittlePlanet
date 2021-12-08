@@ -211,6 +211,7 @@ public class GameManager : MonoBehaviour
 
     private void SelectHandSlot(Slot slot)
     {
+        Debug.Log($"SelectHandSlot {slot}");
         Card card =slot.card;
         if(!card)
         {
@@ -240,7 +241,9 @@ public class GameManager : MonoBehaviour
             else
             {
                 if(!StatsManager.Instance.CardIsDragged)
+                {
                     UnSelectSlot();
+                }
             }
         }
         else
@@ -274,6 +277,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("BuildCard 2");
 
             m_Board.BuildCard(selectedSlot, selectedBuildingSlot);
+
             UnSelectSlot();
 
         }

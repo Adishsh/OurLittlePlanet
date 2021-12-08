@@ -146,12 +146,9 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         if(StatsManager.Instance.buildingSlotSelected!= null)
         {
             EventManager.instance.BuildCard.Invoke(StatsManager.Instance.buildingSlotSelected.index);
-        }else
-        {
-
+        }
         start = transform.localPosition;
         fraction = 0;
-        }
     }
     public void HideTooltip()
     {
