@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
             currentEra = era;
             m_StatsManager.SetEra(era);
             m_Board.ChangeEra(era);
-            m_NewEra.StartAnimation();
+            m_NewEra.StartAnimation(StartEventAfterEraEnd);
             Debug.Log($"Ron- new era");
             SetGameState(GameState.EraChange);
         }else
