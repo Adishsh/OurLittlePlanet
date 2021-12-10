@@ -34906,7 +34906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1571836604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46346,7 +46346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136, y: 26.5}
+  m_AnchoredPosition: {x: 92.6, y: 26.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140223926
@@ -46397,8 +46397,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 76.3
+  m_fontSizeBase: 76.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -47591,7 +47591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136, y: 26.5}
+  m_AnchoredPosition: {x: 105.45, y: 26.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2106403110637654851
@@ -48710,8 +48710,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 76.3
+  m_fontSizeBase: 76.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -51436,7 +51436,7 @@ PrefabInstance:
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
       propertyPath: m_fontSize
-      value: 46.42
+      value: 76.3
       objectReference: {fileID: 0}
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
@@ -51447,7 +51447,7 @@ PrefabInstance:
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 46.42
+      value: 76.3
       objectReference: {fileID: 0}
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
@@ -51458,7 +51458,17 @@ PrefabInstance:
     - target: {fileID: 1459250829388742324, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 1996549119
+      value: 4278250495
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578807224282883854, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 115.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578807224282883854, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 26.5
       objectReference: {fileID: 0}
     - target: {fileID: 8255120775151678752, guid: 196d0cb5b7f5d6f4d81923a04c9afbd7,
         type: 3}
