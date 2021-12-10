@@ -322,7 +322,7 @@ public class GameManager : MonoBehaviour
         float timeToWait = 0.5f;
         if(addedEvent)
         {
-            timeToWait += 4f;
+            timeToWait += 3.5f;
         }
         if(!reachGoal)
         {
