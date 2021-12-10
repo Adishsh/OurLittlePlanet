@@ -50,8 +50,6 @@ public class EventManager : MonoBehaviour {
 
     public void EndTurnPressed()
     {
-        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Gameplay));
-        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Cards_Shuffle));
         EndTurn.Invoke();
     }
 /*

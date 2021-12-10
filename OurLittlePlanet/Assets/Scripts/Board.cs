@@ -43,6 +43,7 @@ public class Board : MonoBehaviour
     public void DrawCardToHand(int cardsToDraw)
     {
         RefilDeckIfNeeded();
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Cards_Shuffle));
 
         for (int i = 0; i < cardsToDraw; i++)
         {

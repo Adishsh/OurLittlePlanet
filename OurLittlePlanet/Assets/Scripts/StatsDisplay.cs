@@ -41,6 +41,7 @@ public class StatsDisplay : MonoBehaviour
         {
             string additiveSign = change > 0?"+":"";
             MoneyChange.text = $"{additiveSign}{change.ToString()}";
+            m_MoneyAdded.speed = 0.35f;
             m_MoneyAdded.SetTrigger("Show");
         }
         StartCoroutine(DelayedAction( ()=>{Money.text = amount.ToString();}, 1f));
@@ -52,6 +53,7 @@ public class StatsDisplay : MonoBehaviour
         {
             string additiveSign = change > 0?"+":"";
             ResourcesChange.text = $"{additiveSign}{change.ToString()}";
+            ResourcesAdded.speed =1;
             ResourcesAdded.SetTrigger("Show");
         }
         StartCoroutine(DelayedAction( ()=>{Resources.text = amount.ToString();}, 1f));
@@ -69,6 +71,7 @@ public class StatsDisplay : MonoBehaviour
         {
             string additiveSign = change > 0?"+":"";
             PolutionChange.text = $"{additiveSign}{change.ToString()}";
+            PolutionAdded.speed = 0.35f;
             PolutionAdded.SetTrigger("Show");
         }
         StartCoroutine(DelayedAction( ()=>{Polution.text = amount.ToString();}, 1f));

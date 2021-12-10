@@ -138,6 +138,7 @@ public class GameManager : MonoBehaviour
         SetRecourcesGoal();
         if(eraChange)
         {
+            AudioManager.S.Play_Sound((AudioManager.SoundTypes.EraChange));
             currentEra = era;
             m_StatsManager.SetEra(era);
             m_Board.ChangeEra(era);
@@ -291,6 +292,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("not in drawing mode");
             return;
         }
+        
         m_Board.DrawCardToHand(m_StatsManager.m_CardsToDraw);
 
         SetGameState(GameState.PlayingCards);
@@ -307,7 +309,7 @@ public class GameManager : MonoBehaviour
         m_StatsManager?.m_CurrentEvent?.StopCurrentAnimation();
         UnSelectSlot();
         m_Board.DiscardHand();
-        EndTurnCalculation();
+        bool reachGoal = EndTurnCalculation();
 
         if (m_StatsManager.DidStrikeOut())
         {
@@ -316,15 +318,23 @@ public class GameManager : MonoBehaviour
             SetGameState(GameState.LoseGame);
             return;
         }
-        bool addedEvent = AddEventCardToEventDeck();
-        float timeToWait = addedEvent ? 4f: 1f;
+        bool addedEvent = AddEventCardToEventDeck(!reachGoal ? 3f:0);
+        float timeToWait = 1f;
+        if(addedEvent)
+        {
+            timeToWait += 4f;
+        }
+        if(!reachGoal)
+        {
+            timeToWait += 2f;
+        }
         SetGameState(GameState.EndOfTurn);
         StartCoroutine(StartStateAfterDelay(timeToWait, GameState.StartTurn));
     }
     
-    private bool AddEventCardToEventDeck()
+    private bool AddEventCardToEventDeck(float secondsToWait)
     {
-       int newEventsAmount = m_StatsManager.GetEventCardsAmountToDraw();
+       int newEventsAmount = m_StatsManager.GetEventCardsAmountToDraw(secondsToWait);
         Debug.Log("AddEventCardToEventDeck: "+newEventsAmount);
 
        m_Board.AddEventCardToEventDeck(newEventsAmount);
@@ -352,16 +362,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void EndTurnCalculation()
+    private bool EndTurnCalculation()
     {
         m_Board.EndTurnImpactCalculations.Invoke(m_StatsManager);
         if(m_StatsManager.m_Resources >= m_ResourcesList[resourceIndex] + m_StatsManager.m_ExtraNeededResources)
         {
+        AudioManager.S.Play_Sound((AudioManager.SoundTypes.Gameplay));
+
             resourceIndex++;
+            return true;
         } 
         else
         {
+
             m_StatsManager.AddLife(-1);
+            return false;
         }
     }
 

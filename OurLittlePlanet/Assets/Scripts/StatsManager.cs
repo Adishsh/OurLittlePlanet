@@ -140,13 +140,13 @@ public class StatsManager: MonoBehaviour
         m_ExtraEventCardsToAdd = extraEventsToAdd;
     }
 
-    public int GetEventCardsAmountToDraw()
+    public int GetEventCardsAmountToDraw(float seconsToWait)
     {
         int addFromPolution = GetNewEventCardsFromPolution();
         int totalEventsToAdd = addFromPolution + m_ExtraEventCardsToAdd;
         if(totalEventsToAdd > 0)
         {
-            BadEventAdded(addFromPolution>0);
+            StartCoroutine(BadEventAdded(addFromPolution>0,seconsToWait));
         }
         return totalEventsToAdd;
     }
@@ -199,8 +199,9 @@ public class StatsManager: MonoBehaviour
         m_Display.SetGoalWarning(CurrentResources < m_GoalResources + m_ExtraNeededResources);
     }
 
-    public void BadEventAdded(bool fromPolution)
+    public IEnumerator BadEventAdded(bool fromPolution, float secondsToWait)
     {
+        yield return new  WaitForSeconds(secondsToWait);
         m_Display.DisplayBadEventAdded(fromPolution);
     }
 
