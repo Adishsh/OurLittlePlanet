@@ -17,6 +17,7 @@ public class BuildingSlot : MonoBehaviour
     [SerializeField] TextMeshPro polution;
     [SerializeField] TextMeshPro Buildingname;
     [SerializeField] AmountAdded m_CardHoverAnimator;
+    [SerializeField] ParticleSystem m_BuildAnim;
 
     private Coroutine showingResources;
     private bool IsHovering;
@@ -29,6 +30,7 @@ public class BuildingSlot : MonoBehaviour
 
     public void Build(Card card, WorldMap map)
     {
+        m_BuildAnim.Emit(100);
 
         var cardData = card.m_CardData;
         resources.text = cardData.m_Resources.ToString();
