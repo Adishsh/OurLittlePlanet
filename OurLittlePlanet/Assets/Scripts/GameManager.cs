@@ -319,7 +319,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         bool addedEvent = AddEventCardToEventDeck(!reachGoal ? 3f:0);
-        float timeToWait = 1f;
+        float timeToWait = 0.5f;
         if(addedEvent)
         {
             timeToWait += 4f;
