@@ -5491,13 +5491,13 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: fde525939a5fa4d1e9968c3ba320c152, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.956
-  m_Pitch: 1.99
+  m_Volume: 0.319
+  m_Pitch: 1.47
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 209
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5550,7 +5550,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.15555556
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -13175,7 +13175,7 @@ MonoBehaviour:
     type: 3}
   m_TopSlot: {fileID: 618233722}
   m_CardsData:
-  - {fileID: 11400000, guid: b36912ed35bd0074baec391c2e2657b0, type: 2}
+  - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
   - {fileID: 11400000, guid: 00a83e1ec2f35614db215d67bccaddd0, type: 2}
   - {fileID: 11400000, guid: 57f75486411d4e94c8d6849ba31f8d43, type: 2}
@@ -49990,7 +49990,7 @@ MonoBehaviour:
     AudioClipRef: {fileID: 8300000, guid: 2eaa1a0d354e6e945b1996c889bd3b05, type: 3}
     AudioSourceRef: {fileID: 4662166872190535475}
   - SoundType: 8
-    AudioClipRef: {fileID: 8300000, guid: 79c313afb0547504cb42850f498c4e71, type: 3}
+    AudioClipRef: {fileID: 8300000, guid: 49caa62bcbd844634880cf7f42639101, type: 3}
     AudioSourceRef: {fileID: 222771252}
   - SoundType: 100
     AudioClipRef: {fileID: 8300000, guid: 16d85cad5e511f142a0a67f3f9e57676, type: 3}
@@ -50057,6 +50057,9 @@ MonoBehaviour:
     AudioSourceRef: {fileID: 4662166873442975580}
   - SoundType: 15
     AudioClipRef: {fileID: 8300000, guid: 40fac4b477c85644680e06871bff1e82, type: 3}
+    AudioSourceRef: {fileID: 1922124591}
+  - SoundType: 207
+    AudioClipRef: {fileID: 8300000, guid: 79c313afb0547504cb42850f498c4e71, type: 3}
     AudioSourceRef: {fileID: 1922124591}
 --- !u!1 &4662166872863245989
 GameObject:

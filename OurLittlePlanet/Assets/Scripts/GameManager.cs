@@ -130,6 +130,10 @@ public class GameManager : MonoBehaviour
 
     private void StartTurn()
     {
+        if(winGame)
+        {
+            return;
+        }
         day++;
         m_StatsManager.SetDay(day);
 
