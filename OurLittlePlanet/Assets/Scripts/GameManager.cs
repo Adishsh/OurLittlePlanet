@@ -357,9 +357,14 @@ public class GameManager : MonoBehaviour
         if(gameState != GameState.LoseGame)
         {
             AudioManager.S.Play_Sound((AudioManager.SoundTypes.Win));
-            WinText.SetActive(true);
-            winGame =true;        
+            winGame =true;      
+            StartCoroutine(ShowWin());  
         }
+    }
+    private IEnumerator ShowWin()
+    {
+        yield return new WaitForSeconds(1f);
+        WinText.SetActive(true);
     }
 
     private bool EndTurnCalculation()
