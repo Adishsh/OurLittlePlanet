@@ -24,7 +24,9 @@ public class StatsDisplay : MonoBehaviour
     [SerializeField] Animator m_EraAnimator;
     [SerializeField] LifeDisplay m_Life;
     [SerializeField] GameObject m_PolutionWarning;
+    [SerializeField] GameObject m_PolutionWarning1;
     [SerializeField] GameObject m_GoalWarning;
+    [SerializeField] GameObject m_GoalWarning1;
     [SerializeField] Animator m_BadEventAddedAnimation;
     [SerializeField] TMP_Text m_NextPolutionLimit;
     [SerializeField] TMP_Text m_NextEventText;
@@ -114,13 +116,15 @@ public class StatsDisplay : MonoBehaviour
 
     public void SetPolutionWarning(bool isOn)
     {
-        m_PolutionWarning.SetActive(isOn);
+        m_PolutionWarning?.SetActive(isOn);
+        m_PolutionWarning1?.SetActive(isOn);
     }
 
     public void SetGoalWarning(bool isOn)
     {
         Debug.Log("goal warning "+isOn);
-        m_GoalWarning.SetActive(isOn);
+        m_GoalWarning?.SetActive(isOn);
+        m_GoalWarning1?.SetActive(isOn);
     }
 
     public void DisplayBadEventAdded(bool fromPolution)
